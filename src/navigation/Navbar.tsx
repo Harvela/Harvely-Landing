@@ -41,62 +41,66 @@ const NavbarGlobal: React.FC<NavbarProps> = () => {
           width: '100%',
           zIndex: 40,
           top: 0,
-          backgroundColor: 'rgba(0, 34, 64, 0.9)',
+          backgroundColor: '#FFF7F1',
         }}
       >
         <Navbar.Brand href="#">
-          {/* <img
-            src="/fullLogo.png"
+          <img
+            src="/logo.png"
             className="h-8 lg:mr-3 lg:h-16"
             alt="Docta Mobile Logo"
-          /> */}
-          <h1 className="text-2xl font-bold text-white">Harvely</h1>
+          />
         </Navbar.Brand>
         <Navbar.Collapse>
           <Link
-            activeClass="text-white font-bold border-b-2 border-white"
+            activeClass="text-white font-bold border-b-2 border-text"
             to="home"
             smooth
             spy
             offset={-200}
+            className="text-text"
           >
             Accueil
           </Link>
           <Link
-            activeClass="text-white font-bold border-b-2 border-white"
-            to="projects"
-            smooth
-            spy
-            offset={-100}
-          >
-            Nos projets
-          </Link>
-          <Link
-            activeClass="text-white font-bold border-b-2 border-white"
+            activeClass="text-white font-bold border-b-2 border-text"
             to="services"
             smooth
             spy
+            className="text-text"
           >
-            Nos services
+            APS
           </Link>
           <Link
-            activeClass="text-white font-bold border-b-2 border-white"
-            to="team"
+            activeClass="text-white font-bold border-b-2 border-text"
+            to="illustrations"
             smooth
             spy
+            className="text-text"
           >
-            Notre equipe
+            Illustrations
           </Link>
           <Link
-            activeClass="text-secondary-900 font-bold border-b-2 border-secondary-900"
-            to="pricing"
+            activeClass="text-white font-bold border-b-2 border-text"
+            to="resources"
             smooth
             spy
             offset={-100}
+            className="text-text"
           >
-            Contact
+            Ressources
           </Link>
         </Navbar.Collapse>
+        <Link
+          activeClass="text-secondary-900 font-bold border-b-2 border-secondary-900"
+          to="pricing"
+          smooth
+          spy
+          offset={-100}
+          className="rounded-lg bg-text px-8 py-2 text-sm font-semibold text-white"
+        >
+          Commencer
+        </Link>
       </Navbar>
     </Flowbite>
   );
