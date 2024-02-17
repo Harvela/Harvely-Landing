@@ -53,7 +53,7 @@ const NavbarGlobal: React.FC<NavbarProps> = () => {
         </Navbar.Brand>
         <Navbar.Collapse>
           <Link
-            activeClass="text-white font-bold border-b-2 border-text"
+            activeClass="text-text font-bold border-b-2 border-text"
             to="home"
             smooth
             spy
@@ -63,7 +63,7 @@ const NavbarGlobal: React.FC<NavbarProps> = () => {
             Accueil
           </Link>
           <Link
-            activeClass="text-white font-bold border-b-2 border-text"
+            activeClass="text-text font-bold border-b-2 border-text"
             to="services"
             smooth
             spy
@@ -72,7 +72,7 @@ const NavbarGlobal: React.FC<NavbarProps> = () => {
             APS
           </Link>
           <Link
-            activeClass="text-white font-bold border-b-2 border-text"
+            activeClass="text-text font-bold border-b-2 border-text"
             to="illustrations"
             smooth
             spy
@@ -81,7 +81,7 @@ const NavbarGlobal: React.FC<NavbarProps> = () => {
             Illustrations
           </Link>
           <Link
-            activeClass="text-white font-bold border-b-2 border-text"
+            activeClass="text-text font-bold border-b-2 border-text"
             to="resources"
             smooth
             spy
@@ -92,7 +92,7 @@ const NavbarGlobal: React.FC<NavbarProps> = () => {
           </Link>
         </Navbar.Collapse>
         <Link
-          activeClass="text-secondary-900 font-bold border-b-2 border-secondary-900"
+          activeClass="text-white font-bold border-b-2 border-secondary-900"
           to="pricing"
           smooth
           spy
