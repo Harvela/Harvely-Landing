@@ -1,74 +1,30 @@
 import { CiHome } from 'react-icons/ci';
-import { FaSquare } from 'react-icons/fa';
 import { FiUsers } from 'react-icons/fi';
 
 const Details = () => {
   return (
-    <div
-      className="mt-12 flex w-full flex-row font-semibold text-black"
-      id="details"
-    >
-      <div className="w-[50%] bg-[#FFE6E9] px-16 py-8">
-        <div className="flex flex-row items-center gap-4 text-lg font-bold">
-          <CiHome />
-          <h2>Pour les ecoles</h2>
-        </div>
-        <ul className="mt-8 flex flex-col gap-4">
-          <li className="flex flex-row items-center gap-4 text-sm">
-            <FaSquare />
-            Mise A niveau de votre personnel
-          </li>
-          <li className="flex flex-row items-center gap-4 text-sm">
-            <FaSquare />
-            Mise A niveau de votre personnel
-          </li>
-          <li className="flex flex-row items-center gap-4 text-sm">
-            <FaSquare />
-            Mise A niveau de votre personnel
-          </li>
-          <li className="flex flex-row items-center gap-4 text-sm">
-            <FaSquare />
-            Mise A niveau de votre personnel
-          </li>
-          <li className="flex flex-row items-center gap-4 text-sm">
-            <FaSquare />
-            Mise A niveau de votre personnel
-          </li>
-        </ul>
-        <button className="mt-8 rounded-lg bg-text px-4 py-1 text-sm font-semibold text-white">
-          J’enregistre mon ecole
+    <div className="flex w-full flex-row gap-8 px-16 py-8" id="details">
+      <div className="flex w-[50%] flex-col items-center justify-center gap-4 rounded-lg bg-green p-8 text-center text-white">
+        <CiHome className="h-20 w-20" />
+        <h2 className="text-lg font-semibold">Vous avez une ecole ?</h2>
+        <p className="text-sm">
+          Enregistrez - vous et obtennez des formations pour vos enseignants.
+          Obtennez aussi des reductions sur Dug Assistant.
+        </p>
+        <button className="mt-8 rounded-lg bg-white px-8 py-2 text-sm font-semibold text-green">
+          Souscrire
         </button>
       </div>
 
-      <div className="w-[50%] bg-[#F5F5F5] px-16 py-8">
-        <div className="flex flex-row items-center gap-4 text-lg font-bold">
-          <FiUsers />
-          <h2>Pour les enseignants</h2>
-        </div>
-        <ul className="mt-8 flex flex-col gap-4">
-          <li className="flex flex-row items-center gap-4 text-sm">
-            <FaSquare />
-            Mise A niveau de votre personnel
-          </li>
-          <li className="flex flex-row items-center gap-4 text-sm">
-            <FaSquare />
-            Mise A niveau de votre personnel
-          </li>
-          <li className="flex flex-row items-center gap-4 text-sm">
-            <FaSquare />
-            Mise A niveau de votre personnel
-          </li>
-          <li className="flex flex-row items-center gap-4 text-sm">
-            <FaSquare />
-            Mise A niveau de votre personnel
-          </li>
-          <li className="flex flex-row items-center gap-4 text-sm">
-            <FaSquare />
-            Mise A niveau de votre personnel
-          </li>
-        </ul>
-        <button className="mt-8 rounded-lg bg-text px-4 py-1 text-sm font-semibold text-white">
-          J’enregistre mon ecole
+      <div className="flex w-[50%] flex-col items-center justify-center gap-4 rounded-lg bg-[#FFDCCD] p-8 text-center text-text">
+        <FiUsers className="h-20 w-20" />
+        <h2 className="text-lg font-semibold">Vous avez une ecole ?</h2>
+        <p className="text-sm">
+          Enregistrez - vous et obtennez des formations pour vos enseignants.
+          Obtennez aussi des reductions sur Dug Assistant.
+        </p>
+        <button className="mt-8 rounded-lg bg-text px-8 py-2 text-sm font-semibold text-white">
+          Souscrire
         </button>
       </div>
     </div>

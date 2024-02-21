@@ -97,9 +97,9 @@ const NavbarGlobal: React.FC<NavbarProps> = () => {
           smooth
           spy
           offset={-100}
-          className="rounded-lg bg-text px-8 py-2 text-sm font-semibold text-white"
+          className="rounded-lg bg-green px-8 py-2 text-sm font-semibold text-white"
         >
-          Commencer
+          Creer une situation
         </Link>
       </Navbar>
     </Flowbite>

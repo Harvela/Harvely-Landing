@@ -13,19 +13,16 @@ const Hero: React.FC = () => {
         <div className=" flex flex-row items-center justify-between">
           <div className="">
             <h1 className="mt-4 text-[16px] font-semibold text-text lg:text-2xl">
-              Une nouvelle approche <br /> d’enseignement,{' '}
-              <span className="text-red">l’APS.</span>
+              Accelerez la preparation de <br /> vos lecons avec <br />
+              <span className="text-green">l’intelligence artificiel.</span>
             </h1>
             <h2 className="my-[30px] text-[10px] text-text md:text-[15px]">
-              Nous mettons <span className="text-green">l’eleve</span> au centre
-              de l enseignement, <br />
-              <span className="text-green">l’enseignant</span> etant un guide
-              qui lui permettra de mieux <br /> comprendre la matiere en tenant
-              compte de son <span className="text-green">environement</span>
+              Generez des situations, exercies, exemples en un rien de <br />{' '}
+              temps et accedez a une bibliotheque de donnes
             </h2>
           </div>
           <img
-            src="/assets/images/home/home.png"
+            src="/assets/images/home/illustration.svg"
             alt="Hero"
             className="h-50 w-[400px]"
           />
@@ -55,8 +52,8 @@ const Hero: React.FC = () => {
               className="text-sm"
             />
           </div>
-          <button className="rounded-r-2xl bg-red px-6 py-4 text-white">
-            Creer une situation
+          <button className="rounded-r-2xl bg-[#FFDCCD] px-6 py-4 font-semibold">
+            CREER UNE SITUATION
           </button>
         </div>
       </div>
