@@ -1,5 +1,15 @@
 import { services } from '@/utils/services';
 
+const getBackground = (index: number) => {
+  if (index === 0) return 'bg-[#FFF5F0]';
+  if (index === 1) return 'bg-[#E9FFFD]';
+  if (index === 2) return 'bg-[#F5F5F5]';
+  if (index === 3) return 'bg-[#F5F5F5]';
+  if (index === 4) return 'bg-[#FFF5F0]';
+  if (index === 5) return 'bg-[#E9FFFD]';
+  return 'bg-[#FFF5F0]';
+};
+
 const Services = () => {
   return (
     <div id="services" className="relative z-20 px-4 py-8 md:px-16 ">
@@ -11,7 +21,7 @@ const Services = () => {
           return (
             <div
               key={index}
-              className="flex flex-col items-center justify-center gap-8 rounded-md bg-[#F5F5F5] p-8"
+              className={`flex flex-col items-center justify-center gap-8 rounded-md ${getBackground(index)} p-8`}
             >
               <img
                 src={service.icon}
