@@ -8,7 +8,7 @@ const Resources = () => {
       <h1 className="mb-2 mt-5 text-lg font-bold text-text lg:text-xl">
         Resources
       </h1>
-      <div className="mt-12 grid grid-cols-4 gap-8">
+      <div className="my-12 grid grid-cols-1 gap-8 md:grid-cols-3">
         {resources.map((resource, index) => {
           return (
             <div

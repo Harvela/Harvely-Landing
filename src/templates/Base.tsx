@@ -6,7 +6,6 @@ import { Details } from './Details';
 import { Footer } from './Footer';
 import { Hero } from './Hero';
 import { Illustrations } from './Illustrations';
-import { Parteners } from './Parteners';
 import { Resources } from './Resources';
 import { Services } from './Services';
 
@@ -20,7 +19,6 @@ const Base = () => {
       <Details />
       <Illustrations />
       <Resources />
-      <Parteners />
       <Footer />
     </div>
   );

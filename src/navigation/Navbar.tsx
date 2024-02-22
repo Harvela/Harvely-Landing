@@ -47,49 +47,52 @@ const NavbarGlobal: React.FC<NavbarProps> = () => {
         <Navbar.Brand href="#">
           <img
             src="/logo.png"
-            className="h-8 lg:mr-3 lg:h-16"
+            className="mt-3 h-8 lg:mr-3 lg:h-12"
             alt="Docta Mobile Logo"
           />
         </Navbar.Brand>
         <Navbar.Collapse>
-          <Link
-            activeClass="text-text font-bold border-b-2 border-text"
-            to="home"
-            smooth
-            spy
-            offset={-200}
-            className="text-text"
-          >
-            Accueil
-          </Link>
-          <Link
-            activeClass="text-text font-bold border-b-2 border-text"
-            to="services"
-            smooth
-            spy
-            className="text-text"
-          >
-            APS
-          </Link>
-          <Link
-            activeClass="text-text font-bold border-b-2 border-text"
-            to="illustrations"
-            smooth
-            spy
-            className="text-text"
-          >
-            Illustrations
-          </Link>
-          <Link
-            activeClass="text-text font-bold border-b-2 border-text"
-            to="resources"
-            smooth
-            spy
-            offset={-100}
-            className="text-text"
-          >
-            Ressources
-          </Link>
+          <div className="flex flex-row justify-between md:w-[35vw]">
+            <Link
+              activeClass="text-text font-bold border-b-2 border-text"
+              to="home"
+              smooth
+              spy
+              offset={-200}
+              className="text-text"
+            >
+              Accueil
+            </Link>
+            <Link
+              activeClass="text-text font-bold border-b-2 border-text"
+              to="services"
+              smooth
+              spy
+              className=" text-text"
+            >
+              APS
+            </Link>
+            <Link
+              activeClass="text-text font-bold border-b-2 border-text"
+              to="illustrations"
+              smooth
+              spy
+              className=" text-text"
+            >
+              Illustrations
+            </Link>
+
+            <Link
+              activeClass="text-text font-bold border-b-2 border-text"
+              to="resources"
+              smooth
+              spy
+              offset={-100}
+              className=" text-text"
+            >
+              Ressources
+            </Link>
+          </div>
         </Navbar.Collapse>
         <Link
           activeClass="text-white font-bold border-b-2 border-secondary-900"

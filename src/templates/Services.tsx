@@ -2,11 +2,11 @@ import { services } from '@/utils/services';
 
 const Services = () => {
   return (
-    <div id="services" className="relative z-20 px-4 py-8 lg:px-16">
-      <h1 className="mb-2 mt-5 text-lg font-bold text-text lg:text-xl">
+    <div id="services" className="relative z-20 px-4 py-8 md:px-16 ">
+      <h1 className="mb-2 mt-5 text-lg font-semibold uppercase text-text lg:text-xl">
         Pourquoi l&apos;APS
       </h1>
-      <div className="mt-12 grid grid-cols-3 gap-16">
+      <div className="mt-12 grid max-h-[600px] grid-cols-1 gap-16 overflow-y-scroll md:grid-cols-3">
         {services.map((service, index) => {
           return (
             <div
@@ -16,7 +16,7 @@ const Services = () => {
               <img
                 src={service.icon}
                 alt={`${service.name} Logo`}
-                className="h-20 w-20"
+                className="size-20"
               />
 
               <p className="text-sm">{service.description}</p>

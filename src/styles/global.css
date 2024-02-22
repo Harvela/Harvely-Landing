@@ -19,3 +19,13 @@ body {
     sans-serif;
   scroll-behavior: smooth;
 }
+
+.css-1f43avz-a11yText-A11yText {
+  width: 0px !important;
+  display: none !important;
+}
+
+input:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
