@@ -9,18 +9,18 @@ const Hero: React.FC = () => {
     <Background color="">
       <div
         id="home"
-        className="mt-8 flex h-fit flex-col  bg-primary-100 p-4 md:mt-0 md:h-[100vh] md:justify-center md:p-16"
+        className="mt-8 flex h-fit flex-col  bg-primary-100 p-4 md:mt-0 md:justify-center md:p-16"
       >
         <div className="mb-6 md:mb-12" />
         <div className=" mb-10 flex flex-col-reverse items-center px-2 md:flex-row md:justify-between">
           <div className="w-[100%] md:w-[55%]">
             <h1 className="mt-4 text-center text-[1.4rem] font-semibold text-text md:text-left md:text-[2.4rem]">
-              Accelerez la preparation de <br /> vos lecons avec
-              <span className="text-green"> l’intelligence artificiel.</span>
+              Accélérez la préparation de <br /> vos leçons avec
+              <span className="text-green"> l’intelligence artificielle.</span>
             </h1>
             <h2 className="my-[30px] text-center text-[0.7rem] text-text md:text-left md:text-[1rem]">
-              Generez des situations, exercies, exemples en un rien de temps et
-              accedez a une bibliotheque de donnes
+              Générez rapidement des situations, exercices et exemples, et
+              accédez à une bibliothèque de resources.
             </h2>
           </div>
           <img
@@ -29,7 +29,14 @@ const Hero: React.FC = () => {
             className="h-50 mt-5 w-[80%] md:mt-0 md:w-[40%]"
           />
         </div>
-        <div className="mt-0 grid grid-cols-1 rounded-lg md:mt-12 md:grid-cols-4">
+        <form
+          onSubmit={(e) => {
+            e.preventDefault();
+            const formData = new FormData(e.currentTarget);
+            console.log(formData.get('course'));
+          }}
+          className="mt-0 grid grid-cols-1 rounded-lg md:mt-12 md:grid-cols-4"
+        >
           <div className="visible flex w-full flex-col items-center justify-center pb-8 md:hidden">
             <h1 className="visible  text-center text-[1.4rem] font-bold text-text ">
               Essayer{' '}
@@ -45,6 +52,7 @@ const Hero: React.FC = () => {
                 console.log('selected');
               }}
               placeholder="mathematique"
+              name="course"
             />
           </div>
           <div className="bg-primary-300 px-6 py-4">
@@ -56,6 +64,7 @@ const Hero: React.FC = () => {
                 console.log('selected');
               }}
               placeholder='conjonction "Et"'
+              name="lesson"
             />
           </div>
           <div className="bg-primary-200 px-6 py-4">
@@ -67,12 +76,16 @@ const Hero: React.FC = () => {
                 console.log('selected');
               }}
               placeholder="Agriculture"
+              name="areaOfLife"
             />
           </div>
-          <button className="md:rounded-t-0 rounded-b-[10px] bg-[#FFDCCD] px-6 py-4 font-semibold md:rounded-r-2xl">
+          <button
+            type="submit"
+            className="md:rounded-t-0 rounded-b-[10px] bg-[#FFDCCD] px-6 py-4 font-semibold md:rounded-r-2xl"
+          >
             CREER UNE SITUATION
           </button>
-        </div>
+        </form>
       </div>
     </Background>
   );

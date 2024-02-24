@@ -18,6 +18,7 @@ export type DropDownProps = {
   inputStyle?: any;
   containerStyle?: any;
   creatable?: boolean;
+  name?: string;
 };
 
 export const Select: React.FC<DropDownProps> = (props) => {
@@ -32,6 +33,7 @@ export const Select: React.FC<DropDownProps> = (props) => {
         props.onSelect(e.value);
         setSelectedOption(e);
       }}
+      name={props.name}
       value={selectedOption}
       ref={ref}
       // styles={{
