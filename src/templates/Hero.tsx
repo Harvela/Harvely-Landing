@@ -11,14 +11,14 @@ const Hero: React.FC = () => {
         id="home"
         className="mt-8 flex h-fit flex-col  bg-primary-100 p-4 md:mt-0 md:h-[100vh] md:justify-center md:p-16"
       >
-        <div className="mb-6 md:mb-12" />
-        <div className=" mb-10 flex flex-col-reverse items-center px-2 md:flex-row md:justify-between">
+        <div className="mb-6 md:mb-8" />
+        <div className="flex flex-col-reverse items-center px-2 md:flex-row md:justify-between">
           <div className="w-[100%] md:w-[55%]">
-            <h1 className="mt-4 text-center text-[1.4rem] font-semibold text-text md:text-left md:text-[2.4rem]">
+            <h1 className="mt-4 text-center text-[1rem] font-semibold text-text md:text-left md:text-[2rem]">
               Accelerez la preparation de <br /> vos lecons avec
               <span className="text-green"> l’intelligence artificiel.</span>
             </h1>
-            <h2 className="my-[30px] text-center text-[0.7rem] text-text md:text-left md:text-[1rem]">
+            <h2 className="my-[24px] text-center text-[0.7rem] text-text md:text-left md:text-[1rem]">
               Generez des situations, exercies, exemples en un rien de temps et
               accedez a une bibliotheque de donnes
             </h2>
@@ -26,7 +26,7 @@ const Hero: React.FC = () => {
           <img
             src="/assets/images/home/illustration.svg"
             alt="Hero"
-            className="h-50 mt-5 w-[80%] md:mt-0 md:w-[40%]"
+            className="h-50 mt-5 w-[80%] md:mt-0 md:w-[36%]"
           />
         </div>
         <div className="mt-0 grid grid-cols-1 rounded-lg md:mt-12 md:grid-cols-4">
@@ -69,7 +69,7 @@ const Hero: React.FC = () => {
               placeholder="Agriculture"
             />
           </div>
-          <button className="md:rounded-t-0 rounded-b-[10px] bg-[#FFDCCD] px-6 py-4 font-semibold md:rounded-r-2xl">
+          <button className="md:rounded-t-0 rounded-b-[10px] bg-green px-6 py-4 font-semibold text-white md:rounded-r-2xl">
             CREER UNE SITUATION
           </button>
         </div>

@@ -1,44 +1,14 @@
 export const services = [
   {
-    name: '',
-    type: '',
-    link: '',
     icon: '/assets/images/home/crosshair.png',
-    description: 'Creation d une situation',
+    description: 'Mettre l’eleve dans un contexte qu’il maitrise deja.',
   },
   {
-    name: '',
-    type: '',
-    link: '',
     icon: '/assets/images/home/file-text.png',
-    description: 'Creation d une situation',
+    description: 'Ameliorer la collaboration entre les eleves',
   },
   {
-    name: '',
-    type: '',
-    link: '',
     icon: '/assets/images/home/loader.png',
-    description: 'Creation d une situation',
-  },
-  {
-    name: '',
-    type: '',
-    link: '',
-    icon: '/assets/images/home/crosshair.png',
-    description: 'Creation d une situation',
-  },
-  {
-    name: '',
-    type: '',
-    link: '',
-    icon: '/assets/images/home/file-text.png',
-    description: 'Creation d une situation',
-  },
-  {
-    name: '',
-    type: '',
-    link: '',
-    icon: '/assets/images/home/loader.png',
-    description: 'Creation d une situation',
+    description: 'Ameliorer la maniere de de resoudre les problemes',
   },
 ];
