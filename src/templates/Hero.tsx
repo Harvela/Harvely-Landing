@@ -55,7 +55,7 @@ const Hero: React.FC = () => {
               });
             else
               window.location.assign(
-                `https://dugassistant.com?course=${data.course}&lesson=${data.lesson}&areaOfLife=${data.areaOfLife}`,
+                `https://app.dugassistant.com?course=${data.course}&lesson=${data.lesson}&areaOfLife=${data.areaOfLife}`,
               );
           })}
           className="mt-0 grid grid-cols-1 rounded-lg md:mt-12 md:grid-cols-4"
@@ -81,10 +81,7 @@ const Hero: React.FC = () => {
           <div className="bg-primary-300 px-6 py-4">
             <p className="text-md mt-2 font-bold">Leçon</p>
             <Select
-              items={[
-                { label: 'Logique Math', value: 'Math' },
-                { label: 'Division', value: 'Division' },
-              ]}
+              items={[]}
               label="label"
               onSelect={(e) => {
                 setValue('lesson', e);
@@ -113,7 +110,10 @@ const Hero: React.FC = () => {
               name="areaOfLife"
             />
           </div>
-          <button className="md:rounded-t-0 rounded-b-2xl bg-green  px-6 py-4 font-semibold text-white md:rounded-bl-[0px] md:rounded-tr-2xl">
+          <button
+            type="submit"
+            className="md:rounded-t-0 rounded-b-2xl bg-green  px-6 py-4 font-semibold text-white md:rounded-bl-[0px] md:rounded-tr-2xl"
+          >
             CREER UNE SITUATION
           </button>
         </form>
