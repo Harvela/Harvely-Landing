@@ -81,7 +81,10 @@ const Hero: React.FC = () => {
           <div className="bg-primary-300 px-6 py-4">
             <p className="text-md mt-2 font-bold">Leçon</p>
             <Select
-              items={[]}
+              items={[
+                { label: 'Logique Math', value: 'Math' },
+                { label: 'Division', value: 'Division' },
+              ]}
               label="label"
               onSelect={(e) => {
                 setValue('lesson', e);
