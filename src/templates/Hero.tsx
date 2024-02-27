@@ -1,10 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import { Select } from '@/select';
 
 import { Background } from '../background/Background';
 
 const Hero: React.FC = () => {
+  const [selectedCourse, setSelectedCourse] = useState('');
+  const [selectedLesson, setSelectedLesson] = useState('');
+  const [selectedAreaOfLife, setSelectedAreaOfLife] = useState('');
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const queryString = `?course=${selectedCourse}&lesson=${selectedLesson}&areaOfLife=${selectedAreaOfLife}`;
+    window.location.href = `https://app.dugassistant.com${queryString}`;
+  };
   return (
     <Background color="">
       <div
@@ -30,11 +39,7 @@ const Hero: React.FC = () => {
           />
         </div>
         <form
-          onSubmit={(e) => {
-            e.preventDefault();
-            const formData = new FormData(e.currentTarget);
-            console.log(formData.get('course'));
-          }}
+          onSubmit={handleSubmit}
           className="mt-0 grid grid-cols-1 rounded-lg md:mt-12 md:grid-cols-4"
         >
           <div className="visible flex w-full flex-col items-center justify-center pb-8 md:hidden">
@@ -46,11 +51,12 @@ const Hero: React.FC = () => {
           <div className="md:rounded-t-0 rounded-t-[10px] bg-primary-200 px-6 py-4 md:rounded-l-2xl">
             <p className="text-md mt-2 font-bold">Cours</p>
             <Select
-              items={[]}
+              items={[
+                { label: 'Math', value: 'Math' },
+                { label: 'Informatique', value: 'Informatique' },
+              ]}
               label="label"
-              onSelect={() => {
-                console.log('selected');
-              }}
+              onSelect={(course: string) => setSelectedCourse(course)}
               placeholder="mathematique"
               name="course"
             />
@@ -58,11 +64,12 @@ const Hero: React.FC = () => {
           <div className="bg-primary-300 px-6 py-4">
             <p className="text-md mt-2 font-bold">Lecon</p>
             <Select
-              items={[]}
+              items={[
+                { label: 'Logique Math', value: 'Math' },
+                { label: 'Division', value: 'Division' },
+              ]}
               label="label"
-              onSelect={() => {
-                console.log('selected');
-              }}
+              onSelect={(lesson: string) => setSelectedLesson(lesson)}
               placeholder='conjonction "Et"'
               name="lesson"
             />
@@ -70,11 +77,15 @@ const Hero: React.FC = () => {
           <div className="bg-primary-200 px-6 py-4">
             <p className="text-md mt-2 font-bold">Domaine</p>
             <Select
-              items={[]}
+              items={[
+                { label: 'Agriculture', value: 'agriculture' },
+                { label: 'Education', value: 'education' },
+                { label: 'Santé', value: 'health' },
+              ]}
               label="label"
-              onSelect={() => {
-                console.log('selected');
-              }}
+              onSelect={(areaOfLife: string) =>
+                setSelectedAreaOfLife(areaOfLife)
+              }
               placeholder="Agriculture"
               name="areaOfLife"
             />
