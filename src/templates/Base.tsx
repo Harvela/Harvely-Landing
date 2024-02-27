@@ -1,3 +1,7 @@
+import 'react-toastify/dist/ReactToastify.css';
+
+import { ToastContainer } from 'react-toastify';
+
 import { Navbar } from '@/navigation/Navbar';
 
 import { Meta } from '../layout/Meta';
@@ -12,6 +16,7 @@ import { Services } from './Services';
 const Base = () => {
   return (
     <div className="text-gray-600 antialiased">
+      <ToastContainer />
       <Meta title={AppConfig.title} description={AppConfig.description} />
       <Navbar />
       <Hero />

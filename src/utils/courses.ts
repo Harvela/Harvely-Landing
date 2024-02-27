@@ -1,0 +1,17 @@
+export const courseList = [
+  { label: 'Mathématiques', value: 'Mathématiques' },
+  { label: 'Physique', value: 'Physique' },
+  { label: 'Chimie', value: 'Chimie' },
+  { label: 'Construction', value: 'Construction' },
+  { label: 'Histoire', value: 'Histoire' },
+  { label: 'Géographie', value: 'Géographie' },
+  { label: 'Art', value: 'Art' },
+  { label: 'Musique', value: 'Musique' },
+  { label: 'Informatique', value: 'Informatique' },
+  { label: 'Éducation à la santé', value: 'Éducation à la santé' },
+  { label: 'Éducation civique', value: 'Éducation civique' },
+  { label: 'Économie', value: 'Économie' },
+  { label: 'Psychologie', value: 'Psychologie' },
+  { label: 'Sociologie', value: 'Sociologie' },
+  { label: 'Philosophie', value: 'Philosophie' },
+];

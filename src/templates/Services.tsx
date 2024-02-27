@@ -9,10 +9,16 @@ const getBackground = (index: number) => {
 
 const Services = () => {
   return (
-    <div id="services" className="relative z-20 px-4 py-8 md:px-16 ">
-      <h1 className="mb-2 mt-5 text-lg font-semibold uppercase text-text lg:text-xl">
-        Pourquoi l&apos;APS
-      </h1>
+    <div
+      id="services"
+      className="relative z-20 flex h-fit flex-col justify-center overflow-y-scroll p-4 md:h-[70vh] md:px-16"
+    >
+      <div className="mt-5 flex w-full flex-col items-center justify-center pb-8 md:mt-0 md:items-start  md:justify-start md:pb-2">
+        <h1 className="text-center text-[1.4rem] font-semibold text-text ">
+          Pourquoi l&apos;APS{' '}
+        </h1>
+        <div className="mt-4 h-[2px] w-[60px] self-center bg-text md:self-start"></div>
+      </div>
       <div className="mt-12 grid max-h-[600px] grid-cols-1 gap-16 md:grid-cols-3">
         {services.map((service, index) => {
           return (
@@ -24,7 +30,7 @@ const Services = () => {
             >
               <img src={service.icon} alt="icon" className="size-20" />
 
-              <p className="text-center text-sm font-semibold text-black">
+              <p className="font-regular text-center text-sm text-text">
                 {service.description}
               </p>
             </div>

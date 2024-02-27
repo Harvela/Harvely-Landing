@@ -70,7 +70,7 @@ const NavbarGlobal: React.FC<NavbarProps> = () => {
               spy
               className=" text-text"
             >
-              APS
+              Pourquoi l&apos;APS
             </Link>
             <Link
               activeClass="text-text font-bold border-b-2 border-text"
@@ -79,7 +79,7 @@ const NavbarGlobal: React.FC<NavbarProps> = () => {
               spy
               className=" text-text"
             >
-              Illustrations
+              Exemples
             </Link>
 
             <Link
@@ -90,7 +90,7 @@ const NavbarGlobal: React.FC<NavbarProps> = () => {
               offset={-100}
               className=" text-text"
             >
-              Ressources
+              Resources
             </Link>
           </div>
         </Navbar.Collapse>
@@ -102,7 +102,7 @@ const NavbarGlobal: React.FC<NavbarProps> = () => {
           offset={-100}
           className="rounded-lg bg-green px-8 py-2 text-sm font-semibold text-white"
         >
-          Creer une situation
+          Créer une situation
         </Link>
       </Navbar>
     </Flowbite>

@@ -29,3 +29,9 @@ input:focus {
   outline: none !important;
   box-shadow: none !important;
 }
+
+.css-100ebu3-menu {
+  background-color: #FFEAD6;
+  padding: 10px;
+
+}
