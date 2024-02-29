@@ -11,7 +11,7 @@ const Services = () => {
   return (
     <div
       id="services"
-      className="relative z-20 flex h-fit flex-col justify-center overflow-y-scroll p-4 md:h-[70vh] md:px-16"
+      className="relative z-20 flex  flex-col justify-center  p-4  md:px-16"
     >
       <div className="mt-5 flex w-full flex-col items-center justify-center pb-8 md:mt-0 md:items-start  md:justify-start md:pb-2">
         <h1 className="text-center text-[1.4rem] font-semibold text-text ">
@@ -19,7 +19,7 @@ const Services = () => {
         </h1>
         <div className="mt-4 h-[2px] w-[60px] self-center bg-text md:self-start"></div>
       </div>
-      <div className="mt-12 grid max-h-[600px] grid-cols-1 gap-16 md:grid-cols-3">
+      <div className="mt-12 grid  grid-cols-1 gap-16 md:grid-cols-3">
         {services.map((service, index) => {
           return (
             <div

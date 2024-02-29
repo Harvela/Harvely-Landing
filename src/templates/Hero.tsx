@@ -16,7 +16,7 @@ const Hero: React.FC = () => {
     <Background color="">
       <div
         id="home"
-        className="mt-8 flex h-fit flex-col bg-primary-100  p-4 md:mt-0 md:h-[100vh] md:justify-center md:p-16"
+        className="mt-8 flex h-fit flex-col bg-primary-100  p-4 md:mt-0 md:min-h-[100vh] md:justify-center md:p-16"
       >
         <div className="mb-6 md:mb-8" />
         <div className="flex flex-col-reverse items-center px-2 md:flex-row md:justify-between">
