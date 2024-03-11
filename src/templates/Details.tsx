@@ -8,7 +8,7 @@ const Details = () => {
   const [openForm, setOpenForm] = useState(false);
 
   return (
-    <div id="details" className="relative  p-4 md:px-16 md:py-8">
+    <div id="details" className="relative  mt-16 p-4 md:mt-4 md:px-16 md:py-8">
       {openForm && (
         <div
           className="fixed left-0 top-0 z-50 flex size-full items-center justify-center bg-black/70"
@@ -19,7 +19,7 @@ const Details = () => {
           </div>
         </div>
       )}
-      <h1 className=" text-lg font-semibold uppercase text-text md:mb-10 lg:text-xl">
+      <h1 className=" mb-6 text-lg font-semibold uppercase text-text md:mb-10 lg:text-xl">
         MODELE DE SOUSCRIPTION
       </h1>
       <div className="z-10 flex h-fit w-full flex-col justify-between gap-8  md:h-[50vh] md:flex-row ">

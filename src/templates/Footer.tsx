@@ -1,6 +1,6 @@
 const Footer = () => (
   <footer className="flex flex-col-reverse justify-between bg-[#0E9F90] p-4 py-8 text-text dark:bg-gray-800 md:flex-row md:p-16">
-    <div className="">
+    <div className="text-md mt-8 font-semibold md:mt-0">
       <p>A propos de nous</p>
     </div>
 

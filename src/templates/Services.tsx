@@ -13,7 +13,7 @@ const Services = () => {
       <h1 className="mb-2 mt-5 text-lg font-semibold uppercase text-text lg:text-xl">
         Pourquoi l&apos;APS
       </h1>
-      <div className="mt-12 grid max-h-[600px] grid-cols-1 gap-16 md:grid-cols-3">
+      <div className="mt-12 grid max-h-[600px] grid-cols-1 gap-4 md:grid-cols-3 md:gap-16">
         {services.map((service, index) => {
           return (
             <div
