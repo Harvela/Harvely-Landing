@@ -23,44 +23,19 @@ export type DropDownProps = {
 
 export const Select: React.FC<DropDownProps> = (props) => {
   const [newOptions, setNewOptions] = React.useState<any[]>([]);
-  const ref = React.useRef<any>(null);
   const [selectedOption, setSelectedOption] = React.useState<any>();
   const [inputValue, setInputValue] = useState<string>();
+  console.log(selectedOption);
   return (
     <ReactSelect
       onChange={(e) => {
         // @ts-ignore
+        setInputValue('');
         props.onSelect(e.value);
         setSelectedOption(e);
       }}
       name={props.name}
       value={selectedOption}
-      ref={ref}
-      styles={{
-        control: (base: any) => ({
-          ...base,
-          borderRadius: 5,
-          borderColor: '#000',
-        }),
-        container: (base: any) => ({
-          ...base,
-          borderRadius: 5,
-          borderColor: '#000',
-        }),
-        option: (base: any) => ({
-          ...base,
-          marginTop: '10px',
-          fontSize: '14px',
-        }),
-        menu: (base: any) => ({
-          ...base,
-          backgroundColor: '#FFEAD6',
-          borderRadius: '8px',
-          padding: 12,
-          width: '100%',
-          marginTop: '10px',
-        }),
-      }}
       unstyled
       placeholder={`ex: ${props.placeholder}`}
       options={[...props.items, ...newOptions]}

@@ -1,25 +1,22 @@
-import React, { useState } from 'react';
+import 'react-toastify/dist/ReactToastify.css';
+
+import React from 'react';
+import { useForm } from 'react-hook-form';
+import { toast } from 'react-toastify';
 
 import { Select } from '@/select';
+import { courseList } from '@/utils/courses';
 
 import { Background } from '../background/Background';
 
 const Hero: React.FC = () => {
-  const [selectedCourse, setSelectedCourse] = useState('');
-  const [selectedPastLesson, setSelectedPastLesson] = useState('');
-  const [selectedCurrentLesson, setSelectedCurrentLesson] = useState('');
-  const [selectedAreaOfLife, setSelectedAreaOfLife] = useState('');
+  const { handleSubmit, setValue } = useForm();
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    const queryString = `?course=${selectedCourse}&lesson=${selectedPastLesson}&lesson=${selectedCurrentLesson}&areaOfLife=${selectedAreaOfLife}`;
-    window.location.href = `https://app.dugassistant.com${queryString}`;
-  };
   return (
     <Background color="">
       <div
         id="home"
-        className="mt-8 flex h-fit flex-col  bg-primary-100 p-4 md:mt-0 md:justify-center md:p-16"
+        className="mt-8 flex h-fit flex-col bg-primary-100  p-4 md:mt-0 md:min-h-[100vh] md:justify-center md:p-16"
       >
         <div className="mb-6 md:mb-8" />
         <div className="flex flex-col-reverse items-center px-2 md:flex-row md:justify-between">
@@ -40,8 +37,28 @@ const Hero: React.FC = () => {
           />
         </div>
         <form
-          onSubmit={handleSubmit}
-          className="mt-0 grid grid-cols-1 rounded-lg md:mt-12 md:grid-cols-5"
+          onSubmit={handleSubmit((data) => {
+            if (!data.course)
+              toast('Veuillez ecrire ou selectionner un cours', {
+                position: 'top-center',
+                hideProgressBar: true,
+              });
+            else if (!data.lesson)
+              toast('Veuillez ecrire ou selectionner une lesson', {
+                position: 'top-center',
+                hideProgressBar: true,
+              });
+            else if (!data.areaOfLife)
+              toast('Veuillez ecrire ou selectionner un domaine de la vie', {
+                position: 'top-center',
+                hideProgressBar: true,
+              });
+            else
+              window.location.assign(
+                `https://app.dugassistant.com?course=${data.course}&lesson=${data.lesson}&areaOfLife=${data.areaOfLife}`,
+              );
+          })}
+          className="mt-0 grid grid-cols-1 rounded-lg md:mt-12 md:grid-cols-4"
         >
           <div className="visible flex w-full flex-col items-center justify-center pb-8 md:hidden">
             <h1 className="visible  text-center text-[1.4rem] font-bold text-text ">
@@ -49,62 +66,54 @@ const Hero: React.FC = () => {
             </h1>
             <div className="mt-4 h-[2px] w-[60px] self-center bg-text"></div>
           </div>
-          <div className="md:rounded-t-0 rounded-t-[10px] bg-primary-300 px-6 py-4 md:rounded-l-2xl">
-            <p className="text-md my-2 font-bold">Cours</p>
+          <div className="md:rounded-t-0 rounded-t-[10px] bg-primary-200 px-6 py-4 md:rounded-l-2xl">
+            <p className="text-md mt-2 font-bold">Cours</p>
             <Select
-              items={[
-                { label: 'Math', value: 'Math' },
-                { label: 'Informatique', value: 'Informatique' },
-              ]}
+              items={courseList}
               label="label"
-              onSelect={(course: string) => setSelectedCourse(course)}
+              onSelect={(e) => {
+                setValue('course', e);
+              }}
               placeholder="mathematique"
               name="course"
             />
           </div>
-          <div className="bg-primary-200 px-6 py-4">
-            <p className="text-md my-2 font-bold">Lecon précédente</p>
+          <div className="bg-primary-300 px-6 py-4">
+            <p className="text-md mt-2 font-bold">Leçon</p>
             <Select
-              items={[
-                { label: 'Logique Math', value: 'Math' },
-                { label: 'Division', value: 'Division' },
-              ]}
+              items={[]}
               label="label"
-              onSelect={(lesson: string) => setSelectedPastLesson(lesson)}
+              onSelect={(e) => {
+                setValue('lesson', e);
+              }}
               placeholder='conjonction "Et"'
               name="lesson"
             />
           </div>
-          <div className="bg-primary-300 px-6 py-4">
-            <p className="text-md my-2 font-bold">Lecon actuelle</p>
-            <Select
-              items={[
-                { label: 'Logique Math', value: 'Math' },
-                { label: 'Division', value: 'Division' },
-              ]}
-              label="label"
-              onSelect={(lesson: string) => setSelectedCurrentLesson(lesson)}
-              placeholder='conjonction "Ou"'
-              name="lesson"
-            />
-          </div>
           <div className="bg-primary-200 px-6 py-4">
-            <p className="text-md my-2 font-bold">Domaine</p>
+            <p className="text-md mt-2 font-bold">Domaine</p>
             <Select
               items={[
                 { label: 'Agriculture', value: 'agriculture' },
+                { label: 'Commerce', value: 'commerce' },
                 { label: 'Education', value: 'education' },
                 { label: 'Santé', value: 'health' },
+                { label: 'Securité', value: 'security' },
+                { label: 'Social', value: 'social' },
+                { label: 'Sport', value: 'sport' },
               ]}
               label="label"
-              onSelect={(areaOfLife: string) =>
-                setSelectedAreaOfLife(areaOfLife)
-              }
+              onSelect={(e) => {
+                setValue('areaOfLife', e);
+              }}
               placeholder="Agriculture"
               name="areaOfLife"
             />
           </div>
-          <button className="md:rounded-t-0 rounded-b-[10px] bg-green px-6 py-4 font-semibold text-white md:rounded-r-2xl">
+          <button
+            type="submit"
+            className="md:rounded-t-0 rounded-b-2xl bg-green  px-6 py-4 font-semibold text-white md:rounded-bl-[0px] md:rounded-tr-2xl"
+          >
             CREER UNE SITUATION
           </button>
         </form>

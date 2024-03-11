@@ -24,7 +24,7 @@ const Services = () => {
             >
               <img src={service.icon} alt="icon" className="size-20" />
 
-              <p className="text-center text-sm font-semibold text-black">
+              <p className="font-regular text-center text-sm text-text">
                 {service.description}
               </p>
             </div>
