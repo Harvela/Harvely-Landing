@@ -43,7 +43,12 @@ const Hero: React.FC = () => {
                 position: 'top-center',
                 hideProgressBar: true,
               });
-            else if (!data.lesson)
+            else if (!data.pastLesson)
+              toast('Veuillez ecrire ou selectionner une lesson', {
+                position: 'top-center',
+                hideProgressBar: true,
+              });
+            else if (!data.currentLesson)
               toast('Veuillez ecrire ou selectionner une lesson', {
                 position: 'top-center',
                 hideProgressBar: true,
@@ -55,10 +60,10 @@ const Hero: React.FC = () => {
               });
             else
               window.location.assign(
-                `https://app.dugassistant.com?course=${data.course}&lesson=${data.lesson}&areaOfLife=${data.areaOfLife}`,
+                `https://app.dugassistant.com?course=${data.course}&pastLesson=${data.lesson}&currentLesson=${data.lesson}&areaOfLife=${data.areaOfLife}`,
               );
           })}
-          className="mt-0 grid grid-cols-1 rounded-lg md:mt-12 md:grid-cols-4"
+          className="mt-0 grid grid-cols-1 rounded-lg md:mt-12 md:grid-cols-5"
         >
           <div className="visible flex w-full flex-col items-center justify-center pb-8 md:hidden">
             <h1 className="visible  text-center text-[1.4rem] font-bold text-text ">
@@ -66,8 +71,8 @@ const Hero: React.FC = () => {
             </h1>
             <div className="mt-4 h-[2px] w-[60px] self-center bg-text"></div>
           </div>
-          <div className="md:rounded-t-0 rounded-t-[10px] bg-primary-200 px-6 py-4 md:rounded-l-2xl">
-            <p className="text-md mt-2 font-bold">Cours</p>
+          <div className="md:rounded-t-0 z-50 rounded-t-[10px] bg-primary-300 px-6 py-4 md:rounded-l-2xl md:rounded-tr-[0px]">
+            <p className="text-md my-2 font-bold">Cours</p>
             <Select
               items={courseList}
               label="label"
@@ -78,20 +83,32 @@ const Hero: React.FC = () => {
               name="course"
             />
           </div>
-          <div className="bg-primary-300 px-6 py-4">
-            <p className="text-md mt-2 font-bold">Leçon</p>
+          <div className="bg-primary-200 px-6 py-4">
+            <p className="text-md my-2 font-bold">Leçon précédente</p>
             <Select
               items={[]}
               label="label"
               onSelect={(e) => {
-                setValue('lesson', e);
+                setValue('pastLesson', e);
               }}
               placeholder='conjonction "Et"'
-              name="lesson"
+              name="pastLesson"
             />
           </div>
-          <div className="bg-primary-200 px-6 py-4">
-            <p className="text-md mt-2 font-bold">Domaine</p>
+          <div className="bg-primary-300 px-6 py-4">
+            <p className="text-md my-2 font-bold">Leçon actuelle</p>
+            <Select
+              items={[]}
+              label="label"
+              onSelect={(e) => {
+                setValue('currentLesson', e);
+              }}
+              placeholder='conjonction "Ou"'
+              name="currentLesson"
+            />
+          </div>
+          <div className="z-50 bg-primary-200 px-6 py-4">
+            <p className="text-md my-2 font-bold">Domaine</p>
             <Select
               items={[
                 { label: 'Agriculture', value: 'agriculture' },

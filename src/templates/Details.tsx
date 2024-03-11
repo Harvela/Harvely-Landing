@@ -8,7 +8,7 @@ const Details = () => {
   const [openForm, setOpenForm] = useState(false);
 
   return (
-    <div id="details" className="relative  mt-16 p-4 md:mt-4 md:px-16 md:py-8">
+    <div id="details" className="relative  mt-64 p-4 md:mt-4 md:px-16 md:py-8">
       {openForm && (
         <div
           className="fixed left-0 top-0 z-50 flex size-full items-center justify-center bg-black/70"

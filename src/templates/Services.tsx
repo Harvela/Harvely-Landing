@@ -9,7 +9,7 @@ const getBackground = (index: number) => {
 
 const Services = () => {
   return (
-    <div id="services" className="relative z-20 px-4 py-8 md:px-16 ">
+    <div id="services" className="relative z-20 px-4 py-8 md:px-16">
       <h1 className="mb-2 mt-5 text-lg font-semibold uppercase text-text lg:text-xl">
         Pourquoi l&apos;APS
       </h1>
