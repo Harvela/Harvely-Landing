@@ -43,12 +43,12 @@ const Hero: React.FC = () => {
                 position: 'top-center',
                 hideProgressBar: true,
               });
-            else if (!data.pastLesson)
+            else if (!data.previousLesson)
               toast('Veuillez ecrire ou selectionner une lesson', {
                 position: 'top-center',
                 hideProgressBar: true,
               });
-            else if (!data.currentLesson)
+            else if (!data.lesson)
               toast('Veuillez ecrire ou selectionner une lesson', {
                 position: 'top-center',
                 hideProgressBar: true,
@@ -60,7 +60,7 @@ const Hero: React.FC = () => {
               });
             else
               window.location.assign(
-                `https://app.dugassistant.com?course=${data.course}&pastLesson=${data.lesson}&currentLesson=${data.lesson}&areaOfLife=${data.areaOfLife}`,
+                `https://app.dugassistant.com?course=${data.course}&previousLesson=${data.previousLesson}&lesson=${data.lesson}&areaOfLife=${data.areaOfLife}`,
               );
           })}
           className="mt-0 grid grid-cols-1 rounded-lg md:mt-12 md:grid-cols-5"
@@ -89,10 +89,10 @@ const Hero: React.FC = () => {
               items={[]}
               label="label"
               onSelect={(e) => {
-                setValue('pastLesson', e);
+                setValue('previousLesson', e);
               }}
               placeholder='conjonction "Et"'
-              name="pastLesson"
+              name="previousLesson"
             />
           </div>
           <div className="bg-primary-300 px-6 py-4">
@@ -101,10 +101,10 @@ const Hero: React.FC = () => {
               items={[]}
               label="label"
               onSelect={(e) => {
-                setValue('currentLesson', e);
+                setValue('lesson', e);
               }}
               placeholder='conjonction "Ou"'
-              name="currentLesson"
+              name="lesson"
             />
           </div>
           <div className="z-50 bg-primary-200 px-6 py-4">
