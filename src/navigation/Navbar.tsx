@@ -39,7 +39,7 @@ const NavbarGlobal: React.FC<NavbarProps> = () => {
         style={{
           position: 'fixed',
           width: '100%',
-          zIndex: 40,
+          zIndex: 700,
           top: 0,
           backgroundColor: '#FFF7F1',
         }}
@@ -58,7 +58,7 @@ const NavbarGlobal: React.FC<NavbarProps> = () => {
               to="home"
               smooth
               spy
-              offset={-200}
+              offset={-50}
               className="text-text"
             >
               Accueil
@@ -87,23 +87,20 @@ const NavbarGlobal: React.FC<NavbarProps> = () => {
               to="resources"
               smooth
               spy
-              offset={-100}
+              offset={-50}
               className=" text-text"
             >
               Resources
             </Link>
           </div>
         </Navbar.Collapse>
-        <Link
-          activeClass="text-white font-bold border-b-2 border-secondary-900"
-          to="pricing"
-          smooth
-          spy
-          offset={-100}
-          className="rounded-lg bg-green px-8 py-2 text-sm font-semibold text-white"
+        <a
+          href="https://app.dugassistant.com"
+          target="_blank"
+          className="border-secondary-900 rounded-lg border-b-2 bg-green px-8 py-2 text-sm font-bold text-white"
         >
-          Créer une situation
-        </Link>
+          Espace de travail
+        </a>
       </Navbar>
     </Flowbite>
   );

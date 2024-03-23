@@ -15,7 +15,7 @@ const Auth = () => {
           />
           <p className="text-[1.5rem] font-medium">
             Nous allons vous poser quelques questions
-            <br /> avant de generer votre situation
+            <br /> avant de generer votre fiche
           </p>
         </div>
       </div>

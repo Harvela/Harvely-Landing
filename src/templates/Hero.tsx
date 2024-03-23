@@ -44,12 +44,12 @@ const Hero: React.FC = () => {
                 hideProgressBar: true,
               });
             else if (!data.previousLesson)
-              toast('Veuillez ecrire ou selectionner une lesson', {
+              toast('Veuillez ecrire ou selectionner la leçon de revision', {
                 position: 'top-center',
                 hideProgressBar: true,
               });
             else if (!data.lesson)
-              toast('Veuillez ecrire ou selectionner une lesson', {
+              toast('Veuillez ecrire ou selectionner une leçon', {
                 position: 'top-center',
                 hideProgressBar: true,
               });
@@ -84,7 +84,7 @@ const Hero: React.FC = () => {
             />
           </div>
           <div className="bg-primary-200 px-6 py-4">
-            <p className="text-md my-2 font-bold">Leçon précédente</p>
+            <p className="text-md my-2 font-bold">Leçon de revision</p>
             <Select
               items={[]}
               label="label"
@@ -96,7 +96,9 @@ const Hero: React.FC = () => {
             />
           </div>
           <div className="bg-primary-300 px-6 py-4">
-            <p className="text-md my-2 font-bold">Leçon actuelle</p>
+            <p className="text-md my-2 font-bold">
+              Leçon d&apos;aujourd&apos;hui
+            </p>
             <Select
               items={[]}
               label="label"
@@ -108,7 +110,7 @@ const Hero: React.FC = () => {
             />
           </div>
           <div className="z-50 bg-primary-200 px-6 py-4">
-            <p className="text-md my-2 font-bold">Domaine</p>
+            <p className="text-md my-2 font-bold">Domaine d&apos;exemples</p>
             <Select
               items={[
                 { label: 'Agriculture', value: 'agriculture' },
@@ -131,7 +133,7 @@ const Hero: React.FC = () => {
             type="submit"
             className="md:rounded-t-0 rounded-b-2xl bg-green  px-6 py-4 font-semibold text-white md:rounded-bl-[0px] md:rounded-tr-2xl"
           >
-            CREER UNE SITUATION
+            OBTENIR MA FICHE
           </button>
         </form>
       </div>
