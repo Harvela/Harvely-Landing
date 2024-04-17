@@ -1,5 +1,20 @@
+const {
+  default: flattenColorPalette,
+} = require('tailwindcss/lib/util/flattenColorPalette');
+
 /* eslint-disable import/no-extraneous-dependencies */
 /* eslint-disable global-require */
+function addVariablesForColors({ addBase, theme }) {
+  const allColors = flattenColorPalette(theme('colors'));
+  const newVars = Object.fromEntries(
+    Object.entries(allColors).map(([key, val]) => [`--${key}`, val]),
+  );
+
+  addBase({
+    ':root': newVars,
+  });
+}
+
 module.exports = {
   content: [
     './src/**/*.{js,ts,jsx,tsx}',
@@ -24,34 +39,16 @@ module.exports = {
       mono: ['Poppins', 'monospace'],
       heading: ['Poppins', 'sans-serif'],
     },
-    colors: {
-      primary: {
-        100: '#FFF7F1',
-        200: '#FFF1E4',
-        300: '#FEE8D4',
-        400: '#FFEAD6',
-        DEFAULT: '#FFEAD6',
-        on: '#f4f8fd',
-      },
-      blue: '#001344',
-      red: '#FF6076',
-      green: '#0E9F90',
-      text: '#3E4C4A',
-    },
     extend: {
       colors: {
         primary: {
-          100: '#FFF7F1',
-          200: '#FFF1E4',
-          300: '#FEE8D4',
-          400: '#FFEAD6',
+          100: '#F0FFFD',
+          200: '#C5FFF9',
+          300: '#6DAFA7',
+          400: '#0F2624',
           DEFAULT: '#FFEAD6',
           on: '#f4f8fd',
         },
-        blue: '#001344',
-        red: '#FF6076',
-        green: '#0E9F90',
-        text: '#3E4C4A',
       },
       lineHeight: {
         hero: '4.5rem',
@@ -61,11 +58,27 @@ module.exports = {
           '0%, 100%': { transform: 'rotate(-1deg)' },
           '50%': { transform: 'rotate(1deg)' },
         },
+        meteor: {
+          '0%': { transform: 'rotate(215deg) translateX(0)', opacity: '1' },
+          '70%': { opacity: '1' },
+          '100%': {
+            transform: 'rotate(215deg) translateX(-500px)',
+            opacity: '0',
+          },
+        },
+        scroll: {
+          to: {
+            transform: 'translate(calc(-50% - 0.5rem))',
+          },
+        },
       },
       animation: {
         wiggle: 'wiggle 1s ease-in-out infinite',
+        'meteor-effect': 'meteor 5s linear infinite',
+        scroll:
+          'scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite',
       },
     },
   },
-  plugins: [require('flowbite/plugin')],
+  plugins: [require('flowbite/plugin'), addVariablesForColors],
 };

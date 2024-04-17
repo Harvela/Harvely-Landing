@@ -18,8 +18,8 @@ const links = {
 };
 
 const Footer = () => (
-  <footer className="bg-[#0E9F90] p-4 py-8 md:p-16">
-    <div className="flex flex-col-reverse justify-between bg-[#0E9F90]  text-text dark:bg-gray-800 md:flex-row ">
+  <footer className="bg-primary-400 p-4 py-8 md:p-16">
+    <div className="text-text flex flex-col-reverse justify-between dark:bg-gray-800 md:flex-row ">
       <div className="mb-6 md:mb-0">
         <p className="mt-8 font-bold text-white md:mt-0">
           Soyez excellent et fiable, le <br />
@@ -92,25 +92,29 @@ const Footer = () => (
       </div>
 
       <div className="w-[100%] md:w-[40%]">
-        <h2 className="text-md mb-8 font-semibold text-white">
-          NOUS CONTACTER
+        <h2 className="mb-4 text-[24px] font-semibold text-white">
+          Faire un don
         </h2>
-        <form>
-          <input
-            type="email"
-            placeholder="Email / Telephone"
-            id="small-input"
-            className="w-full rounded-md border-0 bg-white px-4  outline-none sm:text-xs"
+        <p className="mb-8 text-[16px] text-white">
+          Aider les enseignants avec les situations, ils sont chiches
+        </p>
+        <div className="flex flex-row items-center gap-8">
+          <img
+            src="/assets/images/home/airtel.png"
+            alt="Logo"
+            className="size-16 rounded-lg object-contain"
           />
-          <textarea
-            placeholder="Message"
-            id="small-input"
-            className="my-4 w-full rounded-md border-0 bg-white  px-4 outline-none sm:text-xs"
+          <img
+            src="/assets/images/home/orange.png"
+            alt="Logo"
+            className="size-16 rounded-lg object-contain"
           />
-          <button className="w-full rounded-lg bg-text p-2 text-sm font-semibold text-white">
-            SOUMETTRE
-          </button>
-        </form>
+          <img
+            src="/assets/images/home/m-pesa.png"
+            alt="Logo"
+            className="size-16 rounded-lg object-contain"
+          />
+        </div>
       </div>
     </div>
     <hr className="mt-4 border-gray-200 dark:border-gray-700 sm:mx-auto" />

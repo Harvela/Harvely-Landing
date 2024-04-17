@@ -20,13 +20,13 @@ const Auth = () => {
         </div>
       </div>
       <div className="h-[100vh] w-[2px] bg-primary-400"></div>
-      <div className="my-8 h-[100vh] w-[48%] bg-green/10 px-8">
+      <div className="bg-green/10 my-8 h-[100vh] w-[48%] px-8">
         <p>Question 1/5</p>
         <p className="mt-[10rem] text-[1.5rem]">
           Quel est votre numero de telephone ?
         </p>
-        <input className="mt-10 h-[50px] w-[40vw] rounded-[10px] border-[1px] border-red/30 bg-primary-200 px-4 text-[16px]"></input>
-        <button className="mt-10 rounded-[10px] bg-green px-8 py-3 text-white">
+        <input className="border-red/30 mt-10 h-[50px] w-[40vw] rounded-[10px] border-[1px] bg-primary-200 px-4 text-[16px]"></input>
+        <button className="bg-green mt-10 rounded-[10px] px-8 py-3 text-white">
           Continuer
         </button>
       </div>
