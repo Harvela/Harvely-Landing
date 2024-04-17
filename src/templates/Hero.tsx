@@ -12,7 +12,7 @@ const Hero: React.FC = () => {
   return (
     <div
       id="home"
-      className="relative flex h-screen w-full flex-col items-center justify-center bg-primary-400"
+      className="relative flex h-screen w-full flex-col items-center justify-center bg-primary-400 px-8"
     >
       <div className="absolute inset-0 h-screen w-full">
         <SparklesCore
@@ -38,9 +38,9 @@ const Hero: React.FC = () => {
           <input
             name="email"
             placeholder="Entrez votre address mail"
-            className="z-50 w-[60%] rounded-lg p-4"
+            className="z-50 rounded-lg p-4 md:w-[60%]"
           />
-          <button className="mx-4 rounded-lg bg-primary-400 px-8 py-2 text-white">
+          <button className="mx-2 rounded-lg bg-primary-400 p-2 text-white md:mx-4 md:px-8">
             Rejoindre la liste d&apos;attente
           </button>
         </form>

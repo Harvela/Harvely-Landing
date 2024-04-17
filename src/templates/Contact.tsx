@@ -8,7 +8,7 @@ export function Contact() {
       <h1 className="mb-8 text-[32px] font-semibold text-primary-400">
         Contact
       </h1>
-      <form className="w-[40%] rounded-lg bg-primary-300/20 p-8 shadow-sm shadow-black/20">
+      <form className="w-[100%] rounded-lg bg-primary-300/20 p-8 shadow-sm shadow-black/20 md:w-[40%]">
         <div className="flex flex-row items-center gap-8">
           <Input
             name=""

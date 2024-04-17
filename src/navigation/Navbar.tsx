@@ -36,7 +36,7 @@ export function Navbar() {
             )}
           >
             <span className="block sm:hidden">{navItem.icon}</span>
-            <span className="hidden text-sm sm:block">{navItem.name}</span>
+            <span className="text-sm">{navItem.name}</span>
           </Link>
         ))}
         <button className="relative rounded-full border border-primary-200 px-4 py-2 text-sm font-medium text-black shadow-md dark:border-white/[0.2] dark:text-white">
