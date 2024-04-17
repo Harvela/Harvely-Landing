@@ -83,7 +83,7 @@ export const Tabs = ({
     <>
       <div
         className={cn(
-          'flex flex-row items-center justify-center relative overflow-auto sm:overflow-visible no-visible-scrollbar max-w-full w-full',
+          'flex flex-row flex-wrap items-center justify-center relative sm:overflow-visible no-visible-scrollbar max-w-full w-full',
           containerClassName,
         )}
       >
@@ -95,10 +95,7 @@ export const Tabs = ({
             }}
             onMouseEnter={() => setHovering(true)}
             onMouseLeave={() => setHovering(false)}
-            className={cn(
-              'relative px-2 py-1 md:px-4 md:py-2 rounded-full',
-              tabClassName,
-            )}
+            className={cn('relative px-4 py-2 rounded-full', tabClassName)}
             style={{
               transformStyle: 'preserve-3d',
             }}
@@ -114,7 +111,7 @@ export const Tabs = ({
               />
             )}
 
-            <span className="relative block font-semibold text-black dark:text-white">
+            <span className="relative block w-[30%] font-semibold text-black dark:text-white">
               {tab.title}
             </span>
           </button>
