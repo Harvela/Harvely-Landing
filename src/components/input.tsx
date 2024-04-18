@@ -26,9 +26,6 @@ const Input: React.FC<Props> = (props: Props) => {
     placeholder,
     style,
     icon,
-    register,
-    name,
-    validator,
     type,
     defaultValue,
     bgColor = 'bg-green/5',
@@ -42,14 +39,14 @@ const Input: React.FC<Props> = (props: Props) => {
   return (
     <div className={`sm:mb-5 ${style} flex-1`}>
       {label && (
-        <span className="mb-2 flex flex-row items-center gap-1 text-[12px] font-semibold text-blue">
+        <span className="text-blue mb-2 flex flex-row items-center gap-1 text-[12px] font-semibold">
           {label}
           {icon}
         </span>
       )}
       <input
         type={type || 'text'}
-        className={`${bgColor} w-full rounded-[5px] border-blue/10 px-4 py-1 text-[14px] focus:outline-0`}
+        className={`${bgColor} border-blue/10 w-full rounded-[5px] px-4 py-1 text-[14px] focus:outline-0`}
         placeholder={placeholder}
         max={max}
         min={min}
@@ -57,7 +54,6 @@ const Input: React.FC<Props> = (props: Props) => {
         onChange={(e) => {
           props?.onChange?.(e?.target?.value || '');
         }}
-        {...register?.(name, validator)}
         onBlur={onBlur}
         required={required}
         autoComplete="new-password"
