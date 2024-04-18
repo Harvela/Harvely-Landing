@@ -13,7 +13,9 @@ export function Pricing() {
       </p>
       <div className="mt-8 flex w-full flex-col gap-8 md:mt-12 md:flex-row">
         <div className="flex w-full flex-col items-center justify-between gap-4 rounded-md bg-primary-200 p-4 text-center text-black md:h-full md:w-[30%] md:gap-8 md:p-8">
-          <h4 className="text-[32px] font-bold md:text-[48px]">-5%</h4>
+          <h4 className="-rotate-12 text-[32px] font-bold md:text-[68px]">
+            -5%
+          </h4>
           <p className="text-[16px] md:text-[20px]">
             Pour les instutitions et les ecoles
           </p>

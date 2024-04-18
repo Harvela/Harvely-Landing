@@ -18,7 +18,7 @@ export function Contact() {
           />
           <Input
             name=""
-            label="Full name"
+            label="Email"
             placeholder=""
             bgColor="mb-4 h-[40px] w-full rounded-md border border-primary-300/20 bg-primary-300/20"
           />

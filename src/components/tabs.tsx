@@ -111,7 +111,7 @@ export const Tabs = ({
               />
             )}
 
-            <span className="relative block w-[30%] font-semibold text-black dark:text-white">
+            <span className="relative block  font-semibold text-black dark:text-white">
               {tab.title}
             </span>
           </button>
