@@ -30,7 +30,7 @@ const Hero: React.FC = () => {
         <span className="text-md relative z-20 mb-4 text-center text-white/80 md:text-xl lg:text-xl">
           Dug Assistant - Ed TECH
         </span>
-        <h1 className="relative z-20 mb-12 text-center text-xl font-bold text-white md:text-5xl lg:text-5xl">
+        <h1 className="relative z-20 mb-24 text-center text-xl font-bold text-white md:mb-12 md:text-5xl lg:text-5xl">
           Accélérez la préparation de vos leçons avec l&apos;intelligence
           artificielle.
         </h1>

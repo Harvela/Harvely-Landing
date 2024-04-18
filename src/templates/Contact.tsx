@@ -4,7 +4,7 @@ import Input from '@/components/input';
 
 export function Contact() {
   return (
-    <div className="flex h-screen w-full flex-col items-center  bg-primary-100 px-4 py-8 md:p-16">
+    <div className="flex h-screen w-full flex-col items-center justify-center  bg-primary-100 px-4 py-8 md:p-16">
       <h1 className="mb-8 text-[32px] font-semibold text-primary-400">
         Contact
       </h1>
