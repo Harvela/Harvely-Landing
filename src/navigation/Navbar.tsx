@@ -8,16 +8,20 @@ import { cn } from '@/utils/cn';
 export function Navbar() {
   const navItems = [
     {
-      name: 'Home',
-      link: '/',
+      name: 'Accueil',
+      link: '#home',
     },
     {
-      name: 'About',
-      link: '/about',
+      name: 'Exemples',
+      link: '#examples',
+    },
+    {
+      name: 'Tarifs',
+      link: '#pricing',
     },
     {
       name: 'Contact',
-      link: '/contact',
+      link: '#contact',
     },
   ];
   return (
@@ -39,9 +43,13 @@ export function Navbar() {
             <span className="text-sm">{navItem.name}</span>
           </Link>
         ))}
-        <button className="relative rounded-full border border-primary-200 px-4 py-2 text-sm font-medium text-black shadow-md dark:border-white/[0.2] dark:text-white">
+        <a
+          href="https://app.dugassistant.com"
+          target="_blank"
+          className="relative rounded-full border border-primary-200 px-4 py-2 text-sm font-medium text-black shadow-md dark:border-white/[0.2] dark:text-white"
+        >
           <span>Se connecter</span>
-        </button>
+        </a>
       </div>
     </div>
   );

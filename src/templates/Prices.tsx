@@ -4,7 +4,10 @@ import { prices } from '@/utils/prices';
 
 export function Pricing() {
   return (
-    <div className="flex h-screen w-full flex-col items-center bg-primary-400 px-4 py-8 text-center md:p-16">
+    <div
+      id="pricing"
+      className="flex h-screen w-full flex-col items-center bg-primary-400 px-4 py-8 text-center md:p-16"
+    >
       <h1 className="mb-4 text-[32px] font-semibold text-white md:mb-8">
         Pricing
       </h1>
