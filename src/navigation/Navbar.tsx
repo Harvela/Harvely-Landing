@@ -19,10 +19,10 @@ export function Navbar() {
       name: 'Tarifs',
       link: '#pricing',
     },
-    {
-      name: 'Contact',
-      link: '#contact',
-    },
+    // {
+    //   name: 'Contact',
+    //   link: '#contact',
+    // },
   ];
   return (
     <div className="relative w-full">
@@ -36,17 +36,17 @@ export function Navbar() {
             key={`link=${idx}`}
             href={navItem.link}
             className={cn(
-              'relative dark:text-neutral-50 items-center flex space-x-1 text-neutral-600 dark:hover:text-neutral-300 hover:text-neutral-500',
+              'relative dark:text-neutral-50  items-center flex space-x-1 text-neutral-600 dark:hover:text-neutral-300 hover:text-neutral-500',
             )}
           >
             <span className="block sm:hidden">{navItem.icon}</span>
-            <span className="text-sm">{navItem.name}</span>
+            <span className="text-[12px] md:text-sm">{navItem.name}</span>
           </Link>
         ))}
         <a
           href="https://app.dugassistant.com"
           target="_blank"
-          className="relative rounded-full border border-primary-200 px-4 py-2 text-sm font-medium text-black shadow-md dark:border-white/[0.2] dark:text-white"
+          className="relative rounded-full border border-primary-200 px-2 py-1 text-[11px] font-medium text-black shadow-md dark:border-white/[0.2] dark:text-white md:text-sm"
         >
           <span>Se connecter</span>
         </a>
