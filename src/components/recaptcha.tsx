@@ -13,7 +13,7 @@ export const Recaptcha: React.FC<{ onChange: any }> = (props) => {
       }}
     >
       <ReCAPTCHA
-        sitekey={process.env.NEXT_CAPTCHA_V2_SITE_KEY || ''}
+        sitekey={'6LfizL8pAAAAAKRf2feLhptrTu39ma_m0Ppx4vYP'}
         onChange={onChange}
         onError={() => onChange(null)}
         onAbort={() => onChange(null)}
