@@ -35,7 +35,10 @@ type Lesson = {
 
 const SingleExample: React.FC<Lesson> = (props) => {
   return (
-    <div className="mx-auto flex h-[90%] w-full flex-col gap-6 overflow-x-hidden rounded-2xl bg-primary-300/20 p-4  shadow-sm shadow-black/20 md:h-[100%] md:gap-10 md:p-8">
+    <div
+      id="examples"
+      className="mx-auto flex h-[90%] w-full flex-col gap-6 overflow-x-hidden rounded-2xl bg-primary-300/20 p-4  shadow-sm shadow-black/20 md:h-[100%] md:gap-10 md:p-8"
+    >
       <div className="flex flex-col gap-5 rounded-[5px] bg-[#0E9F90]/10 p-5">
         <div className="flex flex-col gap-3 md:flex-row md:gap-0">
           <h2 className="rounded-[5px]  px-0 py-[3px] text-[14px] font-bold text-black md:px-3 md:text-[16px]">

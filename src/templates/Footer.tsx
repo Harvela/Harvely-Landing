@@ -93,10 +93,13 @@ const Footer = () => (
 
       <div className="w-[100%] md:w-[40%]">
         <h2 className="mb-4 text-[24px] font-semibold text-white">
-          Faire un don
+          Faites un don
         </h2>
         <p className="mb-8 text-[16px] text-white">
-          Aider les enseignants avec les situations, ils sont chiches
+          Soutenez l&apos;éducation en faisant un geste simple mais puissant :
+          achetez nos fiches pour les enseignants. Chaque achat contribue à
+          fournir aux enseignants les outils nécessaires pour former les leaders
+          de demain.
         </p>
         <div className="flex flex-row items-center gap-8">
           <img
