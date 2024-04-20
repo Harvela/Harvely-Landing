@@ -1,5 +1,7 @@
 'use client';
 
+import Link from 'next/link';
+
 import { prices } from '@/utils/prices';
 
 export function Pricing() {
@@ -22,9 +24,12 @@ export function Pricing() {
           <p className="text-[16px] md:text-[20px]">
             Pour les instutitions et les ecoles
           </p>
-          <button className="rounded-md border border-primary-300 px-4 py-2">
+          <Link
+            href="#contact"
+            className="rounded-md border border-primary-300 px-4 py-2"
+          >
             Nous contacter
-          </button>
+          </Link>
         </div>
         <div className="grid w-full grid-cols-1 gap-4 md:w-[70%] md:grid-cols-3 md:gap-8">
           {prices.map((price, index) => {
