@@ -7,12 +7,12 @@ const links = {
   ],
   grid2: [
     {
-      title: 'Termes de reference',
-      link: '#',
+      title: "Termes et conditions d'utilisation",
+      link: 'https://helpful-vermicelli-00f.notion.site/Termes-et-conditions-d-utilisation-ebd469acacd945ebaabf6476041ac772?pvs=4',
     },
     {
-      title: "Conditions d'utilisation",
-      link: '#',
+      title: 'Politique de confidentialité',
+      link: 'https://helpful-vermicelli-00f.notion.site/Politique-de-confidentialit-316f5dd689e84deeb7c05022335ad6f0?pvs=4',
     },
   ],
 };
