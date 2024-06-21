@@ -7,7 +7,7 @@ type CounterProps = {
 
 const Counter: React.FC<CounterProps> = ({ countervalue }) => {
   return (
-    <div className="flex flex-row flex-wrap items-center justify-center gap-8 md:gap-32">
+    <div className="flex flex-row flex-wrap  gap-8 md:gap-32">
       <div className="flex flex-row items-center gap-4 md:gap-6">
         <h2 className="text-[40px] font-bold md:text-[72px]">
           <NumberCounter end={countervalue[0]} delay={4} postFix="" />

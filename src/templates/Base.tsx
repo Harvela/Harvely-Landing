@@ -7,11 +7,12 @@ import { AppConfig } from '../utils/AppConfig';
 import { Conception } from './Conception';
 import { Contact } from './Contact';
 import { Examples } from './Examples';
-import { Features } from './Features';
+import { Fonctionnalites } from './fonctionnalites';
 import { Footer } from './Footer';
 import { Gallery } from './Gallery';
 import { Hero } from './Hero';
 import { Pricing } from './Prices';
+import { Testimony } from './testimony';
 
 const Base = () => {
   return (
@@ -19,12 +20,13 @@ const Base = () => {
       <ToastContainer />
       <Meta title={AppConfig.title} description={AppConfig.description} />
       <Hero />
-      <Features />
+      <Fonctionnalites />
       <Conception />
       <Examples />
       <Pricing />
       <Gallery />
       <Contact />
+      <Testimony />
       <Footer />
     </div>
   );

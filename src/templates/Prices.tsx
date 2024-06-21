@@ -8,13 +8,13 @@ export function Pricing() {
   return (
     <div
       id="pricing"
-      className="flex h-screen w-full flex-col gap-8 bg-white p-4  md:flex-row md:gap-20 md:p-16"
+      className="flex h-fit w-full flex-col gap-8 bg-white p-4  md:flex-row md:gap-20 md:p-16"
     >
       <div className="w-full md:w-[50%]">
         <h1 className="mb-8 text-[24px] font-semibold text-primary-400 md:mb-20 md:text-[32px]">
           Tarifs
         </h1>
-        <form className="flex w-full flex-col gap-4 md:w-[70%] md:gap-16">
+        <form className="flex w-full flex-col gap-4 md:w-[70%]">
           <Input
             label="Quel est votre budget?"
             placeholder={''}
@@ -43,18 +43,18 @@ export function Pricing() {
           </div>
         </form>
       </div>
-      <div className="flex w-full flex-col items-center justify-center gap-4 rounded-[24px] bg-primary-400 p-8 md:h-full md:w-[50%] md:gap-16 md:p-16">
-        <div className="flex flex-col items-center text-white">
-          <h2 className="text-center text-[58px] font-bold md:text-[120px]">
+      <div className="flex h-fit w-full flex-col items-center justify-center gap-4 rounded-[24px] bg-primary-400 p-8 md:w-[50%] md:gap-16 md:p-16">
+        <div className="flex flex-col items-center text-white ">
+          <h2 className="text-center text-[58px] font-bold md:text-[50px]">
             102
           </h2>
-          <p className=" text-center text-[16px] md:text-[32px]">
+          <p className=" text-center text-[16px] md:text-[20px]">
             Fiches d’exploitations de matrices
           </p>
+          <button className="mt-5 rounded-lg bg-white px-10 py-2 font-bold text-black md:w-[50%] md:py-3">
+            Acheter
+          </button>
         </div>
-        <button className="w-[60%] rounded-lg bg-white py-2 font-bold text-black md:w-[50%] md:py-3">
-          Acheter
-        </button>
       </div>
     </div>
   );

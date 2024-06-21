@@ -15,22 +15,22 @@ export function Navbar() {
       name: 'Fonctionalites',
       link: '#feature',
     },
-    {
-      name: 'Utilisation',
-      link: '#utilisation',
-    },
-    {
-      name: 'Exemples',
-      link: '#exemple',
-    },
+    // {
+    //   name: 'Utilisation',
+    //   link: '#utilisation',
+    // },
+    // {
+    //   name: 'Exemples',
+    //   link: '#exemple',
+    // },
     {
       name: 'Tarifs',
       link: '#pricing',
     },
-    {
-      name: 'Gallerie',
-      link: '#gallery',
-    },
+    // {
+    //   name: 'Gallerie',
+    //   link: '#gallery',
+    // },
     // {
     //   name: 'Contact',
     //   link: '#contact',
