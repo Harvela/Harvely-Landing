@@ -1,5 +1,6 @@
 'use client';
 
+import { motion } from 'framer-motion';
 import React from 'react';
 
 import { StickyScroll } from '@/components/sticky-card-reveal';
@@ -48,8 +49,11 @@ const content = [
 ];
 export function Fonctionnalites() {
   return (
-    <div className="">
+    <motion.div
+      onViewportEnter={() => console.log('enter')}
+      className="flex flex-col gap-4"
+    >
       <StickyScroll content={content} />
-    </div>
+    </motion.div>
   );
 }

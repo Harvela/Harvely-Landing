@@ -51,13 +51,13 @@ const Conception = () => {
       style={{ backgroundImage: 'url(/assets/images/home/background.jpg)' }}
     >
       <div className="left-0 top-0 h-full p-4 text-white md:p-16">
-        <div className="grid grid-cols-2 justify-between gap-10 pt-10">
-          <div className="w-full pr-4">
-            <h1 className="mb-8 text-2xl font-semibold md:text-4xl">
+        <div className="grid grid-cols-1 justify-between gap-10 pt-10 md:grid-cols-2">
+          <div className="w-full pb-8 pr-4 md:pb-0">
+            <h1 className="mb-8 text-center text-2xl font-semibold md:text-left md:text-4xl">
               Basee sur des recherches et des experiences des experts dans le
               domaine
             </h1>
-            <p className="text-[12px] md:text-[16px]">
+            <p className="text-center text-[14px] md:text-left md:text-[16px]">
               Basee sur les recherches de Metre Bacibone Dug et plusieurs autres
               chercheur dans l’education ainsi que sur les materiels du
               ministere de l’education et des nombreux jours de recherches
@@ -83,7 +83,7 @@ const Conception = () => {
             </div>
           ))}
         </div> */}
-        <hr className="my-10 h-[3px] w-[30%] bg-white md:my-16 md:mb-10" />
+        <hr className="mx-auto my-10 h-[3px] w-[30%] bg-white md:mx-0 md:my-16 md:mb-10" />
         <Counter countervalue={counterValues} />
       </div>
     </div>

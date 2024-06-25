@@ -6,7 +6,7 @@ const Examples = () => {
   return (
     <div
       id="exemple"
-      className="flex w-full flex-col items-center gap-10 bg-primary-400 p-4  md:flex-row md:gap-20 md:p-16"
+      className="flex w-full flex-col items-center gap-16 bg-primary-400 p-4 py-16 md:flex-row  md:gap-20 md:p-16"
     >
       <div className="w-full md:w-[50%]">
         <h1 className="mb-10 text-[24px] font-semibold text-white md:mb-20 md:text-[32px]">

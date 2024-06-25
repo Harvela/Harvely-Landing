@@ -79,6 +79,17 @@ export const StickyScroll = ({
                 animate={{
                   opacity: activeCard === index ? 1 : 0.3,
                 }}
+                id={`t-${index}`}
+                onViewportEnter={() => {
+                  if (index === 1 || index === 3) {
+                    // scroll to ref
+                    console.log('scrolling to ref');
+                    window.scrollTo({
+                      top: ref.current.offsetTop - 70,
+                      behavior: 'smooth',
+                    });
+                  }
+                }}
                 className="text-4xl font-bold text-primary-400"
               >
                 {item.title}
@@ -90,7 +101,7 @@ export const StickyScroll = ({
                 animate={{
                   opacity: activeCard === index ? 1 : 0.3,
                 }}
-                className="text-kg mt-10 max-w-[50vw]  text-primary-400/50"
+                className="text-kg mt-10 max-w-full text-primary-400/50  md:max-w-[50vw]"
               >
                 {item.description}
               </motion.p>

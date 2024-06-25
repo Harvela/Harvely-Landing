@@ -1,6 +1,8 @@
 'use client';
 
-import axios from 'axios';
+import 'yet-another-react-lightbox/styles.css';
+import 'yet-another-react-lightbox/plugins/thumbnails.css';
+
 import { useState } from 'react';
 import PhotoAlbum from 'react-photo-album';
 import Lightbox from 'yet-another-react-lightbox';
@@ -17,13 +19,14 @@ interface PhotoPageProps {
 
 const Gallery = ({ photos }: PhotoPageProps) => {
   const [index, setIndex] = useState<number>(-1);
+  console.log(photos, 'photos');
 
   return (
     <div
       id="gallery"
-      className="flex h-screen w-full flex-row gap-20 bg-primary-400 p-4 md:p-16"
+      className="flex max-h-[100vh] w-full flex-col gap-0 overflow-scroll bg-primary-400 p-4 md:p-16"
     >
-      <h1 className="mb-20 text-[24px] font-semibold text-white md:text-[32px]">
+      <h1 className="mb-12 text-[24px] font-semibold text-white md:text-[32px]">
         GALLERIE
       </h1>
       <PhotoAlbum
@@ -46,34 +49,5 @@ const Gallery = ({ photos }: PhotoPageProps) => {
     </div>
   );
 };
-
-export async function getServerSideProps(ctx: any) {
-  try {
-    const folder: string = ctx?.query?.id?.toLowerCase?.() || '';
-    const res = await axios.get(
-      `${process.env.APP_LINK}/api/photo?folder=${folder}`,
-    );
-
-    const photos = res.data.photos.map((photo: any) => ({
-      src: photo.url.replace('/upload/', '/upload/w_1080,f_auto/'),
-      width: 1080,
-      height: photo.height / (photo.width / 1080),
-    }));
-
-    return {
-      props: {
-        photos,
-        error: null,
-      },
-    };
-  } catch (error) {
-    return {
-      props: {
-        photos: [],
-        error: 'Failed to fetch photos',
-      },
-    };
-  }
-}
 
 export { Gallery };

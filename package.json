@@ -20,6 +20,7 @@
     "@tsparticles/slim": "^3.3.0",
     "axios": "^1.6.7",
     "classnames": "^2.5.1",
+    "cloudinary": "^2.2.0",
     "clsx": "^2.1.0",
     "flowbite": "^2.2.1",
     "flowbite-react": "^0.7.2",
