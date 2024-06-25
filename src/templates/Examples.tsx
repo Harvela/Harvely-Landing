@@ -1,8 +1,45 @@
 'use client';
 
+import { useState } from 'react';
+
 import Select from '@/components/select';
 
 const Examples = () => {
+  const [data, setData] = useState({} as any);
+  const options = [
+    { label: 'Maternelle', value: 'maternelle' },
+    { label: 'Primaire', value: 'primaire' },
+    { label: 'CTB', value: 'ctb' },
+    { label: 'Secondaire', value: 'secondaire' },
+  ];
+
+  const getClasses = () => {
+    const classes = [];
+    let level = [];
+    let adding = false;
+    if (data.level === 'primaire') {
+      level = ['Histoire', 'Botanique'];
+    } else if (data.level === 'ctb') {
+      level = ['Technologie', 'Zoologie'];
+    } else if (data.level === 'maternelle') {
+      level = ['Art plastique', 'Bricollage'];
+      adding = true;
+    } else {
+      level = ['Biologie', 'Physique'];
+      adding = true;
+    }
+    // eslint-disable-next-line no-plusplus
+    for (let i = 0; i < level.length; i++) {
+      classes.push({
+        label: `${level[i]} ${data.level}`,
+        value: `${
+          adding
+          // ? Number.parseInt(level[i]) + 9 : Number.parseInt(level[i])
+        }`,
+      });
+    }
+    return classes;
+  };
   return (
     <div
       id="exemple"
@@ -15,12 +52,12 @@ const Examples = () => {
         <form className="flex flex-col gap-8 pr-8 md:w-full md:gap-16">
           <Select
             label="Selectionner le niveau"
-            items={[]}
-            onSelect={(item: any) => console.log(item)}
+            items={options}
+            onSelect={(value: any) => setData({ ...data, level: value })}
           />
           <Select
             label="Selectionner le cours"
-            items={[]}
+            items={getClasses()}
             onSelect={(item: any) => console.log(item)}
           />
           <button className="w-fit rounded-lg bg-white px-8 py-1 font-bold text-black md:py-3">

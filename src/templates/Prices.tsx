@@ -1,28 +1,50 @@
 'use client';
 
 import { Checkbox } from 'flowbite-react';
+import { useState } from 'react';
 
-import Input from '@/components/input';
+import Select from '@/components/select';
 
 export function Pricing() {
+  const [selectedPrice, setSelectedPrice] = useState('');
+  const prices = [
+    { label: '1', value: '1' },
+    { label: '2.99', value: '2.99' },
+    { label: '5.99', value: '5.99' },
+    { label: '11.99', value: '11.99' },
+    { label: '24.99', value: '24.99' },
+    { label: '49.99', value: '49.99' },
+  ];
+  const fichesByPrice: { [key: string]: string } = {
+    '1': '2',
+    '2.99': '6',
+    '5.99': '13',
+    '11.99': '25',
+    '24.99': '52',
+    '49.99': '110',
+  };
+
+  const handleSelect = (item: string) => {
+    setSelectedPrice(item);
+  };
+
   return (
     <div
       id="pricing"
       className="flex h-fit w-full flex-col gap-16  bg-white p-4 py-16 md:flex-row  md:gap-20 md:p-16"
     >
       <div className="w-full md:w-[50%]">
-        <h1 className="mb-8 text-[24px] font-semibold text-primary-400 md:mb-20 md:text-[32px]">
+        <h1 className="mb-8 text-[24px] font-semibold text-primary-400 md:mb-16 md:text-[32px]">
           Tarifs
         </h1>
         <form className="flex w-full flex-col gap-4 md:w-[70%]">
-          <Input
-            label="Quel est votre budget?"
-            placeholder={''}
-            name={''}
-            style="rounded-[24px]"
-            bgColor="mt-4 h-[40px] w-full rounded-[24px] border border-primary-400/40"
+          <Select
+            label="Selectionner"
+            items={prices}
+            onSelect={handleSelect}
+            inputStyle="border border-primary-400/80 rounded-[14px]"
           />
-          <div className={`flex-1 sm:mb-5`}>
+          <div className={`mt-8 flex-1 sm:mb-5`}>
             <span className="mb-6 flex flex-row items-center gap-1 text-[16px] font-semibold text-primary-400/90">
               Dug Assitant est partenaire avec mon ecole
             </span>
@@ -46,7 +68,7 @@ export function Pricing() {
       <div className="flex h-fit w-full flex-col items-center justify-center gap-4 rounded-[24px] bg-primary-400 p-8 md:w-[50%] md:gap-16 md:p-16">
         <div className="flex flex-col items-center text-white ">
           <h2 className="text-center text-[58px] font-bold md:text-[50px]">
-            102
+            {selectedPrice ? fichesByPrice[selectedPrice] : '0'}
           </h2>
           <p className=" text-center text-[16px] md:text-[20px]">
             Fiches d’exploitations de matrices
