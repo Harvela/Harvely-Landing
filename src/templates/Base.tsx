@@ -10,13 +10,11 @@ import { Examples } from './Examples';
 import { Fonctionnalites } from './fonctionnalites';
 import { Footer } from './Footer';
 import { Gallery } from './Gallery';
-// import { Gallery } from './Gallery';
 import { Hero } from './Hero';
 import { Pricing } from './Prices';
 import { Testimony } from './testimony';
 
 const Base = (props: any) => {
-  console.log(props, 'props');
   return (
     <div className="text-gray-600 antialiased">
       <ToastContainer />
