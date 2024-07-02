@@ -54,14 +54,13 @@ const Conception = () => {
         <div className="grid grid-cols-1 justify-between gap-10 pt-10 md:grid-cols-2">
           <div className="w-full pb-8 pr-4 md:pb-0">
             <h1 className="mb-8 text-center text-2xl font-semibold md:text-left md:text-4xl">
-              Basee sur des recherches et des experiences des experts dans le
-              domaine
+              Conçu avec des Experts de l&apos;éducation
             </h1>
             <p className="text-center text-[14px] md:text-left md:text-[16px]">
-              Basee sur les recherches de Metre Bacibone Dug et plusieurs autres
-              chercheur dans l’education ainsi que sur les materiels du
-              ministere de l’education et des nombreux jours de recherches
-              aupres de professeurs et enseignants.
+              Basé sur les recherches pionnières de Metre Bacibone Dug et de
+              nombreux autres experts en éducation, ainsi que sur les matériaux
+              du Ministère de l&apos;Éducation et des études approfondies menées
+              auprès des professeurs et enseignants.
             </p>
           </div>
           <CardStack items={CARDS} />

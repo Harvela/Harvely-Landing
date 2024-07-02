@@ -7,19 +7,19 @@ import { StickyScroll } from '@/components/sticky-card-reveal';
 
 const content = [
   {
-    title: 'Collaborative Editing',
+    title: 'Approche par Situation et par Compétence',
     description:
-      'Work together in real time with your team, clients, and stakeholders. Collaborate on documents, share ideas, and make decisions quickly. With our platform, you can streamline your workflow and increase productivity.',
+      "Obtenez des fiches conçues avec l'approche par situation et par compétence, utilisant des scénarios réels où les enseignants amènent les élèves à développer des compétences essentielles et à appliquer leurs connaissances de manière concrète, préparant ainsi chaque apprenant à relever les défis de la vie quotidienne et professionnelle.",
     content: (
       <div className="flex h-full w-full items-center justify-center bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] text-white">
-        Collaborative Editing
+        Approche par Situation et par Compétence
       </div>
     ),
   },
   {
-    title: 'Real time changes',
+    title: 'Des histoires et exemples captivants',
     description:
-      'See changes as they happen. With our platform, you can track every modification in real time. No more confusion about the latest version of your project. Say goodbye to the chaos of version control and embrace the simplicity of real-time updates.',
+      'Obtenez des histoires et des exemples basés sur les réalités de vos élèves, de leurs filières ou de leurs domaines. Ces inspirations instantanées vous permettront de vous concentrer davantage sur le suivi de vos élèves et de rendre vos cours plus intéressants.',
     content: (
       <div className="flex h-full  w-full items-center justify-center text-white">
         Real time changes
@@ -27,9 +27,9 @@ const content = [
     ),
   },
   {
-    title: 'Version control',
+    title: 'Des Illustrations Visuelles pour Vos Leçons',
     description:
-      "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
+      "Enrichissez vos leçons avec nos illustrations visuelles captivantes. Ces ressources visuelles sont conçues pour faciliter la compréhension des concepts complexes et rendre l'apprentissage plus stimulant et engageant pour les élèves. Nos illustrations visuelles permettent une meilleure rétention des informations et aident à rendre vos cours plus dynamiques et interactifs.",
     content: (
       <div className="flex h-full w-full items-center justify-center bg-[linear-gradient(to_bottom_right,var(--orange-500),var(--yellow-500))] text-white">
         Version control
@@ -37,9 +37,9 @@ const content = [
     ),
   },
   {
-    title: 'Running out of content',
+    title: 'Des Fiches au Format DOCX Éditable',
     description:
-      "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
+      "Obtenez des fiches au format DOCX éditable pour une flexibilité maximale dans la personnalisation de vos ressources pédagogiques. Ces fiches vous permettent de facilement modifier le contenu selon vos besoins spécifiques, facilitant ainsi la création de supports d'apprentissage adaptés à votre enseignement.",
     content: (
       <div className="flex h-full w-full items-center justify-center bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] text-white">
         Running out of content

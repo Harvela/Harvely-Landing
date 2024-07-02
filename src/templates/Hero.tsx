@@ -31,7 +31,7 @@ const Hero: React.FC = () => {
           Dug Assistant - Ed TECH
         </span>
         <h1 className="relative z-20 mb-24 text-center  text-xl font-bold text-white md:text-5xl lg:text-5xl">
-          Faites vos fiches de preparation dans
+          Concevez vos fiches de preparation dans
           <span className="mx-2 text-[#F8AB5D]">moins de 5 minutes</span>
           avec l’intelligence artificielle.
         </h1>
