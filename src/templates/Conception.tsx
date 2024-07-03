@@ -6,37 +6,85 @@ import Counter from '@/components/counter';
 const CARDS = [
   {
     id: 0,
-    name: 'Manu Arora',
-    designation: 'Senior Software Engineer',
+    name: 'Metre Bacibone Dug',
+    designation: 'Chercheur et Doctorant en Didactique des Mathématiques ',
     content: (
-      <p>
-        These cards are amazing, <a>I want to use them</a> in my project. Framer
-        motion is a godsend ngl tbh fam 🙏
+      <p
+        className="cursor-pointer"
+        onClick={() => {
+          window.open(
+            'https://admin.harvely.com/uploads/Article_sur_les_defisl_APS_APC_Metre_Dug_d938a12f2a.docx',
+            '_blank',
+          );
+        }}
+      >
+        <span className="pb-3 text-[16px] font-bold">
+          Defis des approches par situations (APS) et par competences (APC) dans
+          le processus enseignement-apprentissage. cas de la logique math au
+          CTEB.
+        </span>
+        <br />
+        <span>
+          Les approches innovantes (par situations APS et par compétences APC)
+          sont celles qui rendent les apprenants plus entreprenants leur
+          permettant de traiter avec succès une situation en vue d’appliquer les
+          savoirs...
+        </span>
       </p>
     ),
   },
   {
     id: 1,
-    name: 'Elon Musk',
-    designation: 'Senior Shitposter',
+    name: 'Metre Bacibone Dug',
+    designation: 'Chercheur et Doctorant en Didactique des Mathématiques ',
     content: (
-      <p>
-        I dont like this Twitter thing, <a>deleting it right away</a> because
-        yolo. Instead, I would like to call it <a>X.com</a> so that it can
-        easily be confused with adult sites.
+      <p
+        className="cursor-pointer"
+        onClick={() => {
+          window.open(
+            'https://admin.harvely.com/uploads/Module_de_formation_sur_l_APS_et_l_APC_des_inspecteurs_et_enseignants_des_maths_5480a83176.docx',
+            '_blank',
+          );
+        }}
+      >
+        <span className="pb-3 text-[16px] font-bold">
+          Module de formation des inspecteurs et enseignants sur la construction
+          des situations d&aposapprentissage et d&aposevaluation (SAE) en
+          approche par des situations dans le domaine d&aposapprentissage des
+          sciences au sud-kivu1/bukavu.
+        </span>
+        <br />
+        <span>
+          Les approches innovantes (par des situations APS et par compétences
+          APC) sont celles qui rendent les apprenants plus entreprenants,
+          leur...
+        </span>
       </p>
     ),
   },
   {
     id: 2,
-    name: 'Tyler Durden',
-    designation: 'Manager Project Mayhem',
+    name: "Ministère de l'Éducation nationale",
+    designation: 'Republique democratique du Congo',
     content: (
-      <p>
-        The first rule of
-        <a>Fight Club</a> is that you do not talk about fight club. The second
-        rule of
-        <a>Fight club</a> is that you DO NOT TALK about fight club.
+      <p
+        className="cursor-pointer"
+        onClick={() => {
+          window.open(
+            'https://minepst.gouv.cd/programmes-scolaires/',
+            '_blank',
+          );
+        }}
+      >
+        <span className="pb-3 text-[16px] font-bold">
+          Programme scolaires au niveau national
+        </span>
+        <br />
+        <span>
+          Le Ministère de l&apos;Éducation nationale de la République
+          démocratique du Congo a mis en place un programme scolaire national
+          pour les élèves du primaire et du secondaire.
+        </span>
       </p>
     ),
   },

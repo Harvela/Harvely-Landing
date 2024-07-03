@@ -7,13 +7,14 @@ import Select from '@/components/select';
 
 export function Pricing() {
   const [selectedPrice, setSelectedPrice] = useState('');
+  const [schoolPartner, setSchoolPartner] = useState(false);
   const prices = [
-    { label: '1', value: '1' },
-    { label: '2.99', value: '2.99' },
-    { label: '5.99', value: '5.99' },
-    { label: '11.99', value: '11.99' },
-    { label: '24.99', value: '24.99' },
-    { label: '49.99', value: '49.99' },
+    { label: '1 $', value: '1' },
+    { label: '2.99 $', value: '2.99' },
+    { label: '5.99 $', value: '5.99' },
+    { label: '11.99 $', value: '11.99' },
+    { label: '24.99 $', value: '24.99' },
+    { label: '49.99 $', value: '49.99' },
   ];
   const fichesByPrice: { [key: string]: string } = {
     '1': '2',
@@ -25,6 +26,7 @@ export function Pricing() {
   };
 
   const handleSelect = (item: string) => {
+    /// setActualPrice(item);
     setSelectedPrice(item);
   };
 
@@ -39,7 +41,9 @@ export function Pricing() {
         </h1>
         <form className="flex w-full flex-col gap-4 md:w-[70%]">
           <Select
-            label="Selectionner"
+            label={`Selectionner un budget ${
+              schoolPartner ? '( 5% reduction )' : ''
+            }`}
             items={prices}
             onSelect={handleSelect}
             inputStyle="border border-primary-400/80 rounded-[14px]"
@@ -50,13 +54,25 @@ export function Pricing() {
             </span>
             <div className="flex flex-row items-center gap-12">
               <div className="flex flex-row items-center gap-4">
-                <Checkbox className="h-6 w-6 border border-primary-400/90 bg-white" />
+                <Checkbox
+                  className="h-6 w-6 border border-primary-400/90 bg-white"
+                  onChange={(e) => {
+                    setSchoolPartner(e.target.checked);
+                  }}
+                  checked={schoolPartner}
+                />
                 <span className="text-[18px] font-semibold text-primary-400/90">
                   Oui
                 </span>
               </div>
               <div className="flex flex-row items-center gap-4">
-                <Checkbox className="h-6 w-6 border border-primary-400/90 bg-white" />
+                <Checkbox
+                  className="h-6 w-6 border border-primary-400/90 bg-white"
+                  onChange={(e) => {
+                    setSchoolPartner(!e.target.checked);
+                  }}
+                  checked={!schoolPartner}
+                />
                 <span className="text-[18px] font-semibold text-primary-400/90">
                   Non
                 </span>

@@ -42,6 +42,7 @@ const Select: React.FC<DropDownProps> = (props) => {
               ...base,
               borderRadius: 5,
               borderColor: '#000',
+              color: 'white',
             }),
             container: (base: any) => ({
               ...base,

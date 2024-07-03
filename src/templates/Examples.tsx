@@ -1,11 +1,21 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import Select from '@/components/select';
+import { getFichesPerSubject, getSubjectPerLevel } from '@/utils/fiches';
 
 const Examples = () => {
   const [data, setData] = useState({} as any);
+
+  const [subjects, setSubjects] = useState([] as string[]);
+  const [fiches, setFiches] = useState([] as any[]);
+
+  useEffect(() => {
+    setSubjects(getSubjectPerLevel(data.level));
+    setFiches(getFichesPerSubject(data.level, data.subject));
+  }, [data]);
+
   const options = [
     { label: 'Maternelle', value: 'maternelle' },
     { label: 'Primaire', value: 'primaire' },
@@ -13,33 +23,8 @@ const Examples = () => {
     { label: 'Secondaire', value: 'secondaire' },
   ];
 
-  const getClasses = () => {
-    const classes = [];
-    let level = [];
-    let adding = false;
-    if (data.level === 'primaire') {
-      level = ['Histoire', 'Botanique'];
-    } else if (data.level === 'ctb') {
-      level = ['Technologie', 'Zoologie'];
-    } else if (data.level === 'maternelle') {
-      level = ['Art plastique', 'Bricollage'];
-      adding = true;
-    } else {
-      level = ['Biologie', 'Physique'];
-      adding = true;
-    }
-    // eslint-disable-next-line no-plusplus
-    for (let i = 0; i < level.length; i++) {
-      classes.push({
-        label: `${level[i]} ${data.level}`,
-        value: `${
-          adding
-          // ? Number.parseInt(level[i]) + 9 : Number.parseInt(level[i])
-        }`,
-      });
-    }
-    return classes;
-  };
+  console.log(data);
+
   return (
     <div
       id="exemple"
@@ -57,31 +42,35 @@ const Examples = () => {
           />
           <Select
             label="Selectionner le cours"
-            items={getClasses()}
-            onSelect={(item: any) => console.log(item)}
+            items={subjects.map((subject: string) => ({
+              label: subject,
+              value: subject,
+            }))}
+            onSelect={(item: any) => setData({ ...data, subject: item })}
           />
           <button className="w-fit rounded-lg bg-white px-8 py-1 font-bold text-black md:py-3">
             Chercher
           </button>
         </form>
       </div>
-      <div className="w-full md:w-[50%]">
-        <div className="justity-center flex flex-col items-center gap-5 rounded-[24px] bg-[#F8AB5D]/10 p-10">
-          <div className="flex flex-row justify-center gap-4">
-            <span className="rounded-md bg-white px-4 py-1 text-[13px]  text-primary-400">
-              Agriculture
-            </span>
-            <span className="rounded-md bg-white px-4 py-1 text-[13px] text-primary-400">
-              mathematique
-            </span>
+      <div className="flex w-full flex-col gap-4 md:w-[50%]">
+        {fiches.map((fiche) => (
+          <div
+            key={fiche.id}
+            className=" flex w-full flex-row items-center justify-between gap-5 rounded-[10px] bg-[#F8AB5D]/10 px-5 py-2"
+          >
+            <p className="text-[16px] font-medium text-[white]">
+              Lesson sur <span className="font-semibold">{fiche.title}</span>
+            </p>
+            <a
+              className="rounded-lg border-[1px] border-[white] px-2 py-1 text-[14px] text-white"
+              target="_blank"
+              href={`https://app.dugassistant.com/fiches/${fiche.id}`}
+            >
+              Voir plus
+            </a>
           </div>
-          <p className="mt-4 flex flex-row text-[22px] font-normal text-[white]">
-            Lesson sur les egouts en construction
-          </p>
-          <button className="mt-4 rounded-lg border-[1px] border-[white] px-4 py-1 text-white">
-            Voir plus
-          </button>
-        </div>
+        ))}
       </div>
     </div>
   );
