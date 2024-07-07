@@ -38,12 +38,24 @@ const testimonials = [
 
 export function Testimony() {
   return (
-    <div className="dark:bg-grid-white/[0.05] relative flex flex-col items-center justify-center overflow-hidden bg-primary-400 antialiased dark:bg-black">
-      <InfiniteMovingCards
-        items={testimonials}
-        direction="right"
-        speed="slow"
-      />
+    <div className="flex w-full flex-col gap-8 bg-primary-400 py-10">
+      <h1 className="mb-12 px-16 text-[20px] font-semibold text-white md:text-[32px]">
+        CE QU&apos;ILS PENSENT DE NOUS
+      </h1>
+      <div className="dark:bg-grid-white/[0.05] relative flex flex-col items-center justify-center overflow-hidden bg-primary-400 antialiased dark:bg-black">
+        <InfiniteMovingCards
+          items={testimonials}
+          direction="left"
+          speed="slow"
+        />
+      </div>
+      <div className="dark:bg-grid-white/[0.05] relative flex flex-col items-center justify-center overflow-hidden bg-primary-400 antialiased dark:bg-black">
+        <InfiniteMovingCards
+          items={testimonials}
+          direction="right"
+          speed="slow"
+        />
+      </div>
     </div>
   );
 }

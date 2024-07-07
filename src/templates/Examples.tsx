@@ -14,7 +14,9 @@ const Examples = () => {
   useEffect(() => {
     setSubjects(getSubjectPerLevel(data.level));
     setFiches(getFichesPerSubject(data.level, data.subject));
-  }, [data]);
+  }, [data.level, data.subject]);
+
+  console.log(subjects);
 
   const options = [
     { label: 'Maternelle', value: 'maternelle' },
@@ -48,9 +50,6 @@ const Examples = () => {
             }))}
             onSelect={(item: any) => setData({ ...data, subject: item })}
           />
-          <button className="w-fit rounded-lg bg-white px-8 py-1 font-bold text-black md:py-3">
-            Chercher
-          </button>
         </form>
       </div>
       <div className="flex w-full flex-col gap-4 md:w-[50%]">
@@ -59,7 +58,7 @@ const Examples = () => {
             key={fiche.id}
             className=" flex w-full flex-row items-center justify-between gap-5 rounded-[10px] bg-[#F8AB5D]/10 px-5 py-2"
           >
-            <p className="text-[16px] font-medium text-[white]">
+            <p className="text-[14px] font-medium text-[white] md:text-[16px]">
               Lesson sur <span className="font-semibold">{fiche.title}</span>
             </p>
             <a
@@ -67,7 +66,7 @@ const Examples = () => {
               target="_blank"
               href={`https://app.dugassistant.com/fiches/${fiche.id}`}
             >
-              Voir plus
+              Voir
             </a>
           </div>
         ))}

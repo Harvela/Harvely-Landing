@@ -30,15 +30,15 @@ export const getSubjectPerLevel = (level: string) => {
 export const getFichesPerSubject = (level?: string, subject?: string) => {
   const fichesPerSubject: any[] = [];
   if (!level) {
-    return fiches.splice(0, 3);
+    return fiches.slice(0, 3);
   }
   if (level && !subject) {
-    return fiches.filter((fiche) => fiche.level === level).splice(0, 3);
+    return fiches.filter((fiche) => fiche.level === level).slice(0, 3);
   }
   fiches.forEach((fiche) => {
     if (fiche.level === level && fiche.subject === subject) {
       fichesPerSubject.push(fiche);
     }
   });
-  return fichesPerSubject.splice(0, 3);
+  return fichesPerSubject.slice(0, 3);
 };

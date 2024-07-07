@@ -9,12 +9,11 @@ import { Contact } from './Contact';
 import { Examples } from './Examples';
 import { Fonctionnalites } from './fonctionnalites';
 import { Footer } from './Footer';
-import { Gallery } from './Gallery';
 import { Hero } from './Hero';
 import { Pricing } from './Prices';
 import { Testimony } from './testimony';
 
-const Base = (props: any) => {
+const Base = () => {
   return (
     <div className="text-gray-600 antialiased">
       <ToastContainer />
@@ -24,10 +23,10 @@ const Base = (props: any) => {
       <Conception />
       <Examples />
       <Pricing />
-
-      <Gallery photos={props.photos} />
-      <Contact />
       <Testimony />
+      {/* <Gallery photos={props.photos} /> */}
+      <Contact />
+
       <Footer />
     </div>
   );
