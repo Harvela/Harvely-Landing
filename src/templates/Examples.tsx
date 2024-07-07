@@ -25,8 +25,6 @@ const Examples = () => {
     { label: 'Secondaire', value: 'secondaire' },
   ];
 
-  console.log(data);
-
   return (
     <div
       id="exemple"
