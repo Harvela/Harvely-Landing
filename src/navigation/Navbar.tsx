@@ -1,104 +1,103 @@
-import type { CustomFlowbiteTheme } from 'flowbite-react';
-import { Flowbite, Navbar } from 'flowbite-react';
-import React, { useEffect } from 'react';
-import { Link, scroller } from 'react-scroll';
+import { useMotionValueEvent, useScroll } from 'framer-motion';
+import Link from 'next/link';
+import React, { useState } from 'react';
+import { FaRegWindowClose } from 'react-icons/fa';
+import { MdMenu } from 'react-icons/md';
 
 export type NavbarProps = {
-  // Prop types go here
   setOpenModal?: (value: boolean) => void;
 };
 
-const customTheme: CustomFlowbiteTheme = {
-  navbar: {
-    link: {
-      base: 'block py-2 md:p-0 text-white',
-      active: {
-        on: 'text-white dark:text-white md:bg-transparent md:text-white',
-        off: 'border-b border-gray-100  text-white hover:bg-gray-50 dark:border-gray-700 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:border-0 md:hover:bg-transparent md:hover:text-cyan-700 md:dark:hover:bg-transparent md:dark:hover:text-white',
-      },
-      disabled: {
-        on: 'text-white hover:cursor-not-allowed dark:text-white',
-        off: '',
-      },
-    },
-  },
-};
+const NavbarGlobal: React.FC<NavbarProps> = ({ setOpenModal }) => {
+  const [isOpen, setIsOpen] = useState(false);
 
-const NavbarGlobal: React.FC<NavbarProps> = () => {
-  useEffect(() => {
-    scroller.scrollTo('home', {
-      duration: 800,
-      delay: 0,
-      smooth: 'easeInOutQuart',
-    });
-  }, []);
+  const handleMenuToggle = () => {
+    setIsOpen(!isOpen);
+    if (setOpenModal) {
+      setOpenModal(!isOpen);
+    }
+  };
+
+  const handleCloseMenu = () => {
+    setIsOpen(false);
+    if (setOpenModal) {
+      setOpenModal(false);
+    }
+  };
+
+  const { scrollY } = useScroll();
+  const [otherStyle, setOtherStyle] = useState('');
+
+  useMotionValueEvent(scrollY, 'change', (latest) => {
+    if (latest > 100) {
+      setOtherStyle('bg-blue w-full shadow-md');
+    } else {
+      setOtherStyle('');
+    }
+  });
+
   return (
-    <Flowbite theme={{ theme: customTheme }}>
-      <Navbar
-        className="px-4 lg:px-16"
-        style={{
-          position: 'fixed',
-          width: '100%',
-          zIndex: 40,
-          top: 0,
-          backgroundColor: 'rgba(0, 34, 64, 0.9)',
-        }}
-      >
-        <Navbar.Brand href="#">
-          {/* <img
-            src="/fullLogo.png"
-            className="h-8 lg:mr-3 lg:h-16"
-            alt="Docta Mobile Logo"
-          /> */}
-          <h1 className="text-2xl font-bold text-white">Harvely</h1>
-        </Navbar.Brand>
-        <Navbar.Collapse>
-          <Link
-            activeClass="text-white font-bold border-b-2 border-white"
-            to="home"
-            smooth
-            spy
-            offset={-200}
-          >
-            Accueil
-          </Link>
-          <Link
-            activeClass="text-white font-bold border-b-2 border-white"
-            to="projects"
-            smooth
-            spy
-            offset={-100}
-          >
-            Nos projets
-          </Link>
-          <Link
-            activeClass="text-white font-bold border-b-2 border-white"
-            to="services"
-            smooth
-            spy
-          >
-            Nos services
-          </Link>
-          <Link
-            activeClass="text-white font-bold border-b-2 border-white"
-            to="team"
-            smooth
-            spy
-          >
-            Notre equipe
-          </Link>
-          <Link
-            activeClass="text-secondary-900 font-bold border-b-2 border-secondary-900"
-            to="pricing"
-            smooth
-            spy
-            offset={-100}
-          >
-            Contact
-          </Link>
-        </Navbar.Collapse>
-      </Navbar>
-    </Flowbite>
+    <div
+      className={`fixed z-[1000] flex flex-row gap-5 px-8 py-6 md:px-16 ${otherStyle}`}
+    >
+      <button onClick={handleMenuToggle}>
+        <MdMenu className="cursor-pointer text-white/90" size={40} />
+      </button>
+
+      <h1 className="text-[30px] text-white/90">Menu</h1>
+      {isOpen && (
+        <div className="absolute left-0 top-0 z-[1000] flex h-[100vh] w-[400px] flex-row justify-between bg-[#00172B] p-8">
+          <div className="mt-12 flex flex-col gap-8">
+            <Link
+              href="/#home"
+              className="text-lg font-medium text-white"
+              onClick={handleCloseMenu}
+            >
+              Accueil
+            </Link>
+            <Link
+              href="/#about"
+              className="text-lg font-medium text-white"
+              onClick={handleCloseMenu}
+            >
+              A propos de nous
+            </Link>
+            <Link
+              href="/#service"
+              className="text-lg font-medium text-white"
+              onClick={handleCloseMenu}
+            >
+              Services
+            </Link>
+            <Link
+              href="/#galery"
+              className="text-lg font-medium text-white"
+              onClick={handleCloseMenu}
+            >
+              Gallerie
+            </Link>
+            <Link
+              href="/#team"
+              className="text-lg font-medium text-white"
+              onClick={handleCloseMenu}
+            >
+              Equipe
+            </Link>
+            <Link
+              href="/#blog"
+              className="text-lg font-medium text-white"
+              onClick={handleCloseMenu}
+            >
+              Blog
+            </Link>
+          </div>
+          <FaRegWindowClose
+            onClick={handleCloseMenu}
+            className="h-6 w-6 text-white"
+          />
+        </div>
+      )}
+    </div>
   );
 };
 

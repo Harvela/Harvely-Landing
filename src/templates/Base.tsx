@@ -2,30 +2,25 @@ import { Navbar } from '@/navigation/Navbar';
 
 import { Meta } from '../layout/Meta';
 import { AppConfig } from '../utils/AppConfig';
+import { About } from './About';
+import { Blog } from './Blog';
 import { Footer } from './Footer';
+import { Galery } from './Galery';
 import { Hero } from './Hero';
-import { Projects } from './Projects';
-import { Services } from './Services';
+import { Options } from './Options';
 import { Team } from './Team';
 
-const Base = () => {
+const Base = (props: any) => {
   return (
     <div className="text-gray-600 antialiased">
       <Meta title={AppConfig.title} description={AppConfig.description} />
-      <div className="relative h-[90vh]">
-        <img
-          src="/assets/images/home/background.jpg"
-          alt="Hero"
-          className="h-full w-full object-cover"
-        />
-        <div className="absolute left-0 top-0 mt-14 h-full w-full bg-[#002240]/90">
-          <Navbar />
-          <Hero />
-        </div>
-      </div>
-      <Projects />
-      <Services />
+      <Navbar />
+      <Hero />
+      <About />
+      <Options />
+      <Galery photos={props.photos} />
       <Team />
+      <Blog />
       <Footer />
     </div>
   );
