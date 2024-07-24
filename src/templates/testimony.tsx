@@ -36,7 +36,7 @@ const testimonials = [
   },
   {
     quote:
-      "Oui ! Nous avons tous constaté que la plupart des questions en Sciences au Examens d'État 2024 étaient introduites par une situation d'évaluation qui pour certains candidats non informés c'était un problème sérieux. A chaque instant j'étais interpellé dans les salles d'examens pour des plaintes des candidats qui pensaient que les situations d'évaluation sont des questions sans numéro où encore non achevées. Il est temps que nos enseignants et Préfets comprennent que l'enseignement des sciences a pris une autres forme avec l'APS et les Nouveaux programmes éducatifs y relatifs",
+      "Oui ! Nous avons tous constaté que la plupart des questions en Sciences au Examens d'État 2024 étaient introduites par une situation d'évaluation qui pour certains candidats non informés c'était un problème sérieux. Il est temps que nos enseignants et Préfets comprennent que l'enseignement des sciences a pris une autres forme avec l'APS et les Nouveaux programmes éducatifs y relatifs",
     name: 'KAMIRA JEAN-MARIE',
     title: '',
   },

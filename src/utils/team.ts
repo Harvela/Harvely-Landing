@@ -8,14 +8,14 @@ export const team = [
   },
   {
     name: 'MURHULA LEMOISSON',
-    role: 'Manager',
+    role: 'Directeur general',
     icon: '/assets/images/home/Lemoisson.jpg',
     phone: '+243 900992697',
     mail: 'murhulametre@gmail.com',
   },
   {
     name: 'CIRAGANE NICOLE',
-    role: 'Manager',
+    role: 'Directeur technique',
     icon: '/assets/images/home/Nicole.jpg',
     phone: '+256 991746590',
     mail: 'ciraganenicole@gmail.com',

@@ -9,7 +9,7 @@ type Card = {
   id: number;
   name: string;
   designation: string;
-  content: React.ReactNode;
+  content: any;
 };
 
 export const CardStack = ({
@@ -42,12 +42,12 @@ export const CardStack = ({
   }, []);
 
   return (
-    <div className="relative  h-60  w-full md:h-60">
+    <div className="relative h-60 w-full md:h-60">
       {cards.map((card, index) => {
         return (
           <motion.div
             key={card.id}
-            className="absolute flex h-60 w-full flex-col justify-between rounded-3xl border border-neutral-200 bg-white p-4 shadow-xl  shadow-black/[0.1] dark:border-white/[0.1] dark:bg-black dark:shadow-white/[0.05] md:h-60"
+            className="absolute flex h-60 w-full flex-col justify-between rounded-3xl border border-neutral-200 bg-white p-4 shadow-xl shadow-black/[0.1] dark:border-white/[0.1] dark:bg-black dark:shadow-white/[0.05] md:h-60"
             style={{
               transformOrigin: 'top center',
             }}

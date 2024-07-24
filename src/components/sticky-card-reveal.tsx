@@ -1,13 +1,10 @@
 'use client';
 
 import { motion, useMotionValueEvent, useScroll } from 'framer-motion';
-import React, { useEffect, useRef, useState } from 'react';
-
-import { cn } from '@/utils/cn';
+import React, { useRef } from 'react';
 
 export const StickyScroll = ({
   content,
-  contentClassName,
 }: {
   content: {
     title: string;
@@ -19,8 +16,6 @@ export const StickyScroll = ({
   const [activeCard, setActiveCard] = React.useState(0);
   const ref = useRef<any>(null);
   const { scrollYProgress } = useScroll({
-    // uncomment line 22 and comment line 23 if you DONT want the overflow container and want to have it change on the entire page scroll
-    // target: ref
     container: ref,
     offset: ['start start', 'end start'],
   });
@@ -41,30 +36,8 @@ export const StickyScroll = ({
     setActiveCard(closestBreakpointIndex);
   });
 
-  // const backgroundColors = [
-  //   "var(--slate-900)",
-  //   "var(--black)",
-  //   "var(--neutral-900)",
-  // ];
-  const linearGradients = [
-    'linear-gradient(to bottom right, var(--cyan-500), var(--emerald-500))',
-    'linear-gradient(to bottom right, var(--cyan-500), var(--emerald-500))',
-    'linear-gradient(to bottom right, var(--cyan-500), var(--emerald-500))',
-  ];
-
-  const [backgroundGradient, setBackgroundGradient] = useState(
-    linearGradients[0],
-  );
-
-  useEffect(() => {
-    setBackgroundGradient(linearGradients[activeCard % linearGradients.length]);
-  }, [activeCard]);
-
   return (
     <motion.div
-      // animate={{
-      //   backgroundColor: backgroundColors[activeCard % backgroundColors.length],
-      // }}
       className="relative flex  h-[80vh] justify-center space-x-10 overflow-y-auto rounded-md p-10"
       ref={ref}
     >
@@ -112,13 +85,7 @@ export const StickyScroll = ({
           <div className="h-40" />
         </div>
       </div>
-      <div
-        style={{ background: backgroundGradient }}
-        className={cn(
-          'hidden lg:block h-[60vh] min-w-[40vw] rounded-md sticky top-10 overflow-hidden',
-          contentClassName,
-        )}
-      >
+      <div className="sticky top-10 hidden h-[60vh] min-w-[40vw] overflow-hidden rounded-md lg:block">
         {content[activeCard]?.content ?? null}
       </div>
     </motion.div>

@@ -20,15 +20,13 @@ const CARDS = [
       >
         <span className="pb-3 text-[14px] font-bold">
           Defis des approches par situations (APS) et par competences (APC) dans
-          le processus enseignement-apprentissage. cas de la logique math au
-          CTEB.
+          le processus enseignement-apprentissage ...
         </span>
         <br />
         <span className="text-[12px]">
           Les approches innovantes (par situations APS et par compétences APC)
           sont celles qui rendent les apprenants plus entreprenants leur
-          permettant de traiter avec succès une situation en vue d’appliquer les
-          savoirs...
+          permettant ...
         </span>
       </p>
     ),
@@ -49,9 +47,7 @@ const CARDS = [
       >
         <span className="pb-3 text-[14px] font-bold">
           Module de formation des inspecteurs et enseignants sur la construction
-          des situations d&aposapprentissage et d&aposevaluation (SAE) en
-          approche par des situations dans le domaine d&aposapprentissage des
-          sciences au sud-kivu1/bukavu.
+          des situations d&aposapprentissage ...
         </span>
         <br />
         <span className="text-[12px]">
@@ -83,7 +79,7 @@ const CARDS = [
         <span className="text-[12px]">
           Le Ministère de l&apos;Éducation nationale de la République
           démocratique du Congo a mis en place un programme scolaire national
-          pour les élèves du primaire et du secondaire.
+          ...
         </span>
       </p>
     ),

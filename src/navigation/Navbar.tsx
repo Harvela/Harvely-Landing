@@ -27,10 +27,10 @@ export function Navbar() {
       name: 'Tarifs',
       link: '#pricing',
     },
-    {
-      name: 'Equipe',
-      link: '#team',
-    },
+    // {
+    //   name: 'Equipe',
+    //   link: '#team',
+    // },
     // {
     //   name: 'Contact',
     //   link: '#contact',
