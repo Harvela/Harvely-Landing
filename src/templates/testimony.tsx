@@ -7,32 +7,38 @@ import { InfiniteMovingCards } from '@/components/infinite-scroll';
 const testimonials = [
   {
     quote:
-      'It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity, it was the season of Light, it was the season of Darkness, it was the spring of hope, it was the winter of despair.',
-    name: 'Charles Dickens',
-    title: 'A Tale of Two Cities',
+      "Exploitons DugAssistant. Je suis émerveillé de générer moi même des situations à partir de mon téléphone. Nous ne serons plus des enseignants pauvres en matières car tout nous est déjà préétabli. Merci vraiment au concepteur de ce système qui rend le travail de l'enseignant très facile. Je suis très satisfait et je dois utiliser ce système et sensibiliser surtout aux autres de s'en approprier aussi.",
+    name: 'KATEMBO MUSABINGO',
+    title: 'ISP. Nyiragongo',
   },
   {
     quote:
-      "To be, or not to be, that is the question: Whether 'tis nobler in the mind to suffer The slings and arrows of outrageous fortune, Or to take Arms against a Sea of troubles, And by opposing end them: to die, to sleep.",
-    name: 'William Shakespeare',
-    title: 'Hamlet',
-  },
-  {
-    quote: 'All that we see or seem is but a dream within a dream.',
-    name: 'Edgar Allan Poe',
-    title: 'A Dream Within a Dream',
+      "Jusque là moi je suis satisfaite  de résultat avec la fiche exploité hier. Les enfants voient l'importance  du sujet dans la vie pratique et quotidienne. Vraiment c'est une meilleure application.",
+    name: 'NABINTU CHRISTINE',
+    title: 'CS. Les Masudi',
   },
   {
     quote:
-      'It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife.',
-    name: 'Jane Austen',
-    title: 'Pride and Prejudice',
+      "Merci de nous alléger la tâche des approches innovantes par l'entremise de l'application DugAssistant",
+    name: 'ROBERT MUVIRI',
+    title: 'CS. Les Masudi',
+  },
+  {
+    quote: "L'enseignant sans situation en APC/APS est un touriste en classe",
+    name: 'KWIRIKA INNOCENT',
+    title: '',
   },
   {
     quote:
-      'Call me Ishmael. Some years ago—never mind how long precisely—having little or no money in my purse, and nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of the world.',
-    name: 'Herman Melville',
-    title: 'Moby-Dick',
+      "C'est vraiment très innovant et tous les enseignants doivent s'en approprier pour améliorer l'action éducative",
+    name: 'PATRICK BYENDA',
+    title: 'CS. Les Masudi',
+  },
+  {
+    quote:
+      "Oui ! Nous avons tous constaté que la plupart des questions en Sciences au Examens d'État 2024 étaient introduites par une situation d'évaluation qui pour certains candidats non informés c'était un problème sérieux. A chaque instant j'étais interpellé dans les salles d'examens pour des plaintes des candidats qui pensaient que les situations d'évaluation sont des questions sans numéro où encore non achevées. Il est temps que nos enseignants et Préfets comprennent que l'enseignement des sciences a pris une autres forme avec l'APS et les Nouveaux programmes éducatifs y relatifs",
+    name: 'KAMIRA JEAN-MARIE',
+    title: '',
   },
 ];
 

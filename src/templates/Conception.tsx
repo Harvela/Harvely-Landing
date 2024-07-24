@@ -18,13 +18,13 @@ const CARDS = [
           );
         }}
       >
-        <span className="pb-3 text-[16px] font-bold">
+        <span className="pb-3 text-[14px] font-bold">
           Defis des approches par situations (APS) et par competences (APC) dans
           le processus enseignement-apprentissage. cas de la logique math au
           CTEB.
         </span>
         <br />
-        <span>
+        <span className="text-[12px]">
           Les approches innovantes (par situations APS et par compétences APC)
           sont celles qui rendent les apprenants plus entreprenants leur
           permettant de traiter avec succès une situation en vue d’appliquer les
@@ -47,14 +47,14 @@ const CARDS = [
           );
         }}
       >
-        <span className="pb-3 text-[16px] font-bold">
+        <span className="pb-3 text-[14px] font-bold">
           Module de formation des inspecteurs et enseignants sur la construction
           des situations d&aposapprentissage et d&aposevaluation (SAE) en
           approche par des situations dans le domaine d&aposapprentissage des
           sciences au sud-kivu1/bukavu.
         </span>
         <br />
-        <span>
+        <span className="text-[12px]">
           Les approches innovantes (par des situations APS et par compétences
           APC) sont celles qui rendent les apprenants plus entreprenants,
           leur...
@@ -76,11 +76,11 @@ const CARDS = [
           );
         }}
       >
-        <span className="pb-3 text-[16px] font-bold">
+        <span className="pb-3 text-[14px] font-bold">
           Programme scolaires au niveau national
         </span>
         <br />
-        <span>
+        <span className="text-[12px]">
           Le Ministère de l&apos;Éducation nationale de la République
           démocratique du Congo a mis en place un programme scolaire national
           pour les élèves du primaire et du secondaire.
@@ -104,7 +104,7 @@ const Conception = () => {
             <h1 className="mb-8 text-center text-2xl font-semibold md:text-left md:text-4xl">
               Conçu avec des Experts de l&apos;éducation
             </h1>
-            <p className="text-center text-[14px] md:text-left md:text-[16px]">
+            <p className="text-center text-[14px] md:text-left md:text-[14px]">
               Basé sur les recherches pionnières de Metre Bacibone Dug et de
               nombreux autres experts en éducation, ainsi que sur les matériaux
               du Ministère de l&apos;Éducation et des études approfondies menées
@@ -120,7 +120,7 @@ const Conception = () => {
               key={index}
               className=" flex w-full flex-col items-center justify-center gap-2 rounded-[8px] border-2 border-white/50 p-4 text-center text-white md:w-[30%] md:rounded-[24px] md:p-8"
             >
-              <p className="text-[12px] md:text-[16px]">{b.title}</p>
+              <p className="text-[12px] md:text-[14px]">{b.title}</p>
               <h2 className="text-[14px] font-semibold md:text-xl">
                 {b.author}
               </h2>

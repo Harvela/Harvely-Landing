@@ -37,7 +37,7 @@ export function Pricing() {
     >
       <div className="w-full md:w-[50%]">
         <h1 className="mb-8 text-[24px] font-semibold text-primary-400 md:mb-16 md:text-[32px]">
-          Tarifs
+          TARIFS
         </h1>
         <form className="flex w-full flex-col gap-4 md:w-[70%]">
           <Select

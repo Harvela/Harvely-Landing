@@ -11,6 +11,7 @@ import { Fonctionnalites } from './fonctionnalites';
 import { Footer } from './Footer';
 import { Hero } from './Hero';
 import { Pricing } from './Prices';
+import { Team } from './Team';
 import { Testimony } from './testimony';
 
 const Base = () => {
@@ -23,6 +24,7 @@ const Base = () => {
       <Conception />
       <Examples />
       <Pricing />
+      <Team />
       <Testimony />
       {/* <Gallery photos={props.photos} /> */}
       <Contact />
