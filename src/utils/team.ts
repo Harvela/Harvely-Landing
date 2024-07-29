@@ -2,7 +2,7 @@ export const team = [
   {
     name: 'BACIBONE METRE DUG',
     role: 'Consultant en education',
-    icon: '/assets/images/home/why.jpg',
+    icon: '/assets/images/home/papa.jpg',
     phone: '+243 853238835',
     mail: 'metrebacibone@gmail.com',
   },

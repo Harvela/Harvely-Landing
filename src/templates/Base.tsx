@@ -9,12 +9,13 @@ import { Contact } from './Contact';
 import { Examples } from './Examples';
 import { Fonctionnalites } from './fonctionnalites';
 import { Footer } from './Footer';
+import { Gallery } from './Gallery';
 import { Hero } from './Hero';
 import { Pricing } from './Prices';
 import { Team } from './Team';
 import { Testimony } from './testimony';
 
-const Base = () => {
+const Base = (props: any) => {
   return (
     <div className="text-gray-600 antialiased">
       <ToastContainer />
@@ -26,7 +27,7 @@ const Base = () => {
       <Pricing />
       <Team />
       <Testimony />
-      {/* <Gallery photos={props.photos} /> */}
+      <Gallery photos={props.photos} />
       <Contact />
 
       <Footer />
