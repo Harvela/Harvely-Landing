@@ -1,23 +1,23 @@
 export const team = [
   {
-    name: 'BACIBONE METRE DUG',
-    role: 'Consultant en education',
-    icon: '/assets/images/home/papa.jpg',
-    phone: '+243 853238835',
-    mail: 'metrebacibone@gmail.com',
-  },
-  {
-    name: 'MURHULA LEMOISSON',
-    role: 'Directeur general',
+    name: 'MURHULA METRE',
+    role: 'Directeur Général',
     icon: '/assets/images/home/Lemoisson.jpg',
     phone: '+243 900992697',
     mail: 'murhulametre@gmail.com',
   },
   {
     name: 'CIRAGANE NICOLE',
-    role: 'Directeur technique',
+    role: 'Directeur Technique',
     icon: '/assets/images/home/Nicole.jpg',
-    phone: '+256 991746590',
+    phone: '+243 991746590',
     mail: 'ciraganenicole@gmail.com',
+  },
+  {
+    name: 'BACIBONE METRE DUG',
+    role: 'Chargé des programmes et expert en Education',
+    icon: '/assets/images/home/papa.jpg',
+    phone: '+243 853238835',
+    mail: 'metrebacibone@gmail.com',
   },
 ];

@@ -7,7 +7,7 @@ const Index = (props: any) => <Base {...props} />;
 export async function getServerSideProps() {
   try {
     const res = await axios.get(
-      `${process.env.APP_LINK}/api/photo?folder=niveleuse`,
+      `${process.env.APP_LINK}/api/photo?folder=dugassistant`,
     );
 
     const photos = res.data.photos.map((photo: any) => ({

@@ -26,7 +26,7 @@ const content = [
       <img
         src="/assets/images/home/situation.png"
         alt=""
-        className="h-full w-full object-cover"
+        className="h-full w-full object-center"
       />
     ),
   },
@@ -38,7 +38,7 @@ const content = [
       <img
         src="/assets/images/home/illustration.png"
         alt=""
-        className="h-full w-full object-cover"
+        className="h-full w-full object-center"
       />
     ),
   },

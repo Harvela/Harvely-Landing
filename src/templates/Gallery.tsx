@@ -18,7 +18,6 @@ interface PhotoPageProps {
 
 const Gallery = ({ photos }: PhotoPageProps) => {
   const [index, setIndex] = useState<number>(-1);
-  console.log(photos, 'photos');
 
   return (
     <div
