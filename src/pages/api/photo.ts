@@ -15,7 +15,7 @@ export default async function handler(
     });
 
     const data = await cloudinary.api.resources_by_asset_folder(
-      (req?.query?.folder as string) || 'tractopelle',
+      (req?.query?.folder as string) || 'dugassistant',
       {
         max_results: 30,
         resource_type: 'image',
