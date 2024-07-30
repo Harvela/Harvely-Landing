@@ -1,56 +1,97 @@
 'use client';
 
-import Link from 'next/link';
+import { Checkbox } from 'flowbite-react';
+import { useState } from 'react';
 
-import { prices } from '@/utils/prices';
+import Select from '@/components/select';
 
 export function Pricing() {
+  const [selectedPrice, setSelectedPrice] = useState('');
+  const [schoolPartner, setSchoolPartner] = useState(false);
+  const prices = [
+    { label: '1 $', value: '1' },
+    { label: '2.99 $', value: '2.99' },
+    { label: '5.99 $', value: '5.99' },
+    { label: '11.99 $', value: '11.99' },
+    { label: '24.99 $', value: '24.99' },
+    { label: '49.99 $', value: '49.99' },
+  ];
+  const fichesByPrice: { [key: string]: string } = {
+    '1': '2',
+    '2.99': '6',
+    '5.99': '13',
+    '11.99': '25',
+    '24.99': '52',
+    '49.99': '110',
+  };
+
+  const handleSelect = (item: string) => {
+    /// setActualPrice(item);
+    setSelectedPrice(item);
+  };
+
   return (
     <div
       id="pricing"
-      className="flex h-screen w-full flex-col items-center bg-primary-400 px-4 py-8 text-center md:p-16"
+      className="flex h-fit w-full flex-col gap-16  bg-white p-4 py-16 md:flex-row  md:gap-20 md:p-16"
     >
-      <h1 className="mb-4 text-[32px] font-semibold text-white md:mb-8">
-        Pricing
-      </h1>
-      <p className="mb-4 text-[16px] text-white/80 md:mb-8 md:text-[20px]">
-        Nous offrons plusieurs paquets pour l’achat de nos fiches.
-      </p>
-      <div className="mt-8 flex w-full flex-col gap-8 md:mt-12 md:flex-row">
-        <div className="flex w-full flex-col items-center justify-between gap-4 rounded-md bg-primary-200 p-4 text-center text-black md:h-full md:w-[30%] md:gap-8 md:p-8">
-          <h4 className="-rotate-12 text-[32px] font-bold md:text-[68px]">
-            -5%
-          </h4>
-          <p className="text-[16px] md:text-[20px]">
-            Pour les instutitions et les ecoles
-          </p>
-          <Link
-            href="#contact"
-            className="rounded-md border border-primary-300 px-4 py-2"
-          >
-            Nous contacter
-          </Link>
-        </div>
-        <div className="grid w-full grid-cols-1 gap-4 md:w-[70%] md:grid-cols-3 md:gap-8">
-          {prices.map((price, index) => {
-            return (
-              <div
-                key={index}
-                className="flex/row flex rounded-md bg-primary-100 text-black transition-all duration-300 ease-in-out hover:bg-primary-100/80"
-              >
-                <h4 className=" mb-2 flex h-full w-[50%] items-center justify-center gap-4 rounded-l-md bg-primary text-center text-[20px] font-bold md:mb-4 md:text-[32px]">
-                  {price.price} <br />
-                  <span className="text-[13px]">USD</span>
-                </h4>
-                <div className="flex h-full w-[50%] flex-row items-center justify-center   gap-4 md:flex-col md:gap-0 ">
-                  <p className="text-[14px] font-extrabold md:text-[32px]">
-                    {price.description}
-                  </p>
-                  <p className="text-[14px] font-bold">Fiches</p>
-                </div>
+      <div className="w-full md:w-[50%]">
+        <h1 className="mb-8 text-[24px] font-semibold text-primary-400 md:mb-16 md:text-[32px]">
+          TARIFS
+        </h1>
+        <form className="flex w-full flex-col gap-4 md:w-[70%]">
+          <Select
+            label={`Selectionner un budget ${
+              schoolPartner ? '( 5% reduction )' : ''
+            }`}
+            items={prices}
+            onSelect={handleSelect}
+            inputStyle="border border-primary-400/80 rounded-[14px]"
+          />
+          <div className={`mt-8 flex-1 sm:mb-5`}>
+            <span className="mb-6 flex flex-row items-center gap-1 text-[16px] font-semibold text-primary-400/90">
+              Dug Assitant est partenaire avec mon ecole
+            </span>
+            <div className="flex flex-row items-center gap-12">
+              <div className="flex flex-row items-center gap-4">
+                <Checkbox
+                  className="h-6 w-6 border border-primary-400/90 bg-white"
+                  onChange={(e) => {
+                    setSchoolPartner(e.target.checked);
+                  }}
+                  checked={schoolPartner}
+                />
+                <span className="text-[18px] font-semibold text-primary-400/90">
+                  Oui
+                </span>
               </div>
-            );
-          })}
+              <div className="flex flex-row items-center gap-4">
+                <Checkbox
+                  className="h-6 w-6 border border-primary-400/90 bg-white"
+                  onChange={(e) => {
+                    setSchoolPartner(!e.target.checked);
+                  }}
+                  checked={!schoolPartner}
+                />
+                <span className="text-[18px] font-semibold text-primary-400/90">
+                  Non
+                </span>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div className="flex h-fit w-full flex-col items-center justify-center gap-4 rounded-[24px] bg-primary-400 p-8 md:w-[50%] md:gap-16 md:p-16">
+        <div className="flex flex-col items-center text-white ">
+          <h2 className="text-center text-[58px] font-bold md:text-[50px]">
+            {selectedPrice ? fichesByPrice[selectedPrice] : '0'}
+          </h2>
+          <p className=" text-center text-[16px] md:text-[20px]">
+            Fiches d’exploitations de matrices
+          </p>
+          <button className="mt-5 rounded-lg bg-white px-10 py-2 font-bold text-black md:w-[50%] md:py-3">
+            Acheter
+          </button>
         </div>
       </div>
     </div>

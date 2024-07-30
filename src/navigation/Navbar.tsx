@@ -12,13 +12,25 @@ export function Navbar() {
       link: '#home',
     },
     {
-      name: 'Exemples',
-      link: '#examples',
+      name: 'Fonctionalites',
+      link: '#feature',
     },
+    // {
+    //   name: 'Utilisation',
+    //   link: '#utilisation',
+    // },
+    // {
+    //   name: 'Exemples',
+    //   link: '#exemple',
+    // },
     {
       name: 'Tarifs',
       link: '#pricing',
     },
+    // {
+    //   name: 'Equipe',
+    //   link: '#team',
+    // },
     // {
     //   name: 'Contact',
     //   link: '#contact',
@@ -36,7 +48,7 @@ export function Navbar() {
             key={`link=${idx}`}
             href={navItem.link}
             className={cn(
-              'relative dark:text-neutral-50  items-center flex space-x-1 text-neutral-600 dark:hover:text-neutral-300 hover:text-neutral-500',
+              'relative dark:text-neutral-50  items-center flex space-x-1 text-black dark:hover:text-neutral-300 hover:text-neutral-500',
             )}
           >
             <span className="block sm:hidden">{navItem.icon}</span>
