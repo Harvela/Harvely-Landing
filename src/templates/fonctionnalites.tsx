@@ -24,7 +24,7 @@ const content = [
       'Obtenez des histoires et des exemples basés sur les réalités de vos élèves, de leurs filières ou de leurs domaines. Ces inspirations instantanées vous permettront de vous concentrer davantage sur le suivi de vos élèves et de rendre vos cours plus intéressants.',
     content: (
       <img
-        src="/assets/images/home/situation.png"
+        src="/assets/images/situation.png"
         alt=""
         className="h-full w-full object-center"
       />
@@ -36,7 +36,7 @@ const content = [
       "Enrichissez vos leçons avec nos illustrations visuelles captivantes. Ces ressources visuelles sont conçues pour faciliter la compréhension des concepts complexes et rendre l'apprentissage plus stimulant et engageant pour les élèves. Nos illustrations visuelles permettent une meilleure rétention des informations et aident à rendre vos cours plus dynamiques et interactifs.",
     content: (
       <img
-        src="/assets/images/home/illustration.png"
+        src="/assets/images/illustration.png"
         alt=""
         className="h-full w-full object-center"
       />
