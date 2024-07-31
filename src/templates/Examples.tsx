@@ -34,7 +34,7 @@ const Examples = () => {
         <h1 className="mb-10 text-[24px] font-semibold text-white md:mb-20 md:text-[32px]">
           Exemples
         </h1>
-        <form className="flex flex-col gap-8 pr-8 md:w-full md:gap-16">
+        <form className="flex flex-col gap-8 md:w-full md:gap-16 md:pr-8">
           <Select
             label="Selectionner le niveau"
             items={options}

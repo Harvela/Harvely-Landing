@@ -33,7 +33,7 @@ export function Pricing() {
   return (
     <div
       id="pricing"
-      className="flex h-fit w-full flex-col gap-16  bg-white p-4 py-16 md:flex-row  md:gap-20 md:p-16"
+      className="flex h-fit w-full flex-col gap-16  bg-white p-4 md:flex-row md:gap-20  md:p-16"
     >
       <div className="w-full md:w-[50%]">
         <h1 className="mb-8 text-[24px] font-semibold text-primary-400 md:mb-16 md:text-[32px]">
