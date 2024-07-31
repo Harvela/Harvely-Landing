@@ -20,13 +20,12 @@ const CARDS = [
       >
         <span className="pb-3 text-[14px] font-bold">
           Defis des approches par situations (APS) et par competences (APC) dans
-          le processus enseignement-apprentissage ...
+          le ...
         </span>
         <br />
         <span className="text-[12px]">
           Les approches innovantes (par situations APS et par compétences APC)
-          sont celles qui rendent les apprenants plus entreprenants leur
-          permettant ...
+          sont ...
         </span>
       </p>
     ),
@@ -47,13 +46,12 @@ const CARDS = [
       >
         <span className="pb-3 text-[14px] font-bold">
           Module de formation des inspecteurs et enseignants sur la construction
-          des situations d&aposapprentissage ...
+          des situations ...
         </span>
         <br />
         <span className="text-[12px]">
           Les approches innovantes (par des situations APS et par compétences
-          APC) sont celles qui rendent les apprenants plus entreprenants,
-          leur...
+          APC) sont ...
         </span>
       </p>
     ),
@@ -109,23 +107,6 @@ const Conception = () => {
           </div>
           <CardStack items={CARDS} />
         </div>
-
-        {/* <div className="mt-8 flex w-full flex-col items-center gap-4 md:flex-row md:justify-between">
-          {books.map((b, index) => (
-            <div
-              key={index}
-              className=" flex w-full flex-col items-center justify-center gap-2 rounded-[8px] border-2 border-white/50 p-4 text-center text-white md:w-[30%] md:rounded-[24px] md:p-8"
-            >
-              <p className="text-[12px] md:text-[14px]">{b.title}</p>
-              <h2 className="text-[14px] font-semibold md:text-xl">
-                {b.author}
-              </h2>
-              <button className="w-[30%] rounded-lg bg-white/80 py-1 text-[12px] font-bold text-black md:w-[40%] md:text-[14px]">
-                Voir plus
-              </button>
-            </div>
-          ))}
-        </div> */}
         <hr className="mx-auto my-10 h-[3px] w-[30%] bg-white md:mx-0 md:my-16 md:mb-10" />
         <Counter countervalue={counterValues} />
       </div>
