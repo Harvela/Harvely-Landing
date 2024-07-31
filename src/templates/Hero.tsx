@@ -2,6 +2,7 @@
 
 import 'react-toastify/dist/ReactToastify.css';
 
+import Link from 'next/link';
 import React from 'react';
 
 import { Navbar } from '@/navigation/Navbar';
@@ -36,12 +37,19 @@ const Hero: React.FC = () => {
           avec l’intelligence artificielle.
         </h1>
         <div className="flex w-full flex-row items-center justify-center gap-4 md:flex-row md:gap-2">
-          <button className="z-[10000] w-full rounded-xl bg-white p-3 text-[15px] text-primary-400 md:mx-4 md:w-[20%] md:text-[18px]">
+          <a
+            href="https://app.dugassistant.com"
+            target="_blank"
+            className="z-[10000] w-full rounded-xl bg-white p-3 text-center text-[15px] text-primary-400 md:mx-4 md:w-[20%] md:text-[18px]"
+          >
             Generer les fiches
-          </button>
-          <button className="z-[10000] w-full rounded-xl border-2 border-white p-3 text-[15px] text-white md:mx-4 md:w-[20%] md:text-[18px]">
+          </a>
+          <Link
+            href="#exemple"
+            className="z-[10000] w-full rounded-xl border-2 border-white p-3 text-center text-[15px] text-white md:mx-4 md:w-[20%] md:text-[18px]"
+          >
             Voir les exemples
-          </button>
+          </Link>
         </div>
       </div>
     </div>

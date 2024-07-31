@@ -57,11 +57,13 @@ const content = [
 ];
 export function Fonctionnalites() {
   return (
-    <motion.div
-      onViewportEnter={() => console.log('enter')}
-      className="flex flex-col gap-4"
-    >
-      <StickyScroll content={content} />
-    </motion.div>
+    <div>
+      <motion.div
+        onViewportEnter={() => console.log('enter')}
+        className="flex flex-col gap-4"
+      >
+        <StickyScroll content={content} />
+      </motion.div>
+    </div>
   );
 }
