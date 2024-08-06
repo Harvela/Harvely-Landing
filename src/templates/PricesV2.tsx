@@ -73,7 +73,7 @@ export const PricingV2 = () => {
                 className={`absolute left-1/2 top-[-16px] w-full -translate-x-1/2 text-center`}
               >
                 <span
-                  className={`rounded-[5px] p-2 px-8 text-[16px]  font-medium${
+                  className={`rounded-[5px] p-2 px-8 text-[16px]  font-medium ${
                     index === prices.length - 1
                       ? 'border-[1px] border-primary-500 bg-primary-400 text-primary-500'
                       : 'bg-primary-500 text-white '
