@@ -10,19 +10,19 @@ export function Pricing() {
   const [schoolPartner, setSchoolPartner] = useState(false);
   const prices = [
     { label: '1 $', value: '1' },
-    { label: '2.99 $', value: '2.99' },
-    { label: '5.99 $', value: '5.99' },
-    { label: '11.99 $', value: '11.99' },
-    { label: '24.99 $', value: '24.99' },
-    { label: '49.99 $', value: '49.99' },
+    { label: '2 $', value: '2' },
+    { label: '4 $', value: '4' },
+    { label: '10 $', value: '10' },
+    { label: '23 $', value: '23' },
+    { label: '45 $', value: '45' },
   ];
   const fichesByPrice: { [key: string]: string } = {
     '1': '2',
-    '2.99': '6',
-    '5.99': '13',
-    '11.99': '25',
-    '24.99': '52',
-    '49.99': '110',
+    '2': '6',
+    '4': '13',
+    '10': '25',
+    '23': '52',
+    '45': '110',
   };
 
   const handleSelect = (item: string) => {

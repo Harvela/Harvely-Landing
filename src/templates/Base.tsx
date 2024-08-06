@@ -11,7 +11,7 @@ import { Fonctionnalites } from './fonctionnalites';
 import { Footer } from './Footer';
 import { Gallery } from './Gallery';
 import { Hero } from './Hero';
-import { Pricing } from './Prices';
+import { PricingV2 } from './PricesV2';
 import { Team } from './Team';
 import { Testimony } from './testimony';
 
@@ -24,7 +24,7 @@ const Base = (props: any) => {
       <Fonctionnalites />
       <Conception />
       <Examples />
-      <Pricing />
+      <PricingV2 />
       <Team />
       <Testimony />
       <Gallery photos={props.photos} />

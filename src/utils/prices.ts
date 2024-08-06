@@ -1,26 +1,30 @@
 export const prices = [
   {
-    price: '1',
-    description: '2 ',
+    id: 1,
+    fiche: '30',
+    price: '$5',
+    frequency: '/mois',
+    name: 'Abonnement individuel',
+    list: [
+      "Fiches conforme aux programmes utilisant l'APS/APC",
+      "Formation gratuite sur l'APS/APC",
+      'Reduction sur la formation en bureautique de base ($10)',
+      'Support technique disponible ',
+    ],
   },
   {
-    price: '2.99',
-    description: '6 ',
-  },
-  {
-    price: '5.99',
-    description: '13 ',
-  },
-  {
-    price: '11.99',
-    description: '25 ',
-  },
-  {
-    price: '24.99',
-    description: '52 ',
-  },
-  {
-    price: '49.99',
-    description: '110 ',
+    id: 2,
+    fiche: '30',
+    price: '$5',
+    frequency: '/mois par enseignant',
+    name: 'Abonnement par ecole',
+    list: [
+      "Fiches conforme aux programmes utilisant l'APS/APC",
+      "Formation gratuite sur l'APS/APC",
+      'Formation gratuite en bureautique',
+      'Prevision des matieres pour les enseignants',
+      'Systeme de suivi des enseignants',
+      'Support technique disponible',
+    ],
   },
 ];
