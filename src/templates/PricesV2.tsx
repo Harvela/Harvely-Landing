@@ -27,10 +27,10 @@ export const PricingV2 = () => {
   };
   return (
     <div id="pricing" className="h-fit w-full bg-white p-4 md:p-16">
-      <h1 className="mb-8 text-[24px] font-semibold text-primary-400 md:mb-16 md:text-[32px]">
+      {/* <h1 className="mb-8 text-[24px] font-semibold text-primary-400 md:mb-16 md:text-[32px]">
         TARIFS
-      </h1>
-      <div className="grid grid-cols-3 gap-16">
+      </h1> */}
+      <div className="grid grid-cols-1 gap-12 md:grid-cols-2 md:gap-10 lg:grid-cols-4 lg:gap-4">
         <div className="border-primary0 flex flex-col justify-between rounded-[5px] border-[2px] p-6 shadow-sm">
           <div className="flex flex-col gap-6">
             <div className="flex flex-col gap-2 pt-4">
@@ -95,7 +95,7 @@ export const PricingV2 = () => {
                   {p.price}
                 </h2>
                 <p className="text-center text-[24px] font-semibold text-primary-400">
-                  {p.fiche} fiches
+                  {p.fiche} fiches {p.frequency}
                 </p>
               </div>
               <ul className="flex flex-col gap-6">

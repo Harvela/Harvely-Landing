@@ -4,7 +4,7 @@ export const prices = [
     fiche: '30',
     price: '$5',
     frequency: '/mois',
-    name: 'Abonnement individuel',
+    name: 'Abonnement mensuel',
     list: [
       "Fiches conforme aux programmes utilisant l'APS/APC",
       "Formation gratuite sur l'APS/APC",
@@ -15,10 +15,26 @@ export const prices = [
   {
     id: 2,
     fiche: '30',
-    price: '$5',
-    frequency: '/mois par enseignant',
-    name: 'Abonnement par ecole',
+    price: '$13.5',
+    frequency: '/mois',
+    name: 'Abonnement trimestriel',
     list: [
+      "Fiches conforme aux programmes utilisant l'APS/APC",
+      "Formation gratuite sur l'APS/APC",
+      'Formation gratuite en bureautique',
+      'Prevision des matieres pour les enseignants',
+      'Systeme de suivi des enseignants',
+      'Support technique disponible',
+    ],
+  },
+  {
+    id: 3,
+    fiche: '30',
+    price: '$30',
+    frequency: '/mois',
+    name: 'Abonnement annuel',
+    list: [
+      "Acces sur DugAssistant pendant toute l'annee scolaire(10 mois)",
       "Fiches conforme aux programmes utilisant l'APS/APC",
       "Formation gratuite sur l'APS/APC",
       'Formation gratuite en bureautique',

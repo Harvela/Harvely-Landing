@@ -16,13 +16,13 @@ interface PhotoPageProps {
   error?: string | null;
 }
 
-const Gallery = ({ photos }: PhotoPageProps) => {
+const Gallerie = ({ photos }: PhotoPageProps) => {
   const [index, setIndex] = useState<number>(-1);
 
   return (
     <div
       id="gallery"
-      className="flex max-h-[100vh] w-full flex-col gap-0 overflow-scroll bg-primary-400 p-4 md:p-16"
+      className="flex max-h-[100vh] w-full flex-col gap-0 overflow-scroll p-4 md:p-16"
     >
       <h1 className="mb-12 text-[24px] font-semibold text-white md:text-[32px]">
         GALLERIE
@@ -48,4 +48,4 @@ const Gallery = ({ photos }: PhotoPageProps) => {
   );
 };
 
-export { Gallery };
+export { Gallerie };

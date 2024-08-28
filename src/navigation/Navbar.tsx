@@ -1,67 +1,99 @@
 'use client';
 
 import Link from 'next/link';
-import React from 'react';
-
-import { cn } from '@/utils/cn';
+import React, { useState } from 'react';
+import { GiHamburgerMenu } from 'react-icons/gi';
+import { IoCloseSharp } from 'react-icons/io5';
 
 export function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   const navItems = [
     {
       name: 'Accueil',
-      link: '#home',
-    },
-    {
-      name: 'Fonctionalites',
-      link: '#feature',
+      link: '/home',
     },
     // {
-    //   name: 'Utilisation',
-    //   link: '#utilisation',
-    // },
-    // {
-    //   name: 'Exemples',
-    //   link: '#exemple',
+    //   name: 'Fonctionalites',
+    //   link: '/feature',
     // },
     {
       name: 'Tarifs',
-      link: '#pricing',
+      link: '/tarif',
     },
-    // {
-    //   name: 'Equipe',
-    //   link: '#team',
-    // },
-    // {
-    //   name: 'Contact',
-    //   link: '#contact',
-    // },
+    {
+      name: 'Gallerie',
+      link: '/gallery',
+    },
   ];
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   return (
-    <div className="relative w-full">
-      <div
-        className={cn(
-          'flex  w-[95%]  md:max-w-fit  fixed top-10 inset-x-0 mx-auto border border-transparent dark:border-white/[0.2] rounded-full dark:bg-black bg-white shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] z-[5000] pr-2 md:pl-8 py-2  items-center justify-center space-x-4',
-        )}
-      >
-        {navItems.map((navItem: any, idx: number) => (
-          <Link
-            key={`link=${idx}`}
-            href={navItem.link}
-            className={cn(
-              'relative dark:text-neutral-50  items-center flex space-x-1 text-black dark:hover:text-neutral-300 hover:text-neutral-500',
-            )}
+    <div className="z-10000 fixed mb-8 w-full border-b-[1px] border-primary-400/10 bg-white px-8 py-4 md:px-16 md:py-6">
+      <div className="hidden flex-row items-center justify-between md:flex">
+        <div className="flex flex-row items-center gap-2">
+          <img src="/logo.png" alt="Logo" className="h-12 w-auto" />
+          <p className="text-[24px] font-semibold text-primary-400">
+            DugAssistant
+          </p>
+        </div>
+
+        {/* Desktop Menu */}
+        <div className="flex items-center gap-8">
+          {navItems.map((navItem, idx) => (
+            <Link
+              key={`link-${idx}`}
+              href={navItem.link}
+              className="text-[18px] font-medium text-primary-400"
+            >
+              {navItem.name}
+            </Link>
+          ))}
+          <a
+            href="https://app.dugassistant.com"
+            target="_blank"
+            className="relative rounded-md bg-primary-400 px-4 py-2 text-[16px] font-medium text-white shadow-sm shadow-primary-400"
           >
-            <span className="block sm:hidden">{navItem.icon}</span>
-            <span className="text-[12px] md:text-sm">{navItem.name}</span>
-          </Link>
-        ))}
-        <a
-          href="https://app.dugassistant.com"
-          target="_blank"
-          className="relative rounded-full border border-primary-200 px-2 py-1 text-[11px] font-medium text-black shadow-md dark:border-white/[0.2] dark:text-white md:text-sm"
-        >
-          <span>Se connecter</span>
-        </a>
+            <span>Se connecter</span>
+          </a>
+        </div>
+      </div>
+
+      <div className="md:hidden">
+        <div className="flex flex-row items-center justify-between">
+          <img src="/logo.png" alt="Logo" className="h-10 w-auto" />
+          <button onClick={toggleMenu} className="text-3xl text-primary-400">
+            {menuOpen ? <IoCloseSharp /> : <GiHamburgerMenu />}
+          </button>
+        </div>
+
+        {menuOpen && (
+          <div className="mt-20 flex h-[100vh] flex-col gap-20">
+            <div className="flex flex-col gap-8">
+              {navItems.map((navItem, idx) => (
+                <Link
+                  key={`mobile-link-${idx}`}
+                  href={navItem.link}
+                  className="text-[18px] font-medium text-primary-400"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  {navItem.name}
+                </Link>
+              ))}
+            </div>
+            <a
+              href="https://app.dugassistant.com"
+              target="_blank"
+              className="relative w-[60%] rounded-md bg-primary-400 px-4 py-2 text-center text-[16px] font-medium text-white shadow-sm shadow-primary-400"
+              onClick={() => setMenuOpen(false)}
+            >
+              Se connecter
+            </a>
+          </div>
+        )}
       </div>
     </div>
   );

@@ -1,70 +1,42 @@
 'use client';
 
-import { useEffect, useState } from 'react';
-
-import Select from '@/components/select';
-import { getFichesPerSubject, getSubjectPerLevel } from '@/utils/fiches';
+import { fiches } from '@/utils/fiches';
 
 const Examples = () => {
-  const [data, setData] = useState({} as any);
-
-  const [subjects, setSubjects] = useState([] as string[]);
-  const [fiches, setFiches] = useState([] as any[]);
-
-  useEffect(() => {
-    setSubjects(getSubjectPerLevel(data.level));
-    setFiches(getFichesPerSubject(data.level, data.subject));
-  }, [data.level, data.subject]);
-
-  console.log(subjects);
-
-  const options = [
-    { label: 'Maternelle', value: 'maternelle' },
-    { label: 'Primaire', value: 'primaire' },
-    { label: 'CTB', value: 'ctb' },
-    { label: 'Secondaire', value: 'secondaire' },
-  ];
-
   return (
     <div
       id="exemple"
-      className="flex w-full flex-col items-center gap-16 bg-primary-400 p-4 py-16 md:flex-row  md:gap-20 md:p-16"
+      className="flex w-full flex-col gap-8 px-8 py-4 md:gap-16 md:px-16 md:py-8"
     >
-      <div className="w-full md:w-[50%]">
-        <h1 className="mb-10 text-[24px] font-semibold text-white md:mb-20 md:text-[32px]">
-          Exemples
-        </h1>
-        <form className="flex flex-col gap-8 md:w-full md:gap-16 md:pr-8">
-          <Select
-            label="Selectionner le niveau"
-            items={options}
-            onSelect={(value: any) => setData({ ...data, level: value })}
-          />
-          <Select
-            label="Selectionner le cours"
-            items={subjects.map((subject: string) => ({
-              label: subject,
-              value: subject,
-            }))}
-            onSelect={(item: any) => setData({ ...data, subject: item })}
-          />
-        </form>
-      </div>
-      <div className="flex w-full flex-col gap-4 md:w-[50%]">
+      <h1 className="text-[16px] font-semibold text-primary-400 md:text-[32px]">
+        Exemples
+      </h1>
+      <div className="grid w-full gap-6 md:grid-cols-4">
         {fiches.map((fiche) => (
           <div
             key={fiche.id}
-            className=" flex w-full flex-row items-center justify-between gap-5 rounded-[10px] bg-[#F8AB5D]/10 px-5 py-2"
+            className="flex flex-col gap-4 rounded-lg border-[1px] border-primary-400/20 p-4 text-[14px] text-primary-400 shadow-sm"
           >
-            <p className="text-[14px] font-medium text-[white] md:text-[16px]">
-              Lesson sur <span className="font-semibold">{fiche.title}</span>
-            </p>
+            <div className="flex flex-col justify-between gap-2">
+              <p className="text-[16px] font-medium text-primary-400 md:text-[20px]">
+                Fiche sur <span className="font-semibold">{fiche.title}</span>
+              </p>
+              <div className="flex flex-row items-center gap-2">
+                <p className="rounded-[5px] bg-primary-300/20 px-2 py-1 text-[10px] font-medium uppercase text-primary-400 md:px-4 md:py-[2px] md:text-[12px]">
+                  {fiche.level}
+                </p>
+                <p className="rounded-[5px] bg-primary-400/10 px-2 py-1 text-[10px] font-medium uppercase text-primary-400 md:px-4 md:py-[2px] md:text-[12px]">
+                  {fiche.domaine}
+                </p>
+              </div>
+            </div>
+            <p className="text-[12px] md:text-[14px]">{fiche.content}</p>
             <a
-              className="rounded-lg border-[1px] border-[white] px-2 py-1 text-[14px] text-white"
+              className="w-[50%] rounded-lg border-[1px] border-primary-400 px-2 py-1 text-center text-[12px] text-primary-400 md:w-[30%] md:text-[14px]"
               target="_blank"
               href={`https://app.dugassistant.com/fiches/${fiche.id}`}
             >
-              Voir
+              Voir plus
             </a>
           </div>
         ))}
