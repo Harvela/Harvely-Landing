@@ -9,7 +9,6 @@ export const prices = [
       "Fiches conforme aux programmes utilisant l'APS/APC",
       "Formation gratuite sur l'APS/APC",
       'Reduction sur la formation en bureautique de base ($10)',
-      'Support technique disponible ',
     ],
   },
   {
@@ -20,11 +19,9 @@ export const prices = [
     name: 'Abonnement trimestriel',
     list: [
       "Fiches conforme aux programmes utilisant l'APS/APC",
-      "Formation gratuite sur l'APS/APC",
-      'Formation gratuite en bureautique',
+      "Formation gratuite sur l'APS/APC et bureautique",
       'Prevision des matieres pour les enseignants',
       'Systeme de suivi des enseignants',
-      'Support technique disponible',
     ],
   },
   {
@@ -36,11 +33,9 @@ export const prices = [
     list: [
       "Acces sur DugAssistant pendant toute l'annee scolaire(10 mois)",
       "Fiches conforme aux programmes utilisant l'APS/APC",
-      "Formation gratuite sur l'APS/APC",
-      'Formation gratuite en bureautique',
+      "Formation gratuite sur l'APS/APC et bureautique",
       'Prevision des matieres pour les enseignants',
       'Systeme de suivi des enseignants',
-      'Support technique disponible',
     ],
   },
 ];

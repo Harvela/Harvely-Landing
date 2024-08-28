@@ -3,6 +3,7 @@ import { Examples } from '@/templates/Examples';
 import { Footer } from '@/templates/Footer';
 import { Hero } from '@/templates/Hero';
 import { Partners } from '@/templates/Parteners';
+import { TestimonialPage } from '@/templates/testimony';
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
       <div className="pt-[80px]">
         <Hero />
         <Examples />
+        <TestimonialPage />
         <Partners />
         <Footer />
       </div>

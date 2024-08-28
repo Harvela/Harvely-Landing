@@ -17,8 +17,8 @@ const partners = [
 
 export function Partners() {
   return (
-    <div className="flex w-full flex-col gap-8 bg-primary-400 py-16">
-      <h1 className="mb:4 px-4 text-[18px] font-semibold text-white md:mb-8 md:px-16 md:text-[24px]">
+    <div className="flex w-full flex-col gap-8 bg-primary-400 px-4 py-16  md:px-16">
+      <h1 className="mb-4 text-[18px] font-semibold text-white md:mb-8 md:text-[24px]">
         NOS PARTENAIRES
       </h1>
       <div className="relative flex flex-col items-center justify-center overflow-hidden bg-primary-400 antialiased">

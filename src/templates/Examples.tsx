@@ -8,9 +8,12 @@ const Examples = () => {
       id="exemple"
       className="flex w-full flex-col gap-8 px-8 py-4 md:gap-16 md:px-16 md:py-8"
     >
-      <h1 className="text-[16px] font-semibold text-primary-400 md:text-[32px]">
-        Exemples
-      </h1>
+      <div className="">
+        <h2 className="text-3xl font-extrabold text-gray-900">Exemples</h2>
+        <p className="text-md mt-2 text-gray-600">
+          What our clients say about us
+        </p>
+      </div>
       <div className="grid w-full gap-6 md:grid-cols-4">
         {fiches.map((fiche) => (
           <div
