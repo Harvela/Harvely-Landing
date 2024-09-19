@@ -25,6 +25,7 @@ export function Navbar() {
       name: 'Gallerie',
       link: '/gallery',
     },
+    { name: 'Contact', link: '/Contact' },
   ];
 
   const toggleMenu = () => {
