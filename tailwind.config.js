@@ -50,6 +50,10 @@ module.exports = {
           DEFAULT: '#FFEAD6',
           on: '#f4f8fd',
         },
+        back: {
+          100: '#0A665C',
+        },
+        button: '#F8AB5D',
       },
       lineHeight: {
         hero: '4.5rem',

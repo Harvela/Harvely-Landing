@@ -26,19 +26,19 @@ export const PricingV2 = () => {
     setSelectedPrice(item);
   };
   return (
-    <div id="pricing" className="h-fit w-full bg-white p-4 md:p-16">
-      {/* <h1 className="mb-8 text-[24px] font-semibold text-primary-400 md:mb-16 md:text-[32px]">
-        TARIFS
-      </h1> */}
-      <p className="mb-16 px-20 text-center text-[20px]">
+    <div id="pricing" className="h-fit w-full p-8 md:p-16">
+      <h1 className="mb-8 text-[24px] font-semibold text-white md:mb-16 md:text-[32px]">
+        Nos tarifs
+      </h1>
+      <p className="mb-16 text-[16px] text-white md:text-[20px]">
         Découvrez nos offres adaptées à tous les budgets pour un accès optimisé
         aux ressources éducatives de DugAssistant!
       </p>
       <div className="grid grid-cols-1 gap-12 md:grid-cols-2 md:gap-10 lg:grid-cols-4 lg:gap-4">
-        <div className="border-primary0 flex flex-col justify-between rounded-[5px] border-[2px] p-6 shadow-sm">
+        <div className="flex flex-col justify-between rounded-[5px] bg-button/10 p-6 shadow-sm">
           <div className="flex flex-col gap-6">
             <div className="flex flex-col gap-2 pt-4">
-              <h2 className="text-center text-[40px] font-bold text-primary-500">
+              <h2 className="text-center text-[40px] font-bold text-white">
                 ${selectedPrice || '0'}
               </h2>
               <p className="text-center text-[24px] font-semibold text-primary-400">
@@ -61,15 +61,11 @@ export const PricingV2 = () => {
         {prices.map((p, index) => (
           <div
             key={p.id}
-            className={`relative flex flex-col justify-between rounded-[5px] p-6 ${
-              index === prices.length - 2
-                ? 'border-[4px] border-primary-500 shadow-lg'
-                : 'border-primary0 border-[2px] shadow-sm'
-            }
+            className={`relative flex flex-col justify-between rounded-[5px] p-6 
             ${
               index === prices.length - 1
-                ? 'bg-primary-500 text-white shadow-lg'
-                : 'border-primary0 border-[2px] shadow-sm'
+                ? 'bg-button text-white shadow-lg'
+                : 'bg-button/10 shadow-sm'
             }`}
           >
             {p.name && (
@@ -79,7 +75,7 @@ export const PricingV2 = () => {
                 <span
                   className={`rounded-[5px] p-2 px-8 text-[16px]  font-medium ${
                     index === prices.length - 1
-                      ? 'border-[1px] border-primary-500 bg-primary-400 text-primary-500'
+                      ? 'border-[1px] border-primary-500 bg-primary-400 text-white'
                       : 'bg-primary-500 text-white '
                   }`}
                 >
@@ -89,13 +85,7 @@ export const PricingV2 = () => {
             )}
             <div className="flex flex-col gap-6">
               <div className="flex flex-col gap-2 pt-4">
-                <h2
-                  className={`text-center text-[40px] font-bold ${
-                    index === prices.length - 1
-                      ? 'text-primary-400'
-                      : 'text-primary-500 '
-                  }`}
-                >
+                <h2 className="text-center text-[40px] font-bold text-white">
                   {p.price}
                 </h2>
                 <p className="text-center text-[24px] font-semibold text-primary-400">
@@ -104,13 +94,12 @@ export const PricingV2 = () => {
               </div>
               <ul className="flex flex-col gap-3">
                 {p.list.map((item, idx) => (
-                  <li key={idx} className="flex flex-row gap-2 text-[14px]">
+                  <li
+                    key={idx}
+                    className="flex flex-row gap-2 text-[14px] text-white"
+                  >
                     <svg
-                      className={`h-5 w-5 shrink-0 dark:text-green-400 ${
-                        index === prices.length - 1
-                          ? 'text-primary-400'
-                          : 'text-primary-500 '
-                      }`}
+                      className="h-5 w-5 shrink-0 text-white dark:text-green-400"
                       fill="currentColor"
                       viewBox="0 0 20 20"
                       xmlns="http://www.w3.org/2000/svg"
@@ -137,6 +126,14 @@ export const PricingV2 = () => {
             </button>
           </div>
         ))}
+      </div>
+      <div className="m-auto mt-20 flex w-full flex-col items-center justify-center gap-8 rounded-[10px] bg-white p-6 md:w-[70%] md:p-12">
+        <p className="font-regular text-center text-[16px] text-black md:text-[32px]">
+          Certaines Ecoles ou professeurs n’arrivent pas a acceder aux tech a
+          cause des problemes financiers. vous pouvez contribuer a rendre
+          l’education meilleure
+        </p>
+        <button className="h-[50px] w-[200px] rounded-[10px] bg-back-100"></button>
       </div>
     </div>
   );

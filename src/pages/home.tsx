@@ -1,13 +1,11 @@
 import { Navbar } from '@/navigation/Navbar';
 import { Examples } from '@/templates/Examples';
-import { Footer } from '@/templates/Footer';
 import { Hero } from '@/templates/Hero';
-import { Partners } from '@/templates/Parteners';
-import { TestimonialPage } from '@/templates/testimony';
+import { PricingV2 } from '@/templates/PricesV2';
 
 const Home = () => {
   return (
-    <div>
+    <div className="bg-back-100">
       <div className="fixed z-[5000] w-full">
         <Navbar />
       </div>
@@ -15,9 +13,10 @@ const Home = () => {
       <div className="pt-[80px]">
         <Hero />
         <Examples />
-        <TestimonialPage />
+        <PricingV2 />
+        {/* <TestimonialPage />
         <Partners />
-        <Footer />
+        <Footer /> */}
       </div>
     </div>
   );

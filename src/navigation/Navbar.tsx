@@ -33,13 +33,15 @@ export function Navbar() {
   };
 
   return (
-    <div className="z-10000 fixed mb-8 w-full border-b-[1px] border-primary-400/10 bg-white px-8 py-4 md:px-16 md:py-6">
+    <div className="z-10000 fixed mb-8 w-full border-b-[2px] border-white/20 bg-back-100 px-8 py-4 md:px-16 md:py-6">
       <div className="hidden flex-row items-center justify-between md:flex">
         <div className="flex flex-row items-center gap-2">
-          <img src="/logo.png" alt="Logo" className="h-12 w-auto" />
-          <p className="text-[24px] font-semibold text-primary-400">
-            DugAssistant
-          </p>
+          <img
+            src="/logo1.jpg"
+            alt="logo1"
+            className="h-12 w-auto text-white"
+          />
+          <p className="text-[24px] font-semibold text-white">DugAssistant</p>
         </div>
 
         {/* Desktop Menu */}
@@ -48,19 +50,19 @@ export function Navbar() {
             <Link
               key={`link-${idx}`}
               href={navItem.link}
-              className="text-[18px] font-medium text-primary-400"
+              className="text-[18px] font-medium text-white"
             >
               {navItem.name}
             </Link>
           ))}
-          <a
-            href="https://app.dugassistant.com"
-            target="_blank"
-            className="relative rounded-md bg-primary-400 px-4 py-2 text-[16px] font-medium text-white shadow-sm shadow-primary-400"
-          >
-            <span>Se connecter</span>
-          </a>
         </div>
+        <a
+          href="https://app.dugassistant.com"
+          target="_blank"
+          className="relative rounded-md border-[2px] border-white px-6 py-2 text-[16px] font-medium text-white shadow-sm shadow-primary-400"
+        >
+          <span>Se connecter</span>
+        </a>
       </div>
 
       <div className="md:hidden">

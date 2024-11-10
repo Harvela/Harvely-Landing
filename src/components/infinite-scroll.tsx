@@ -13,7 +13,6 @@ export const InfiniteMovingCards = ({
 }: {
   items: {
     name: string;
-    logo: string;
   }[];
   direction?: 'left' | 'right';
   speed?: 'fast' | 'normal' | 'slow';
@@ -82,20 +81,14 @@ export const InfiniteMovingCards = ({
       <ul
         ref={scrollerRef}
         className={cn(
-          ' flex min-w-full shrink-0 gap-4 py-4 w-max flex-nowrap',
+          ' flex min-w-full shrink-0 flex-row gap-16 justify-between py-4 w-max flex-nowrap',
           start && 'animate-scroll ',
           pauseOnHover && 'hover:[animation-play-state:paused]',
         )}
       >
         {items.map((item) => (
-          <li
-            className="relative flex w-[350px] max-w-full flex-col items-center justify-center gap-8 rounded-2xl border border-b-0 border-slate-700 bg-white px-8 py-6 md:w-[450px]"
-            key={item.name}
-          >
-            <img src="/logo.png" />
-            <span className=" relative z-20 text-[24px] font-semibold leading-[1.6] text-primary-400">
-              {item.name}
-            </span>
+          <li className="text-[12px] text-white md:text-[24px]" key={item.name}>
+            {item.name}
           </li>
         ))}
       </ul>
