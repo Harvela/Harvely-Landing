@@ -1,22 +1,19 @@
 'use client';
 
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import React, { useState } from 'react';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { IoCloseSharp } from 'react-icons/io5';
 
 export function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
-
+  const router = useRouter(); // Récupère l'URL actuelle
   const navItems = [
     {
       name: 'Accueil',
       link: '/home',
     },
-    // {
-    //   name: 'Fonctionalites',
-    //   link: '/feature',
-    // },
     {
       name: 'Tarifs',
       link: '/tarif',
@@ -33,15 +30,15 @@ export function Navbar() {
   };
 
   return (
-    <div className="z-10000 fixed mb-8 w-full border-b-[2px] border-white/20 bg-back-100 px-8 py-4 md:px-32 md:py-6">
+    <div className="z-10000 fixed mb-8 w-full border-b-[2px] border-white/20 bg-back-100 px-8 py-4 md:px-32 md:py-2.5">
       <div className="hidden flex-row items-center justify-between md:flex">
         <div className="flex flex-row items-center gap-2">
           <img
-            src="/logo1.jpg"
+            src="/logo192.png"
             alt="logo1"
-            className="h-12 w-auto text-white"
+            className="h-8 w-auto rounded-[8px] text-white"
           />
-          <p className="text-[24px] font-semibold text-white">DugAssistant</p>
+          <p className="text-[18px] font-semibold text-white">DugAssistant</p>
         </div>
 
         {/* Desktop Menu */}
@@ -50,7 +47,11 @@ export function Navbar() {
             <Link
               key={`link-${idx}`}
               href={navItem.link}
-              className="text-[18px] font-medium text-white"
+              className={`rounded-[5px] p-2 text-[14px] font-medium text-white transition duration-300 ${
+                router.pathname === navItem.link
+                  ? 'bg-black bg-opacity-10' // Applique le style actif
+                  : 'hover:bg-black hover:bg-opacity-10' // Applique un effet au survol
+              }`}
             >
               {navItem.name}
             </Link>
@@ -59,12 +60,13 @@ export function Navbar() {
         <a
           href="https://app.dugassistant.com"
           target="_blank"
-          className="relative rounded-md border-[2px] border-white px-6 py-2 text-[16px] font-medium text-white shadow-sm shadow-primary-400"
+          className="relative rounded-md border-[2px] border-white px-6 py-2 text-[13px] font-medium text-white shadow-sm shadow-primary-400 hover:bg-black hover:text-primary-500"
         >
           <span>Se connecter</span>
         </a>
       </div>
 
+      {/* Mobile Menu */}
       <div className="md:hidden">
         <div className="flex flex-row items-center justify-between">
           <img src="/logo.png" alt="Logo" className="h-10 w-auto" />
@@ -80,7 +82,11 @@ export function Navbar() {
                 <Link
                   key={`mobile-link-${idx}`}
                   href={navItem.link}
-                  className="text-[18px] font-medium text-primary-400"
+                  className={`text-[18px] font-medium text-primary-400 ${
+                    router.pathname === navItem.link
+                      ? 'bg-black bg-opacity-10' // Applique le style actif
+                      : 'hover:bg-black hover:bg-opacity-10'
+                  }`}
                   onClick={() => setMenuOpen(false)}
                 >
                   {navItem.name}
@@ -90,7 +96,7 @@ export function Navbar() {
             <a
               href="https://app.dugassistant.com"
               target="_blank"
-              className="relative w-[60%] rounded-md bg-primary-400 px-4 py-2 text-center text-[16px] font-medium text-white shadow-sm shadow-primary-400"
+              className="relative w-[60%] rounded-md bg-primary-400 p-4 text-center text-[16px] font-medium text-white shadow-sm shadow-primary-400"
               onClick={() => setMenuOpen(false)}
             >
               Se connecter
