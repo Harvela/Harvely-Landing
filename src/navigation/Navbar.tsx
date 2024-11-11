@@ -33,7 +33,7 @@ export function Navbar() {
   };
 
   return (
-    <div className="z-10000 fixed mb-8 w-full border-b-[2px] border-white/20 bg-back-100 px-8 py-4 md:px-16 md:py-6">
+    <div className="z-10000 fixed mb-8 w-full border-b-[2px] border-white/20 bg-back-100 px-8 py-4 md:px-32 md:py-6">
       <div className="hidden flex-row items-center justify-between md:flex">
         <div className="flex flex-row items-center gap-2">
           <img

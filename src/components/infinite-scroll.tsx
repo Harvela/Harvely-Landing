@@ -87,7 +87,10 @@ export const InfiniteMovingCards = ({
         )}
       >
         {items.map((item) => (
-          <li className="text-[12px] text-white md:text-[24px]" key={item.name}>
+          <li
+            className="text-[12px] font-extrabold text-white/50 md:text-[32px]"
+            key={item.name}
+          >
             {item.name}
           </li>
         ))}
