@@ -21,17 +21,17 @@ const Hero: React.FC = () => {
               <span className="mx-2 text-[#F8AB5D]">5 minutes</span>
               avec l’intelligence artificielle.
             </h1>
-            <div className="flex w-full flex-row items-center gap-4 md:flex-row md:gap-8">
+            <div className="flex w-full flex-row items-center gap-4 md:flex-row md:gap-6">
               <a
                 href="https://app.dugassistant.com"
                 target="_blank"
-                className="rounded-xl bg-button px-4 py-3 text-center text-[10px] text-white md:px-8 md:text-[16px]"
+                className="rounded-lg bg-button px-4 py-3 text-center text-[10px] text-black hover:bg-[#E8984B] md:px-8 md:text-[16px]"
               >
                 Generer les fiches
               </a>
               <Link
                 href="#exemple"
-                className="rounded-xl border-2 border-button px-3 py-2 text-center text-[10px] text-button md:px-8 md:text-[18px]"
+                className="rounded-lg border-2 border-button px-3 py-2.5 text-center text-[10px] text-button hover:bg-button hover:text-black md:px-8 md:text-[16px]"
               >
                 Voir les exemples
               </Link>
@@ -42,6 +42,7 @@ const Hero: React.FC = () => {
         <img
           src="Group.svg"
           className="h-full w-[100%] p-8 md:w-[50%] md:p-16"
+          alt="group svg"
         />
       </div>
       <Partners />

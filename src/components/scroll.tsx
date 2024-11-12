@@ -27,21 +27,16 @@ export const InfiniteMovingLessons = ({
   const [start, setStart] = useState(false);
   const containerRef = React.useRef<HTMLDivElement>(null);
   const scrollerRef = React.useRef<HTMLUListElement>(null);
+
   const getDirection = () => {
     if (containerRef.current) {
-      if (direction === 'left') {
-        containerRef.current.style.setProperty(
-          '--animation-direction',
-          'forwards',
-        );
-      } else {
-        containerRef.current.style.setProperty(
-          '--animation-direction',
-          'reverse',
-        );
-      }
+      containerRef.current.style.setProperty(
+        '--animation-direction',
+        direction === 'left' ? 'forwards' : 'reverse',
+      );
     }
   };
+
   const getSpeed = () => {
     if (containerRef.current) {
       if (speed === 'fast') {
@@ -56,13 +51,12 @@ export const InfiniteMovingLessons = ({
 
   function addAnimation() {
     if (containerRef.current && scrollerRef.current) {
+      // Limiter la duplication pour éviter l'infini
       const scrollerContent = Array.from(scrollerRef.current.children);
 
       scrollerContent.forEach((item) => {
         const duplicatedItem = item.cloneNode(true);
-        if (scrollerRef.current) {
-          scrollerRef.current.appendChild(duplicatedItem);
-        }
+        scrollerRef.current?.appendChild(duplicatedItem);
       });
 
       getDirection();
@@ -78,16 +72,13 @@ export const InfiniteMovingLessons = ({
   return (
     <div
       ref={containerRef}
-      className={cn(
-        'scroller relative z-20  max-w-[90vw] overflow-hiddens',
-        className,
-      )}
+      className={cn('scroller relative overflow-hidden z-20', className)}
     >
       <ul
         ref={scrollerRef}
         className={cn(
-          ' flex min-w-full w-max shrink-0 flex-row gap-16 justify-between py-4 flex-nowrap overflow-hidden',
-          start && 'animate-scroll ',
+          'flex min-w-full w-max shrink-0 flex-row gap-16 justify-between py-4 flex-nowrap',
+          start && 'animate-scroll',
           pauseOnHover && 'hover:[animation-play-state:paused]',
         )}
       >

@@ -14,22 +14,22 @@ const Examples = () => {
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-3">
         <div className="rounded-tl-[8px] border-b-[1px] border-r-[1px] border-dashed border-button bg-button/10 p-16 text-white">
-          <h2 className="text-extrabold mb-4 text-6xl">1</h2>
-          <p className="text-2xl">
+          <h2 className="mb-4 text-5xl font-bold">1</h2>
+          <p className="text-lg">
             Information sur la lecon le cours, le sujet, le texte
           </p>
         </div>
 
         <div className="rounded-t-[8px] border-b-[1px] border-r-[1px] border-dashed border-button bg-button p-16 text-primary-400/80">
-          <h2 className="text-extrabold mb-4 text-6xl">2</h2>
-          <p className="text-2xl">
+          <h2 className="mb-4 text-5xl font-bold">2</h2>
+          <p className="text-lg">
             Information sur la lecon le cours, le sujet, le texte
           </p>
         </div>
 
         <div className="rounded-tr-[8px] border-b-[1px] border-l-[1px] border-dashed border-button bg-button/10 p-16 text-white ">
-          <h2 className="text-extrabold mb-4 text-6xl">3</h2>
-          <p className="text-2xl">
+          <h2 className="mb-4 text-5xl font-bold">3</h2>
+          <p className="text-lg">
             Information sur la lecon le cours, le sujet, le texte
           </p>
         </div>
