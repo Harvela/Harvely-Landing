@@ -127,7 +127,7 @@ export const PricingV2 = () => {
           </div>
         ))}
       </div>
-      <div className="m-auto mt-20 flex w-full flex-col items-center justify-center gap-8 rounded-[10px] bg-white p-6 md:w-[70%] md:p-12">
+      <div className="m-auto mt-20 flex w-full flex-col items-center justify-center gap-8 rounded-[10px] bg-white/95 p-6 md:w-[70%] md:p-12">
         <p className="font-regular text-center text-[16px] text-black md:text-[32px]">
           Certaines Ecoles ou professeurs n’arrivent pas a acceder aux tech a
           cause des problemes financiers. vous pouvez contribuer a rendre
