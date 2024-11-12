@@ -3,11 +3,21 @@
 import 'react-toastify/dist/ReactToastify.css';
 
 import Link from 'next/link';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 import { Partners } from './Parteners';
 
 const Hero: React.FC = () => {
+  const messages = ['5 minutes', '3 étapes', 'zéro stress'];
+  const [currentMessageIndex, setCurrentMessageIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentMessageIndex((prevIndex) => (prevIndex + 1) % messages.length);
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, []);
   return (
     <div
       id="home"
@@ -18,7 +28,9 @@ const Hero: React.FC = () => {
           <div className="my-auto flex flex-col gap-4 p-8 md:gap-8 md:px-16">
             <h1 className="mb-4 text-lg font-semibold text-white md:mb-5 md:text-5xl">
               Concevez vos fiches de preparation en
-              <span className="mx-2 text-[#F8AB5D]">5 minutes</span>
+              <span className="mx-2 text-button">
+                {messages[currentMessageIndex]}
+              </span>
               avec l’intelligence artificielle.
             </h1>
             <div className="flex w-full flex-row items-center gap-4 md:flex-row md:gap-8">
