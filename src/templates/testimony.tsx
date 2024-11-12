@@ -1,99 +1,98 @@
-'use client';
+import Marquee from '@/components/ui/marquee';
+import { cn } from '@/lib/utils';
 
-import React from 'react';
-
-const testimonials = [
+const reviews = [
   {
-    text: "Exploitons DugAssistant. Je suis émerveillé de générer moi même des situations à partir de mon téléphone. Nous ne serons plus des enseignants pauvres en matières car tout nous est déjà préétabli. Merci vraiment au concepteur de ce système qui rend le travail de l'enseignant très facile. Je suis très satisfait et je dois utiliser ce système et sensibiliser surtout aux autres de s'en approprier aussi.",
-    name: 'KATEMBO MUSABINGO',
-    role: 'ISP. Nyiragongo',
-    image: '/assets/images/home/papa.jpg',
-    qual: 'Mathematicien',
-    level: 'Secondaire',
+    name: 'Jack',
+    username: '@jack',
+    body: "I've never seen anything like this before. It's amazing. I love it.",
+    img: 'https://avatar.vercel.sh/jack',
   },
   {
-    text: "Jusque là moi je suis satisfaite  de résultat avec la fiche exploité hier. Les enfants voient l'importance  du sujet dans la vie pratique et quotidienne. Vraiment c'est une meilleure application.",
-    name: 'NABINTU CHRISTINE',
-    role: 'CS. Les Masudi',
-    image: '/assets/images/home/papa.jpg',
-    qual: 'Mathematicien',
-    level: 'Secondaire',
+    name: 'Jill',
+    username: '@jill',
+    body: "I don't know what to say. I'm speechless. This is amazing.",
+    img: 'https://avatar.vercel.sh/jill',
   },
   {
-    text: "Merci de nous alléger la tâche des approches innovantes par l'entremise de l'application DugAssistant",
-    name: 'ROBERT MUVIRI',
-    role: 'CS. Les Masudi',
-    image: '/assets/images/home/papa.jpg',
-    qual: 'Mathematicien',
-    level: 'Secondaire',
+    name: 'John',
+    username: '@john',
+    body: "I'm at a loss for words. This is amazing. I love it.",
+    img: 'https://avatar.vercel.sh/john',
   },
   {
-    text: "L'enseignant sans situation en APC/APS est un touriste en classe",
-    name: 'KWIRIKA INNOCENT',
-    role: '',
-    image: '/assets/images/home/papa.jpg',
-    qual: 'Mathematicien',
-    level: 'Secondaire',
+    name: 'Jane',
+    username: '@jane',
+    body: "I'm at a loss for words. This is amazing. I love it.",
+    img: 'https://avatar.vercel.sh/jane',
   },
   {
-    text: "C'est vraiment très innovant et tous les enseignants doivent s'en approprier pour améliorer l'action éducative",
-    name: 'PATRICK BYENDA',
-    role: 'CS. Les Masudi',
-    image: '/assets/images/home/papa.jpg',
-    qual: 'Mathematicien',
-    level: 'Secondaire',
+    name: 'Jenny',
+    username: '@jenny',
+    body: "I'm at a loss for words. This is amazing. I love it.",
+    img: 'https://avatar.vercel.sh/jenny',
   },
   {
-    text: "Oui ! Nous avons tous constaté que la plupart des questions en Sciences au Examens d'État 2024 étaient introduites par une situation d'évaluation qui pour certains candidats non informés c'était un problème sérieux. Il est temps que nos enseignants et Préfets comprennent que l'enseignement des sciences a pris une autres forme avec l'APS et les Nouveaux programmes éducatifs y relatifs",
-    name: 'KAMIRA JEAN-MARIE',
-    role: '',
-    image: '/assets/images/home/papa.jpg',
-    qual: 'Mathematicien',
-    level: 'Secondaire',
+    name: 'James',
+    username: '@james',
+    body: "I'm at a loss for words. This is amazing. I love it.",
+    img: 'https://avatar.vercel.sh/james',
   },
 ];
 
-export function TestimonialPage() {
+const firstRow = reviews.slice(0, reviews.length / 2);
+const secondRow = reviews.slice(reviews.length / 2);
+
+const ReviewCard = ({
+  img,
+  name,
+  username,
+  body,
+}: {
+  img: string;
+  name: string;
+  username: string;
+  body: string;
+}) => {
   return (
-    <div className="bg-white py-16">
-      <div className="px-4 md:px-16">
-        <div className="mb-12">
-          <h2 className="text-3xl font-extrabold text-gray-900">
-            Testimonials
-          </h2>
-          <p className="mt-2 text-lg text-gray-600">
-            What our clients say about us
-          </p>
-        </div>
-        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          {testimonials.map((testimonial, idx) => (
-            <div
-              key={idx}
-              className="flex flex-col justify-between rounded-lg border-[1px] border-primary-400/10 p-6 shadow-sm"
-            >
-              <p className="mb-8 text-[14px] leading-relaxed text-primary-400">
-                {testimonial.text}
-              </p>
-              <div className="flex items-center justify-start">
-                <img
-                  src={testimonial.image}
-                  alt={testimonial.name}
-                  className="h-16 w-16 rounded-full object-cover"
-                />
-                <div className="ml-8">
-                  <p className="text-xl font-medium text-gray-900">
-                    {testimonial.name}
-                  </p>
-                  <p className="text-sm text-gray-500">
-                    {testimonial.role} | {testimonial.qual} |{' '}
-                    {testimonial.level}
-                  </p>
-                </div>
-              </div>
-            </div>
-          ))}
+    <figure
+      className={cn(
+        'relative w-80 cursor-pointer overflow-hidden rounded-xl border p-4 bg-white',
+        'border-gray-950/[.1] bg-white hover:bg-white/80',
+        'dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]',
+      )}
+    >
+      <div className="flex flex-row items-center gap-2">
+        <img className="rounded-full" width="64" height="64" alt="" src={img} />
+        <div className="flex flex-col">
+          <figcaption className="text-medium font-medium dark:text-white">
+            {name}
+          </figcaption>
+          <p className="text-sm font-medium dark:text-white/40">{username}</p>
         </div>
       </div>
+      <blockquote className="text-medium mt-2">{body}</blockquote>
+    </figure>
+  );
+};
+
+const Testimony = () => {
+  return (
+    <div className="relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden md:shadow-xl">
+      <Marquee pauseOnHover className="[--duration:20s]">
+        {firstRow.map((review) => (
+          <ReviewCard key={review.username} {...review} />
+        ))}
+      </Marquee>
+      <Marquee reverse pauseOnHover className="[--duration:20s]">
+        {secondRow.map((review) => (
+          <ReviewCard key={review.username} {...review} />
+        ))}
+      </Marquee>
+      <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-white dark:from-background"></div>
+      <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-white dark:from-background"></div>
     </div>
   );
-}
+};
+
+export default Testimony;

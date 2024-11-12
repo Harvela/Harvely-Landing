@@ -2,6 +2,7 @@ import { Navbar } from '@/navigation/Navbar';
 import { Examples } from '@/templates/Examples';
 import { Hero } from '@/templates/Hero';
 import { PricingV2 } from '@/templates/PricesV2';
+import Testimony from '@/templates/testimony';
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
         <Hero />
         <Examples />
         <PricingV2 />
+        <Testimony />
         {/* <TestimonialPage />
         <Partners />
         <Footer /> */}
