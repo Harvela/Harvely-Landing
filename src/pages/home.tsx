@@ -11,7 +11,7 @@ const Home = () => {
         <Navbar />
       </div>
 
-      <div className="pt-[80px]">
+      <div className="pt-[150px]">
         <Hero />
         <Examples />
         <PricingV2 />
