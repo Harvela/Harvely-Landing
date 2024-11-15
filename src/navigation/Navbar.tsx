@@ -8,7 +8,7 @@ import { IoCloseSharp } from 'react-icons/io5';
 
 export function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const router = useRouter(); // Récupère l'URL actuelle
+  const router = useRouter();
   const navItems = [
     {
       name: 'Accueil',
@@ -47,10 +47,10 @@ export function Navbar() {
             <Link
               key={`link-${idx}`}
               href={navItem.link}
-              className={`rounded-[5px] p-2 text-[14px] font-medium text-white transition duration-300 ${
+              className={`rounded-[5px] p-2 px-4 text-[14px] font-medium text-white transition duration-300 ${
                 router.pathname === navItem.link
-                  ? 'bg-black bg-opacity-10' // Applique le style actif
-                  : 'hover:bg-black hover:bg-opacity-10' // Applique un effet au survol
+                  ? 'bg-black bg-opacity-10'
+                  : 'hover:bg-black hover:bg-opacity-10'
               }`}
             >
               {navItem.name}
@@ -60,7 +60,7 @@ export function Navbar() {
         <a
           href="https://app.dugassistant.com"
           target="_blank"
-          className="relative rounded-md border-[2px] border-white px-6 py-2 text-[13px] font-medium text-white shadow-sm shadow-primary-400 hover:bg-black hover:text-primary-500"
+          className="relative rounded-md border-[2px] border-white px-6 py-2 text-[13px] font-medium text-white shadow-sm shadow-primary-400 hover:border-none hover:bg-black hover:text-primary-500"
         >
           <span>Se connecter</span>
         </a>
@@ -84,7 +84,7 @@ export function Navbar() {
                   href={navItem.link}
                   className={`text-[18px] font-medium text-primary-400 ${
                     router.pathname === navItem.link
-                      ? 'bg-black bg-opacity-10' // Applique le style actif
+                      ? 'bg-black bg-opacity-10'
                       : 'hover:bg-black hover:bg-opacity-10'
                   }`}
                   onClick={() => setMenuOpen(false)}
