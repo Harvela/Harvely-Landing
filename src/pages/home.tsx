@@ -1,5 +1,6 @@
 import { Navbar } from '@/navigation/Navbar';
 import { Examples } from '@/templates/Examples';
+import { Footer } from '@/templates/Footer';
 import { Hero } from '@/templates/Hero';
 import { PricingV2 } from '@/templates/PricesV2';
 import Testimony from '@/templates/testimony';
@@ -16,6 +17,7 @@ const Home = () => {
         <Examples />
         <PricingV2 />
         <Testimony />
+        <Footer />
         {/* <TestimonialPage />
         <Partners />
         <Footer /> */}
