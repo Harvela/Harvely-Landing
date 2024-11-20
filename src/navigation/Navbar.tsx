@@ -1,105 +1,109 @@
-import type { CustomFlowbiteTheme } from 'flowbite-react';
-import { Flowbite, Navbar } from 'flowbite-react';
-import React, { useEffect } from 'react';
-import { Link, scroller } from 'react-scroll';
+'use client';
 
-export type NavbarProps = {
-  // Prop types go here
-  setOpenModal?: (value: boolean) => void;
-};
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import React, { useState } from 'react';
+import { GiHamburgerMenu } from 'react-icons/gi';
+import { IoCloseSharp } from 'react-icons/io5';
 
-const customTheme: CustomFlowbiteTheme = {
-  navbar: {
-    link: {
-      base: 'block py-2 md:p-0 text-white',
-      active: {
-        on: 'text-white dark:text-white md:bg-transparent md:text-white',
-        off: 'border-b border-gray-100  text-white hover:bg-gray-50 dark:border-gray-700 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:border-0 md:hover:bg-transparent md:hover:text-cyan-700 md:dark:hover:bg-transparent md:dark:hover:text-white',
-      },
-      disabled: {
-        on: 'text-white hover:cursor-not-allowed dark:text-white',
-        off: '',
-      },
+export function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const router = useRouter();
+  const navItems = [
+    {
+      name: 'Accueil',
+      link: '/home',
     },
-  },
-};
+    {
+      name: 'Tarifs',
+      link: '/tarif',
+    },
+    {
+      name: 'Gallerie',
+      link: '/gallery',
+    },
+    { name: 'Contact', link: '/Contact' },
+  ];
 
-const NavbarGlobal: React.FC<NavbarProps> = () => {
-  useEffect(() => {
-    scroller.scrollTo('home', {
-      duration: 800,
-      delay: 0,
-      smooth: 'easeInOutQuart',
-    });
-  }, []);
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   return (
-    <Flowbite theme={{ theme: customTheme }}>
-      <Navbar
-        className="px-4 lg:px-16"
-        style={{
-          position: 'fixed',
-          width: '100%',
-          zIndex: 40,
-          top: 0,
-          backgroundColor: 'rgba(0, 34, 64, 0.9)',
-        }}
-      >
-        <Navbar.Brand href="#">
-          {/* <img
-            src="/fullLogo.png"
-            className="h-8 lg:mr-3 lg:h-16"
-            alt="Docta Mobile Logo"
-          /> */}
-          <h1 className="text-2xl font-bold text-white">Harvely</h1>
-        </Navbar.Brand>
-        <Navbar.Collapse>
-          <Link
-            activeClass="text-white font-bold border-b-2 border-white"
-            to="home"
-            smooth
-            spy
-            offset={-200}
-          >
-            Accueil
-          </Link>
-          <Link
-            activeClass="text-white font-bold border-b-2 border-white"
-            to="projects"
-            smooth
-            spy
-            offset={-100}
-          >
-            Nos projets
-          </Link>
-          <Link
-            activeClass="text-white font-bold border-b-2 border-white"
-            to="services"
-            smooth
-            spy
-          >
-            Nos services
-          </Link>
-          <Link
-            activeClass="text-white font-bold border-b-2 border-white"
-            to="team"
-            smooth
-            spy
-          >
-            Notre equipe
-          </Link>
-          <Link
-            activeClass="text-secondary-900 font-bold border-b-2 border-secondary-900"
-            to="pricing"
-            smooth
-            spy
-            offset={-100}
-          >
-            Contact
-          </Link>
-        </Navbar.Collapse>
-      </Navbar>
-    </Flowbite>
-  );
-};
+    <div className="z-10000 fixed mb-8 w-full border-b-[2px] border-white/20 bg-back-100 px-8 py-4 md:px-32 md:py-2.5">
+      <div className="hidden flex-row items-center justify-between md:flex">
+        <div className="flex flex-row items-center gap-2">
+          <img
+            src="/logo192.png"
+            alt="logo1"
+            className="h-8 w-auto rounded-[8px] text-white"
+          />
+          <p className="text-[18px] font-semibold text-white">DugAssistant</p>
+        </div>
 
-export { NavbarGlobal as Navbar };
+        {/* Desktop Menu */}
+        <div className="flex items-center gap-8">
+          {navItems.map((navItem, idx) => (
+            <Link
+              key={`link-${idx}`}
+              href={navItem.link}
+              className={`rounded-[5px] p-2 px-4 text-[14px] font-medium text-white transition duration-300 ${
+                router.pathname === navItem.link
+                  ? 'bg-black bg-opacity-10'
+                  : 'hover:bg-black hover:bg-opacity-10'
+              }`}
+            >
+              {navItem.name}
+            </Link>
+          ))}
+        </div>
+        <a
+          href="https://app.dugassistant.com"
+          target="_blank"
+          className="relative rounded-md border-[2px] border-white px-6 py-2 text-[13px] font-medium text-white shadow-sm shadow-primary-400 hover:border-none hover:bg-black hover:text-primary-500"
+        >
+          <span>Se connecter</span>
+        </a>
+      </div>
+
+      {/* Mobile Menu */}
+      <div className="md:hidden">
+        <div className="flex flex-row items-center justify-between">
+          <img src="/logo.png" alt="Logo" className="h-10 w-auto" />
+          <button onClick={toggleMenu} className="text-3xl text-primary-400">
+            {menuOpen ? <IoCloseSharp /> : <GiHamburgerMenu />}
+          </button>
+        </div>
+
+        {menuOpen && (
+          <div className="mt-20 flex h-[100vh] flex-col gap-20">
+            <div className="flex flex-col gap-8">
+              {navItems.map((navItem, idx) => (
+                <Link
+                  key={`mobile-link-${idx}`}
+                  href={navItem.link}
+                  className={`text-[18px] font-medium text-primary-400 ${
+                    router.pathname === navItem.link
+                      ? 'bg-black bg-opacity-10'
+                      : 'hover:bg-black hover:bg-opacity-10'
+                  }`}
+                  onClick={() => setMenuOpen(false)}
+                >
+                  {navItem.name}
+                </Link>
+              ))}
+            </div>
+            <a
+              href="https://app.dugassistant.com"
+              target="_blank"
+              className="relative w-[60%] rounded-md bg-primary-400 p-4 text-center text-[16px] font-medium text-white shadow-sm shadow-primary-400"
+              onClick={() => setMenuOpen(false)}
+            >
+              Se connecter
+            </a>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
