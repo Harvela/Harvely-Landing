@@ -1,3 +1,5 @@
+import Input from '@/components/input';
+
 const links = {
   grid1: [
     { title: 'Accueil', link: 'home' },
@@ -91,33 +93,20 @@ const Footer = () => (
         </ul>
       </div>
 
-      <div className="w-[100%] md:w-[40%]">
-        <h2 className="mb-4 text-[24px] font-semibold text-white">
-          Faites un don
-        </h2>
-        <p className="mb-8 text-[16px] text-white">
-          Soutenez l&apos;éducation en faisant un geste simple mais puissant :
-          achetez nos fiches pour les enseignants. Chaque achat contribue à
-          fournir aux enseignants les outils nécessaires pour former les leaders
-          de demain.
-        </p>
-        <div className="flex flex-row items-center gap-8">
-          <img
-            src="/assets/images/home/airtel.png"
-            alt="Logo"
-            className="size-16 rounded-lg object-contain"
-          />
-          <img
-            src="/assets/images/home/orange.png"
-            alt="Logo"
-            className="size-16 rounded-lg object-contain"
-          />
-          <img
-            src="/assets/images/home/m-pesa.png"
-            alt="Logo"
-            className="size-16 rounded-lg object-contain"
-          />
-        </div>
+      <div className="w-[100%] md:w-[30%]">
+        <Input
+          name=""
+          label="Nom complet"
+          placeholder="veillez entrer votre nom"
+          bgColor="mb-2 h-[40px] w-full rounded-md border border-black/20 focus:border-[#616161]"
+        />
+        <textarea
+          placeholder="laissez nous un message"
+          className="mb-4 h-[90px] w-full rounded-md border border-black/20 text-[15px]"
+        />
+        <button className="w-full rounded-md bg-primary-300 px-4 py-2 font-semibold text-white">
+          Nous contacter
+        </button>
       </div>
     </div>
     <hr className="mt-4 border-gray-200 dark:border-gray-700 sm:mx-auto" />
