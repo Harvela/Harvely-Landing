@@ -1,4 +1,5 @@
 import { Navbar } from '@/navigation/Navbar';
+import BlogList from '@/templates/BlogsList';
 import { Examples } from '@/templates/Examples';
 import { Footer } from '@/templates/Footer';
 import { Hero } from '@/templates/Hero';
@@ -17,7 +18,9 @@ const Home = () => {
         <Examples />
         <PricingV2 />
         <Testimony />
+        <BlogList />
         <Footer />
+
         {/* <TestimonialPage />
         <Partners />
         <Footer /> */}
