@@ -8,7 +8,7 @@ import BlogCard from '@/components/BlogCard';
 const BlogList: React.FC = () => {
   const [currentPage, setCurrentPage] = useState(0);
 
-  const blogsPerPage = 3;
+  const blogsPerPage = 4;
   const blogs = [
     {
       id: '1',
@@ -54,6 +54,28 @@ const BlogList: React.FC = () => {
       tags: ['Startup', 'SaaS'],
       link: '#',
     },
+    {
+      id: '5',
+      image: '/images/blog4.jpg',
+      author: 'Emma Clarke',
+      date: '16 Jan 2022',
+      title: 'How to start in SaaS',
+      description:
+        'An introductory guide to building SaaS applications from scratch.',
+      tags: ['Startup', 'SaaS'],
+      link: '#',
+    },
+    {
+      id: '6',
+      image: '/images/blog4.jpg',
+      author: 'Emma Clarke',
+      date: '16 Jan 2022',
+      title: 'How to start in SaaS',
+      description:
+        'An introductory guide to building SaaS applications from scratch.',
+      tags: ['Startup', 'SaaS'],
+      link: '#',
+    },
   ];
 
   const totalPages = Math.ceil(blogs.length / blogsPerPage);
@@ -72,15 +94,15 @@ const BlogList: React.FC = () => {
   };
 
   return (
-    <div className="mx-auto max-w-7xl p-8 md:px-32">
+    <div className="mx-auto px-8 py-16 md:px-32">
       <div className="mb-6">
         <h1 className="text-3xl font-bold text-white">Nos Blogs</h1>
         <p className="mt-4 font-light text-white">
-          Découvrez les derniers articles et ressources sur les outils, <br />{' '}
-          la productivité, et les meilleures pratiques.
+          Découvrez les derniers articles et ressources sur les outils, la
+          productivité, et les meilleures pratiques.
         </p>
       </div>
-      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
+      <div className="mt-16 grid grid-cols-1 gap-12 md:grid-cols-4">
         {displayedBlogs.map((blog, index) => (
           <BlogCard key={index} {...blog} />
         ))}

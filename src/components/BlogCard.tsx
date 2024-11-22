@@ -23,21 +23,21 @@ const BlogCard: React.FC<BlogCardProps> = ({
   tags,
 }) => {
   return (
-    <div className="overflow-hidden rounded-lg bg-white shadow-lg transition-transform hover:scale-105">
-      <img src={image} alt={title} className="h-48 w-full object-cover" />
-      <div className="p-4">
-        <div className="text-sm text-gray-500">
+    <div className="overflow-hidden rounded-[5px] bg-white shadow-md transition-transform hover:scale-105">
+      <img src={image} alt={title} className="h-54 w-full object-cover" />
+      <div className="p-6">
+        <div className="text-[14px] text-gray-500">
           <span className="font-semibold">{author}</span> • {date}
         </div>
 
         <Link
           href={`/blog/${id}`}
           rel="noopener noreferrer"
-          className="mt-2 block text-xl font-bold text-gray-800 hover:text-back-100"
+          className="mt-2 block text-[18px] font-bold text-gray-800 hover:text-back-100"
         >
           {title} <span className="inline-block">↗</span>
         </Link>
-        <p className="mt-2 text-sm text-gray-600">{description}</p>
+        <p className="mt-2 text-[14px] text-gray-600">{description}</p>
         <div className="mt-4 flex flex-wrap gap-2">
           {tags.map((tag, index) => (
             <span

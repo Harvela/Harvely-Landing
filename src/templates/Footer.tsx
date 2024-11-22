@@ -93,18 +93,20 @@ const Footer = () => (
         </ul>
       </div>
 
-      <div className="w-[100%] md:w-[30%]">
+      <div className="w-full md:w-[30%]">
+        <h2 className="mb-6 mt-12 text-sm font-bold uppercase text-white md:mt-0 ">
+          Nous contacter
+        </h2>
         <Input
           name=""
-          label="Nom complet"
-          placeholder="veillez entrer votre nom"
+          placeholder="Nom complet"
           bgColor="mb-2 h-[40px] w-full rounded-md border border-black/20 focus:border-[#616161]"
         />
         <textarea
           placeholder="laissez nous un message"
-          className="mb-4 h-[90px] w-full rounded-md border border-black/20 text-[15px]"
+          className="mb-4 h-[100px] w-full rounded-md border border-black/20 text-[15px]"
         />
-        <button className="w-full rounded-md bg-primary-300 px-4 py-2 font-semibold text-white">
+        <button className="w-full rounded-md bg-back-100 px-4 py-3 font-semibold text-white">
           Nous contacter
         </button>
       </div>
