@@ -6,10 +6,19 @@ import { InfiniteMovingCards } from '@/components/infinite-scroll';
 
 const partners = [
   {
-    name: 'CS. Les Masudis',
+    name: 'Inst. KADUTU',
   },
   {
     name: 'E.I.B.E',
+  },
+  {
+    name: 'Inst. ZANNER',
+  },
+  {
+    name: 'MAMAN SOPHIE',
+  },
+  {
+    name: 'Inst. BAKANJA',
   },
 ];
 

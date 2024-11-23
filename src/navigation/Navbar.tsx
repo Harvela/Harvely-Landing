@@ -7,23 +7,31 @@ import { BsMoonStarsFill, BsSun } from 'react-icons/bs';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { IoCloseSharp } from 'react-icons/io5';
 
-export function Navbar() {
+const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const router = useRouter();
   const navItems = [
     {
       name: 'Accueil',
-      link: '/home',
+      link: '#home',
+    },
+    {
+      name: 'Exemples',
+      link: '#exemples',
     },
     {
       name: 'Tarifs',
-      link: '/tarif',
+      link: '#pricing',
     },
     {
-      name: 'Gallerie',
-      link: '/gallery',
+      name: 'Temoignage',
+      link: '#testimony',
     },
-    { name: 'Contact', link: '/Contact' },
+    {
+      name: 'Blog',
+      link: '#blog',
+    },
+    { name: 'Contact', link: '#contact' },
   ];
 
   const toggleMenu = () => {
@@ -64,12 +72,12 @@ export function Navbar() {
         </div>
 
         {/* Desktop Menu */}
-        <div className="flex items-center gap-8">
+        <div className="flex items-center gap-3">
           {navItems.map((navItem, idx) => (
             <Link
               key={`link-${idx}`}
               href={navItem.link}
-              className={`rounded-[5px] p-2 px-4 text-[16px] font-medium text-back-100 transition duration-300 dark:text-white ${
+              className={`rounded-[5px] px-3 py-1 text-[14px] font-medium text-back-100 transition duration-300 dark:text-white ${
                 router.pathname === navItem.link
                   ? 'bg-black bg-opacity-10'
                   : 'hover:bg-black hover:bg-opacity-10'
@@ -147,4 +155,6 @@ export function Navbar() {
       </div>
     </div>
   );
-}
+};
+
+export default Navbar;

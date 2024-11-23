@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import Select from '@/components/select';
 import { prices } from '@/utils/prices';
 
-export const PricingV2 = () => {
+const PricingV2 = () => {
   const [selectedPrice, setSelectedPrice] = useState('');
   const price = [
     { label: '1 $', value: '1' },
@@ -131,3 +131,5 @@ export const PricingV2 = () => {
     </div>
   );
 };
+
+export default PricingV2;

@@ -6,7 +6,7 @@ import { toast } from 'react-toastify';
 import Input from '@/components/input';
 import { Recaptcha } from '@/components/recaptcha';
 
-export function Contact() {
+const Contact = () => {
   const [email, setEmail] = React.useState('');
   const [fullname, setFullname] = React.useState('');
   const [message, setMessage] = React.useState('');
@@ -163,4 +163,6 @@ export function Contact() {
       </div>
     </div>
   );
-}
+};
+
+export default Contact;

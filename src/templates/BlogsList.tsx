@@ -94,7 +94,7 @@ const BlogList: React.FC = () => {
   };
 
   return (
-    <div className="mx-auto px-4 py-16 md:px-32">
+    <div id="blog" className="mx-auto px-4 py-16 md:px-32">
       <div className="mb-6">
         <h1 className="text-[24px] font-bold text-back-100 dark:text-white md:text-[32px]">
           Nos Blogs

@@ -78,7 +78,10 @@ const ReviewCard = ({
 
 const Testimony = () => {
   return (
-    <div className="relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden md:shadow-xl">
+    <div
+      id="testimony"
+      className="relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden md:shadow-xl"
+    >
       <Marquee pauseOnHover className="[--duration:20s]">
         {firstRow.map((review) => (
           <ReviewCard key={review.username} {...review} />

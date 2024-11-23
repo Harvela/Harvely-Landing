@@ -6,7 +6,7 @@ import { fiches } from '@/utils/fiches';
 const Examples = () => {
   return (
     <div
-      id="exemple"
+      id="exemples"
       className="flex w-full flex-col gap-8 border-b-2 border-white/40 px-4 py-16 md:gap-16 md:px-32"
     >
       <h2 className="text-[18px] font-semibold text-back-100 dark:text-white md:text-[32px]">
@@ -39,4 +39,4 @@ const Examples = () => {
   );
 };
 
-export { Examples };
+export default Examples;
