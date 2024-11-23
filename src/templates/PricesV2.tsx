@@ -120,8 +120,8 @@ export const PricingV2 = () => {
           </div>
         ))}
       </div>
-      <div className="m-auto mt-20 flex w-full flex-col items-center justify-center gap-8 rounded-[10px] bg-back-100/20 p-6 dark:bg-white/90 md:w-[70%] md:p-12">
-        <p className="text-center text-[14px] font-semibold text-black md:text-[28px]">
+      <div className="m-auto mt-20 flex w-full flex-col items-center justify-center gap-8 rounded-[10px] bg-back-100/10 p-6 dark:bg-white/90 md:w-[70%] md:p-12">
+        <p className="text-center text-[14px] font-semibold text-black md:text-[24px]">
           Certaines Ecoles ou professeurs n’arrivent pas a acceder aux tech a
           cause des problemes financiers. vous pouvez contribuer a rendre
           l’education meilleure

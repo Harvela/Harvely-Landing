@@ -30,7 +30,7 @@ export function Navbar() {
     setMenuOpen(!menuOpen);
   };
 
-  const [theme, setTheme] = useState('dark');
+  const [theme, setTheme] = useState('light');
 
   useEffect(() => {
     // Initialize theme based on system preference or previous setting
