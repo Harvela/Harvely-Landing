@@ -9,7 +9,7 @@ import Testimony from '@/templates/testimony';
 
 const Home = () => {
   return (
-    <div className="bg-back-100">
+    <div className="bg-white dark:bg-back-100">
       <div className="fixed z-[5000] w-full">
         <Navbar />
       </div>

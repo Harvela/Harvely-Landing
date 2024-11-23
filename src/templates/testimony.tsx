@@ -59,16 +59,16 @@ const ReviewCard = ({
       className={cn(
         'relative w-80 cursor-pointer overflow-hidden rounded-xl border p-4 bg-white',
         'border-gray-950/[.1] bg-white hover:bg-white/80',
-        'dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]',
+        'dark:border-[1px] dark:border-back-100 dark:bg-white dark:hover:bg-white/80 dark:shadow-sm',
       )}
     >
       <div className="flex flex-row items-center gap-2">
         <img className="rounded-full" width="64" height="64" alt="" src={img} />
         <div className="flex flex-col">
-          <figcaption className="text-medium font-medium dark:text-white">
+          <figcaption className="text-medium font-medium text-black">
             {name}
           </figcaption>
-          <p className="text-sm font-medium dark:text-white/40">{username}</p>
+          <p className="text-sm font-medium text-black/60">{username}</p>
         </div>
       </div>
       <blockquote className="text-medium mt-2">{body}</blockquote>
@@ -89,8 +89,8 @@ const Testimony = () => {
           <ReviewCard key={review.username} {...review} />
         ))}
       </Marquee>
-      <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-white dark:from-background"></div>
-      <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-white dark:from-background"></div>
+      <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-back-100/40 dark:from-white/40"></div>
+      <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-back-100/40 dark:from-white/40"></div>
     </div>
   );
 };

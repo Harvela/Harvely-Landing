@@ -13,12 +13,12 @@ const Hero: React.FC = () => {
   return (
     <div
       id="home"
-      className="w-full flex-col border-b-2 border-white/40 md:px-16"
+      className="w-full flex-col border-b-2 border-back-100/40 dark:border-white/40 md:px-16"
     >
       <div className="flex flex-col-reverse content-center items-center  justify-between md:h-[75vh] md:flex-row">
-        <div className="relative w-[100%]  flex-col items-center justify-center md:w-[50%]">
-          <div className="my-auto flex flex-col gap-4 p-8 md:gap-8 md:px-16">
-            <h1 className="mb-4 text-lg font-semibold text-white md:mb-5 md:text-3xl">
+        <div className="relative w-full  flex-col items-center justify-center md:w-[50%]">
+          <div className="my-auto flex flex-col gap-4 px-4 py-8 md:gap-8 md:px-16">
+            <h1 className="mb-4 text-lg font-semibold text-back-100 dark:text-white md:mb-5 md:text-[32px]">
               Concevez vos fiches de preparation en
               <WordRotate
                 className="font-bold text-button"
@@ -46,7 +46,7 @@ const Hero: React.FC = () => {
 
         <img
           src="Group.svg"
-          className="h-full w-[100%] p-8 md:w-[50%] md:p-16"
+          className="size-full px-4 py-8 md:w-[50%] md:p-16"
           alt="group svg"
         />
       </div>

@@ -26,16 +26,16 @@ export const PricingV2 = () => {
     setSelectedPrice(item);
   };
   return (
-    <div id="pricing" className="h-fit w-full p-8 md:px-32 md:py-16">
-      <h1 className="mb-8 text-[24px] font-semibold text-white md:mb-16 md:text-[32px]">
+    <div id="pricing" className="h-fit w-full px-4 py-8 md:px-32 md:py-16">
+      <h1 className="mb-8 text-[24px] font-semibold text-back-100 dark:text-white md:mb-6 md:text-[32px]">
         Nos tarifs
       </h1>
-      <p className="mb-16 text-[16px] text-white md:text-[20px]">
+      <p className="mb-20 text-[14px] text-black/80 dark:text-white/80 md:text-[18px]">
         Découvrez nos offres adaptées à tous les budgets pour un accès optimisé
         aux ressources éducatives de DugAssistant!
       </p>
       <div className="grid grid-cols-1 gap-12 md:grid-cols-2 md:gap-10 lg:grid-cols-4 lg:gap-8">
-        <div className="flex flex-col justify-between rounded-[5px] bg-white/90 p-6 shadow-md">
+        <div className="flex flex-col justify-between rounded-[5px] border border-back-100 bg-white/90 p-6 shadow-sm">
           <div className="flex flex-col gap-6">
             <div className="flex flex-col gap-2 pt-4">
               <h2 className="text-center text-[40px] font-bold text-back-100">
@@ -64,7 +64,7 @@ export const PricingV2 = () => {
             ${
               index === prices.length - 1
                 ? 'bg-button text-white shadow-lg'
-                : 'bg-white/90 shadow-sm'
+                : 'border border-back-100 bg-white/90 shadow-sm'
             }`}
           >
             {p.name && (
@@ -120,13 +120,13 @@ export const PricingV2 = () => {
           </div>
         ))}
       </div>
-      <div className="m-auto mt-20 flex w-full flex-col items-center justify-center gap-8 rounded-[10px] bg-white/90 p-6 md:w-[70%] md:p-12">
-        <p className="text-center text-[16px] font-semibold text-black md:text-[28px]">
+      <div className="m-auto mt-20 flex w-full flex-col items-center justify-center gap-8 rounded-[10px] bg-back-100/20 p-6 dark:bg-white/90 md:w-[70%] md:p-12">
+        <p className="text-center text-[14px] font-semibold text-black md:text-[28px]">
           Certaines Ecoles ou professeurs n’arrivent pas a acceder aux tech a
           cause des problemes financiers. vous pouvez contribuer a rendre
           l’education meilleure
         </p>
-        <button className="h-[50px] w-[200px] rounded-[10px] bg-back-100"></button>
+        <button className="h-[30px] w-[140px] rounded-[10px] bg-back-100 md:h-[50px] md:w-[200px]"></button>
       </div>
     </div>
   );

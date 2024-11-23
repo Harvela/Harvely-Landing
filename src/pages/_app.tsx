@@ -6,15 +6,16 @@ import { QueryClient, QueryClientProvider } from 'react-query';
 
 const queryClient = new QueryClient();
 
-const MyApp = ({ Component, pageProps }: AppProps) => (
-  <>
-    <Script
-      strategy="lazyOnload"
-      src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
-    />
+const MyApp = ({ Component, pageProps }: AppProps) => {
+  return (
+    <>
+      <Script
+        strategy="lazyOnload"
+        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
+      />
 
-    <Script id="google-analytics" strategy="lazyOnload">
-      {`
+      <Script id="google-analytics" strategy="lazyOnload">
+        {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
@@ -22,11 +23,12 @@ const MyApp = ({ Component, pageProps }: AppProps) => (
           page_path: window.location.pathname
         });
       `}
-    </Script>
-    <QueryClientProvider client={queryClient}>
-      <Component {...pageProps} />
-    </QueryClientProvider>
-  </>
-);
+      </Script>
+      <QueryClientProvider client={queryClient}>
+        <Component {...pageProps} />
+      </QueryClientProvider>
+    </>
+  );
+};
 
 export default MyApp;

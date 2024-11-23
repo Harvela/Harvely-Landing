@@ -87,22 +87,24 @@ export const InfiniteMovingLessons = ({
             key={item.id}
             target="_blank"
             href={`https://app.dugassistant.com/fiches/${item.id}`}
-            className="flex w-[500px] flex-col gap-8 rounded-lg border-[1px] border-white p-8 text-[16px] text-white"
+            className="flex w-[500px] flex-col gap-8 rounded-lg border border-back-100 p-8 text-[16px] text-back-100 dark:border-white dark:text-white"
           >
             <div className="flex flex-col justify-between gap-4">
-              <p className="text-[16px] font-medium text-white md:text-[24px]">
+              <p className="text-[16px] font-medium text-back-100 dark:text-white md:text-[24px]">
                 Fiche sur <span className="font-semibold">{item.title}</span>
               </p>
               <div className="flex flex-row items-center gap-4">
-                <p className="rounded-[5px] bg-primary-300/20 px-4 py-2 text-[10px] font-medium uppercase text-button md:px-4 md:py-[2px] md:text-[12px]">
+                <p className="rounded-[5px] bg-back-100/20 px-4 py-2 text-[10px] font-medium uppercase text-back-100 dark:bg-primary-300/20 dark:text-button md:px-4 md:py-[2px] md:text-[12px]">
                   {item.level}
                 </p>
-                <p className="rounded-[5px] bg-primary-400/10 px-4 py-2 text-[10px] font-medium uppercase text-button md:px-4 md:py-[2px] md:text-[12px]">
+                <p className="rounded-[5px] bg-back-100/20 px-4 py-2 text-[10px] font-medium uppercase text-back-100 dark:bg-primary-300/20 dark:text-button md:px-4 md:py-[2px] md:text-[12px]">
                   {item.domaine}
                 </p>
               </div>
             </div>
-            <p className="text-[12px] md:text-[16px]">{item.content}</p>
+            <p className="text-[12px] text-black/70 dark:text-white md:text-[16px]">
+              {item.content}
+            </p>
           </a>
         ))}
       </ul>
