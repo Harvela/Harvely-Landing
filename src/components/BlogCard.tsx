@@ -11,27 +11,29 @@ type BlogCardProps = {
   title: string;
   description: string;
   tags: string[];
+  link: string;
 };
 
 const BlogCard: React.FC<BlogCardProps> = ({
-  id,
   image,
   author,
   date,
   title,
   description,
   tags,
+  link,
 }) => {
   return (
-    <div className="overflow-hidden rounded-[5px] bg-white shadow-md transition-transform hover:scale-105">
-      <img src={image} alt={title} className="h-54 w-full object-cover" />
+    <div className="h-[500px] overflow-hidden rounded-[5px] bg-white shadow-md transition-transform hover:scale-105">
+      <img src={image} alt={title} className="h-[50%] w-full object-cover" />
       <div className="p-6">
         <div className="text-[14px] text-gray-500">
           <span className="font-semibold">{author}</span> • {date}
         </div>
 
         <Link
-          href={`/blog/${id}`}
+          href={link}
+          target="_blank"
           rel="noopener noreferrer"
           className="mt-2 block text-[18px] font-bold text-gray-800 hover:text-back-100"
         >

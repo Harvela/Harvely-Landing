@@ -1,9 +1,9 @@
 const links = {
   grid1: [
-    { title: 'Accueil', link: 'home' },
-    { title: 'Comment ca marche?', link: 'how-it-work' },
-    { title: 'Nos servives', link: 'services' },
-    { title: 'Nos paquets', link: 'pricing' },
+    { title: 'Accueil', link: '#home' },
+    { title: 'Tarifs', link: '#pricing' },
+    { title: 'Blog', link: '#blog' },
+    { title: 'Contact', link: '#contact' },
   ],
   grid2: [
     {
@@ -31,7 +31,8 @@ const Footer = () => (
       <div className="flex flex-row items-center gap-4 md:gap-8">
         {/* LinkedIn */}
         <a
-          href="#"
+          href="https://www.linkedin.com/showcase/dugassistant/?viewAsMember=true"
+          target="_blank"
           className="text-white hover:text-gray-900 dark:hover:text-white"
         >
           <svg
@@ -45,11 +46,12 @@ const Footer = () => (
         </a>
         {/* Facebook */}
         <a
-          href="#"
+          href="https://www.facebook.com/profile.php?id=61562272059423"
+          target="_blank"
           className="text-white hover:text-gray-900 dark:hover:text-white"
         >
           <svg
-            className="size-4 md:h-5 md:w-6"
+            className="size-4 md:size-6"
             fill="currentColor"
             viewBox="0 0 24 24"
             aria-hidden="true"
@@ -64,11 +66,12 @@ const Footer = () => (
 
         {/* X (formerly Twitter) */}
         <a
-          href="#"
+          href="https://x.com/harvelyc"
+          target="_blank"
           className="text-white hover:text-gray-900 dark:hover:text-white"
         >
           <svg
-            className="size-4 md:h-5 md:w-6"
+            className="size-4 md:size-6"
             fill="currentColor"
             viewBox="0 0 24 24"
             aria-hidden="true"
@@ -79,11 +82,12 @@ const Footer = () => (
 
         {/* Instagram */}
         <a
-          href="#"
+          href="https://www.instagram.com/dugassistant"
+          target="_blank"
           className="text-white hover:text-gray-900 dark:hover:text-white"
         >
           <svg
-            className="size-4 md:h-5 md:w-6"
+            className="size-4 md:size-6"
             fill="currentColor"
             viewBox="0 0 24 24"
             aria-hidden="true"
@@ -114,7 +118,7 @@ const Footer = () => (
         <p className="text-[12px] text-white/90 dark:text-gray-400 md:text-[16px]">
           Conçue pour aider les enseignants du primaire et du secondaire à
           préparer leurs cours de manière efficace. Contribue à la réduction des
-          inégalités et à l’amélioration de la qualité de l’enseignement en RDC
+          inégalités et à l’amélioration de la qualité de l’enseignement en RDC.
         </p>
       </div>
 
@@ -154,14 +158,14 @@ const Footer = () => (
       <div className="flex flex-row items-center justify-between py-4 sm:flex sm:items-center sm:justify-between">
         <span className="text-[8px] text-white dark:text-gray-400 sm:text-center md:text-[10px]">
           © {new Date().getFullYear()}{' '}
-          <a href="https://flowbite.com" className="hover:underline">
+          <a href="https://www.dugassistant.com" className="hover:underline">
             Dug Assistant™
           </a>
-          . All Rights Reserved.
+          . Tous droits réservés.
         </span>
 
         <span className="text-[8px] text-white dark:text-gray-400 sm:text-center md:text-[10px]">
-          Harvely Company product
+          Un produit de Harvely Company
         </span>
       </div>
     </div>

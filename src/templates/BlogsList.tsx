@@ -4,79 +4,12 @@ import React, { useState } from 'react';
 import { FiArrowLeft, FiArrowRight } from 'react-icons/fi';
 
 import BlogCard from '@/components/BlogCard';
+import { blogs } from '@/utils/blogs';
 
 const BlogList: React.FC = () => {
   const [currentPage, setCurrentPage] = useState(0);
 
   const blogsPerPage = 4;
-  const blogs = [
-    {
-      id: '1',
-      image: '/images/blog1.jpg',
-      author: 'Phoenix Baker',
-      date: '19 Jan 2022',
-      title: 'Migrating to Linear 101',
-      description:
-        "Linear helps streamline software projects, sprints, tasks, and bug tracking. Here's how to get started.",
-      tags: ['Product', 'Tools', 'SaaS'],
-      link: '#',
-    },
-    {
-      id: '2',
-      image: '/images/blog2.jpg',
-      author: 'Lana Steiner',
-      date: '18 Jan 2022',
-      title: 'Building your API Stack',
-      description:
-        'The rise of RESTful APIs has been met by a rise in tools for creating, testing, and managing them.',
-      tags: ['Software Development', 'Tools'],
-      link: '#',
-    },
-    {
-      id: '3',
-      image: '/images/blog3.jpg',
-      author: 'Alec Whitten',
-      date: '17 Jan 2022',
-      title: 'Bill Walsh leadership lessons',
-      description:
-        'Like to know the secrets of transforming a 2-14 team into a 3× Super Bowl winning Dynasty?',
-      tags: ['Leadership', 'Management'],
-      link: '#',
-    },
-    {
-      id: '4',
-      image: '/images/blog4.jpg',
-      author: 'Emma Clarke',
-      date: '16 Jan 2022',
-      title: 'How to start in SaaS',
-      description:
-        'An introductory guide to building SaaS applications from scratch.',
-      tags: ['Startup', 'SaaS'],
-      link: '#',
-    },
-    {
-      id: '5',
-      image: '/images/blog4.jpg',
-      author: 'Emma Clarke',
-      date: '16 Jan 2022',
-      title: 'How to start in SaaS',
-      description:
-        'An introductory guide to building SaaS applications from scratch.',
-      tags: ['Startup', 'SaaS'],
-      link: '#',
-    },
-    {
-      id: '6',
-      image: '/images/blog4.jpg',
-      author: 'Emma Clarke',
-      date: '16 Jan 2022',
-      title: 'How to start in SaaS',
-      description:
-        'An introductory guide to building SaaS applications from scratch.',
-      tags: ['Startup', 'SaaS'],
-      link: '#',
-    },
-  ];
 
   const totalPages = Math.ceil(blogs.length / blogsPerPage);
 
