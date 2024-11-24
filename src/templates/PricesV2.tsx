@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
 import Select from '@/components/select';
+import ShinyButton from '@/components/ui/shiny-button';
 import { prices } from '@/utils/prices';
 
 const PricingV2 = () => {
@@ -121,12 +122,14 @@ const PricingV2 = () => {
         ))}
       </div>
       <div className="m-auto mt-20 flex w-full flex-col items-center justify-center gap-8 rounded-[10px] bg-back-100/10 p-6 dark:bg-white/90 md:w-[70%] md:p-12">
-        <p className="text-center text-[14px] font-semibold text-black md:text-[24px]">
+        <p className="text-center text-[14px] font-normal text-black md:text-[18px]">
           Certaines Ecoles ou professeurs n’arrivent pas a acceder aux tech a
           cause des problemes financiers. vous pouvez contribuer a rendre
           l’education meilleure
         </p>
-        <button className="h-[30px] w-[140px] rounded-[10px] bg-back-100 md:h-[50px] md:w-[200px]"></button>
+        <ShinyButton className="text-primary-400  dark:text-white">
+          Faire un don
+        </ShinyButton>
       </div>
     </div>
   );

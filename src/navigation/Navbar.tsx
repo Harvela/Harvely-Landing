@@ -15,18 +15,18 @@ const Navbar = () => {
       name: 'Accueil',
       link: '#home',
     },
-    {
-      name: 'Exemples',
-      link: '#exemples',
-    },
+    // {
+    //   name: 'Exemples',
+    //   link: '#exemples',
+    // },
     {
       name: 'Tarifs',
       link: '#pricing',
     },
-    {
-      name: 'Temoignage',
-      link: '#testimony',
-    },
+    // {
+    //   name: 'Temoignage',
+    //   link: '#testimony',
+    // },
     {
       name: 'Blog',
       link: '#blog',

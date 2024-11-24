@@ -57,7 +57,7 @@ const ReviewCard = ({
   return (
     <figure
       className={cn(
-        'relative w-80 cursor-pointer overflow-hidden rounded-xl border p-4 bg-white',
+        'relative md:w-[25vw] w-[80vw] cursor-pointer overflow-hidden rounded-xl border p-4 bg-white',
         'border-gray-950/[.1] bg-white hover:bg-white/80',
         'dark:border-[1px] dark:border-back-100 dark:bg-white dark:hover:bg-white/80 dark:shadow-sm',
       )}
@@ -78,23 +78,45 @@ const ReviewCard = ({
 
 const Testimony = () => {
   return (
-    <div
-      id="testimony"
-      className="relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden md:shadow-xl"
-    >
-      <Marquee pauseOnHover className="[--duration:20s]">
-        {firstRow.map((review) => (
-          <ReviewCard key={review.username} {...review} />
-        ))}
-      </Marquee>
-      <Marquee reverse pauseOnHover className="[--duration:20s]">
-        {secondRow.map((review) => (
-          <ReviewCard key={review.username} {...review} />
-        ))}
-      </Marquee>
-      <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-back-100/40 dark:from-white/40"></div>
-      <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-back-100/40 dark:from-white/40"></div>
-    </div>
+    <>
+      <h1 className="mb-0 px-4 text-[24px] font-semibold text-back-100 dark:text-white md:mb-6 md:px-32  md:text-[32px]">
+        Ce qu&apos;ils en disent
+      </h1>
+      <div className="relative hidden h-[500px] w-full flex-row items-center justify-between overflow-hidden rounded-lg md:flex md:px-32">
+        <Marquee pauseOnHover vertical className="[--duration:20s]">
+          {firstRow.map((review) => (
+            <ReviewCard key={review.username} {...review} />
+          ))}
+        </Marquee>
+        <Marquee reverse pauseOnHover vertical className="[--duration:20s]">
+          {secondRow.map((review) => (
+            <ReviewCard key={review.username} {...review} />
+          ))}
+        </Marquee>
+        <Marquee pauseOnHover vertical className="[--duration:20s]">
+          {secondRow.map((review) => (
+            <ReviewCard key={review.username} {...review} />
+          ))}
+        </Marquee>
+        <div className="pointer-events-none absolute inset-x-0 top-0 h-1/3 bg-gradient-to-b from-white dark:from-transparent"></div>
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-white dark:from-transparent"></div>
+      </div>
+
+      <div className="relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden rounded-lg md:hidden">
+        <Marquee pauseOnHover className="[--duration:20s]">
+          {firstRow.map((review) => (
+            <ReviewCard key={review.username} {...review} />
+          ))}
+        </Marquee>
+        <Marquee reverse pauseOnHover className="[--duration:20s]">
+          {secondRow.map((review) => (
+            <ReviewCard key={review.username} {...review} />
+          ))}
+        </Marquee>
+        <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-white dark:from-transparent"></div>
+        <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-white dark:from-transparent"></div>
+      </div>
+    </>
   );
 };
 

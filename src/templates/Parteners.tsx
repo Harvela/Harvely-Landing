@@ -25,7 +25,7 @@ const partners = [
 export function Partners() {
   return (
     <div className="flex w-full flex-col gap-2 px-4 pb-2  md:px-16">
-      <p className="mt-5 text-[14px] font-semibold text-button md:mb-8 md:text-[16px]">
+      <p className="mt-5 text-[12px] font-semibold text-button/50 md:mb-8 md:text-[16px]">
         Trusted by teachers from multiple schools :
       </p>
       <div className="relative mt-4 flex flex-col items-center justify-center overflow-hidden antialiased md:mt-[-30px]">

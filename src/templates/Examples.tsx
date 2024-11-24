@@ -34,6 +34,9 @@ const Examples = () => {
           </p>
         </div>
       </div>
+      <h2 className="mb-0 text-[16px] font-semibold text-button dark:text-white md:text-[16px]">
+        Recemment crées par nos utilisateurs
+      </h2>
       <InfiniteMovingLessons items={fiches} speed="slow" />
     </div>
   );
