@@ -54,7 +54,15 @@ const PricingV2 = () => {
               />
             </form>
           </div>
-          <button className="mt-5 rounded-lg bg-back-100 px-4 py-2 font-semibold text-white md:w-2/5">
+          <button
+            className="mt-5 rounded-lg bg-back-100 px-4 py-2 font-semibold text-white md:w-2/5"
+            onClick={() => {
+              window.open(
+                `https://app.dugassistant.com?paymentType=PAY_AS_YOU_GO&quantity=${selectedPrice}`,
+                '_blank',
+              );
+            }}
+          >
             Acheter
           </button>
         </div>
@@ -115,7 +123,15 @@ const PricingV2 = () => {
                 ))}
               </ul>
             </div>
-            <button className="mt-5 rounded-lg bg-back-100 px-4 py-2 font-semibold text-white md:w-2/5">
+            <button
+              className="mt-5 rounded-lg bg-back-100 px-4 py-2 font-semibold text-white md:w-2/5"
+              onClick={() => {
+                window.open(
+                  `https://app.dugassistant.com?paymentType=SUBSCRIPTION&&quantity=${p.quantity}`,
+                  '_blank',
+                );
+              }}
+            >
               Acheter
             </button>
           </div>
@@ -123,9 +139,9 @@ const PricingV2 = () => {
       </div>
       <div className="m-auto mt-20 flex w-full flex-col items-center justify-center gap-8 rounded-[10px] bg-back-100/10 p-6 dark:bg-white/90 md:w-[70%] md:p-12">
         <p className="text-center text-[14px] font-normal text-black md:text-[18px]">
-          Certaines Ecoles ou professeurs n’arrivent pas a acceder aux tech a
-          cause des problemes financiers. vous pouvez contribuer a rendre
-          l’education meilleure
+          Certaines écoles ou certains professeurs n’arrivent pas à accéder aux
+          technologies en raison de problèmes financiers. Vous pouvez contribuer
+          à améliorer l’éducation.
         </p>
         <ShinyButton className="text-primary-400  dark:text-white">
           Faire un don

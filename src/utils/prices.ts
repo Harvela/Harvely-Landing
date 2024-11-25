@@ -4,6 +4,7 @@ export const prices = [
     fiche: '30',
     price: '$5',
     frequency: '/mois',
+    quantity: 1,
     name: 'Abonnement mensuel',
     list: [
       "Fiches conforme aux programmes utilisant l'APS/APC",
@@ -16,6 +17,7 @@ export const prices = [
     fiche: '30',
     price: '$13.5',
     frequency: '/mois',
+    quantity: 3,
     name: 'Abonnement trimestriel',
     list: [
       "Fiches conforme aux programmes utilisant l'APS/APC",
@@ -28,6 +30,7 @@ export const prices = [
     id: 3,
     fiche: '30',
     price: '$30',
+    quantity: 10,
     frequency: '/mois',
     name: 'Abonnement annuel',
     list: [

@@ -30,10 +30,10 @@ const Hero: React.FC = () => {
         <div className="relative w-full  flex-col items-center justify-center md:w-[50%]">
           <div className="my-auto flex flex-col gap-4 px-4 py-8 md:gap-8 md:px-16">
             <h1 className="mb-4 text-center text-[18px] font-semibold text-back-100 dark:text-white md:mb-5 md:text-left md:text-[38px]">
-              Concevez vos fiches de preparation en
+              Concevez vos fiches de preparation
               <WordRotate
                 className="font-bold text-button"
-                words={['5 minutes', '3 étapes', 'zéro stress']}
+                words={['en 5 minutes', 'en 3 étapes', 'sans stress']}
               />
               avec l’intelligence artificielle.
             </h1>
@@ -43,7 +43,7 @@ const Hero: React.FC = () => {
                 target="_blank"
                 className="rounded-lg bg-button px-4 py-3 text-center text-[13px] text-black hover:bg-[#E8984B] md:px-8 md:text-[16px]"
               >
-                Generer les fiches
+                Générer les fiches
               </a>
               <Link
                 href="#exemple"
