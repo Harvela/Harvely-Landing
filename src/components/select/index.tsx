@@ -20,7 +20,7 @@ const Select: React.FC<DropDownProps> = (props) => {
 
   return (
     <div className={props.containerStyle}>
-      <p className="font-regular mb-2 text-sm md:mb-6 md:text-lg">
+      <p className="mb-2 text-sm font-semibold text-back-100 md:mb-6 md:text-lg">
         {props?.label}
       </p>
       {props.creatable ? (
@@ -41,7 +41,7 @@ const Select: React.FC<DropDownProps> = (props) => {
             control: (base: any) => ({
               ...base,
               borderRadius: 5,
-              borderColor: '#000',
+              borderColor: '#0A665C',
               color: 'white',
             }),
             container: (base: any) => ({
@@ -94,7 +94,7 @@ const Select: React.FC<DropDownProps> = (props) => {
             control: (base: any) => ({
               ...base,
               borderRadius: 10,
-              borderColor: '',
+              borderColor: '#0A665C',
               backgroundColor: 'none',
               padding: 6,
             }),

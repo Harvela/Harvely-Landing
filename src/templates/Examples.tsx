@@ -1,76 +1,41 @@
 'use client';
 
-import { useEffect, useState } from 'react';
-
-import Select from '@/components/select';
-import { getFichesPerSubject, getSubjectPerLevel } from '@/utils/fiches';
+import { InfiniteMovingLessons } from '@/components/scroll';
+import { fiches } from '@/utils/fiches';
 
 const Examples = () => {
-  const [data, setData] = useState({} as any);
-
-  const [subjects, setSubjects] = useState([] as string[]);
-  const [fiches, setFiches] = useState([] as any[]);
-
-  useEffect(() => {
-    setSubjects(getSubjectPerLevel(data.level));
-    setFiches(getFichesPerSubject(data.level, data.subject));
-  }, [data.level, data.subject]);
-
-  console.log(subjects);
-
-  const options = [
-    { label: 'Maternelle', value: 'maternelle' },
-    { label: 'Primaire', value: 'primaire' },
-    { label: 'CTB', value: 'ctb' },
-    { label: 'Secondaire', value: 'secondaire' },
-  ];
-
   return (
     <div
-      id="exemple"
-      className="flex w-full flex-col items-center gap-16 bg-primary-400 p-4 py-16 md:flex-row  md:gap-20 md:p-16"
+      id="exemples"
+      className="flex w-full flex-col gap-8 border-b-2 border-white/40 px-4 py-16 md:gap-16 md:px-32"
     >
-      <div className="w-full md:w-[50%]">
-        <h1 className="mb-10 text-[24px] font-semibold text-white md:mb-20 md:text-[32px]">
-          Exemples
-        </h1>
-        <form className="flex flex-col gap-8 md:w-full md:gap-16 md:pr-8">
-          <Select
-            label="Selectionner le niveau"
-            items={options}
-            onSelect={(value: any) => setData({ ...data, level: value })}
-          />
-          <Select
-            label="Selectionner le cours"
-            items={subjects.map((subject: string) => ({
-              label: subject,
-              value: subject,
-            }))}
-            onSelect={(item: any) => setData({ ...data, subject: item })}
-          />
-        </form>
+      <h2 className="text-[18px] font-semibold text-back-100 dark:text-white md:text-[32px]">
+        En seulement quelques etapes
+      </h2>
+      <div className="grid grid-cols-1 md:grid-cols-3">
+        <div className="rounded-tl-[8px] border-b border-r border-dashed border-button bg-back-100/80 p-16 text-white dark:bg-button/10">
+          <h2 className="mb-4 text-5xl font-bold">1</h2>
+          <p className="text-lg">
+            Informations sur la leçon, le cours, le sujet et le texte.
+          </p>
+        </div>
+
+        <div className="rounded-t-[8px] border-b border-r border-dashed border-button bg-button p-16 text-primary-400/80">
+          <h2 className="mb-4 text-5xl font-bold">2</h2>
+          <p className="text-lg">Choisir les images pour illustrer vos leçon</p>
+        </div>
+
+        <div className="rounded-tr-[8px] border-b border-l border-dashed border-button bg-back-100/80 p-16 text-white dark:bg-button/10 ">
+          <h2 className="mb-4 text-5xl font-bold">3</h2>
+          <p className="text-lg">Telecharger votre fiche en format word</p>
+        </div>
       </div>
-      <div className="flex w-full flex-col gap-4 md:w-[50%]">
-        {fiches.map((fiche) => (
-          <div
-            key={fiche.id}
-            className=" flex w-full flex-row items-center justify-between gap-5 rounded-[10px] bg-[#F8AB5D]/10 px-5 py-2"
-          >
-            <p className="text-[14px] font-medium text-[white] md:text-[16px]">
-              Lesson sur <span className="font-semibold">{fiche.title}</span>
-            </p>
-            <a
-              className="rounded-lg border-[1px] border-[white] px-2 py-1 text-[14px] text-white"
-              target="_blank"
-              href={`https://app.dugassistant.com/fiches/${fiche.id}`}
-            >
-              Voir
-            </a>
-          </div>
-        ))}
-      </div>
+      <h2 className="mb-0 text-[16px] font-semibold text-button dark:text-white md:text-[16px]">
+        Recemment crées par nos utilisateurs
+      </h2>
+      <InfiniteMovingLessons items={fiches} speed="slow" />
     </div>
   );
 };
 
-export { Examples };
+export default Examples;
