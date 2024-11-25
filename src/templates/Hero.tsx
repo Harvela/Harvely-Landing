@@ -33,7 +33,7 @@ const Hero: React.FC = () => {
               Concevez vos fiches de preparation
               <WordRotate
                 className="font-bold text-button"
-                words={['en 5 minutes', 'en 3 étapes', 'sans stress']}
+                words={['en moins de 5 minutes', 'en 3 étapes', 'sans stress']}
               />
               avec l’intelligence artificielle.
             </h1>
