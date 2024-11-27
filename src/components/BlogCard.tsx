@@ -24,27 +24,42 @@ const BlogCard: React.FC<BlogCardProps> = ({
   link,
 }) => {
   return (
-    <div className="h-[500px] overflow-hidden rounded-[5px] bg-white shadow-md transition-transform hover:scale-105">
-      <img src={image} alt={title} className="h-[50%] w-full object-cover" />
+    <div className="group relative h-[500px] overflow-hidden rounded-[5px] bg-white shadow-md transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+      {/* Image Section */}
+      <div className="relative h-[50%] w-full overflow-hidden">
+        <img
+          src={image}
+          alt={title}
+          className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110"
+        />
+      </div>
+
+      {/* Content Section */}
       <div className="p-6">
+        {/* Author and Date */}
         <div className="text-[14px] text-gray-500">
           <span className="font-semibold">{author}</span> • {date}
         </div>
 
+        {/* Title with link */}
         <Link
           href={link}
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-2 block text-[18px] font-bold text-gray-800 hover:text-back-100"
+          className="mt-2 block text-[18px] font-bold text-gray-800 transition-colors duration-300 hover:text-back-100"
         >
           {title} <span className="inline-block">↗</span>
         </Link>
+
+        {/* Description */}
         <p className="mt-2 text-[14px] text-gray-600">{description}</p>
+
+        {/* Tags */}
         <div className="mt-4 flex flex-wrap gap-2">
           {tags.map((tag, index) => (
             <span
               key={index}
-              className="rounded-full bg-gray-200 px-3 py-1 text-xs text-gray-700 transition hover:bg-back-100 hover:text-white"
+              className="rounded-full bg-gray-200 px-3 py-1 text-xs text-gray-700 transition-colors duration-300 hover:bg-back-100 hover:text-white"
             >
               {tag}
             </span>

@@ -35,9 +35,9 @@ const PricingV2 = () => {
         Découvrez nos offres adaptées à tous les budgets pour un accès optimisé
         aux ressources éducatives de DugAssistant!
       </p>
-      <div className="grid grid-cols-1 gap-12 md:grid-cols-2 md:gap-10 lg:grid-cols-4 lg:gap-8">
-        <div className="flex flex-col justify-between rounded-[5px] border border-back-100 bg-white/90 p-6 shadow-sm">
-          <div className="flex flex-col gap-6">
+      <div className="grid grid-cols-1 gap-12 md:grid-cols-2 md:gap-10 lg:gap-8 xl:grid-cols-3 2xl:grid-cols-4">
+        <div className="flex flex-col justify-between rounded-[5px] border border-back-100 bg-white/90 p-6 shadow-sm lg:hidden 2xl:flex">
+          <div className="flex flex-col gap-6 ">
             <div className="flex flex-col gap-2 pt-4">
               <h2 className="text-center text-[40px] font-bold text-back-100">
                 ${selectedPrice || '0'}
@@ -104,7 +104,7 @@ const PricingV2 = () => {
                 {p.list.map((item, idx) => (
                   <li
                     key={idx}
-                    className="flex flex-row gap-2 text-[14px] text-back-100"
+                    className="flex flex-row gap-2 text-[15px] text-back-100"
                   >
                     <svg
                       className="size-5 shrink-0 text-back-100 dark:text-green-400"

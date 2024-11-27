@@ -9,7 +9,7 @@ export const prices = [
     list: [
       "Fiches conforme aux programmes utilisant l'APS/APC",
       "Formation gratuite sur l'APS/APC",
-      'Reduction sur la formation en bureautique de base ($10)',
+      'Réduction sur la formation en bureautique de base (10 $)',
     ],
   },
   {
@@ -22,7 +22,7 @@ export const prices = [
     list: [
       "Fiches conforme aux programmes utilisant l'APS/APC",
       "Formation gratuite sur l'APS/APC et bureautique",
-      'Prevision des matieres pour les enseignants',
+      'Prévision des matières pour les enseignants',
       'Systeme de suivi des enseignants',
     ],
   },
@@ -34,10 +34,10 @@ export const prices = [
     frequency: '/mois',
     name: 'Abonnement annuel',
     list: [
-      "Acces sur DugAssistant pendant toute l'annee scolaire(10 mois)",
+      "Accès à DugAssistant pendant toute l'année scolaire (10 mois)",
       "Fiches conforme aux programmes utilisant l'APS/APC",
       "Formation gratuite sur l'APS/APC et bureautique",
-      'Prevision des matieres pour les enseignants',
+      'Prévision des matières pour les enseignants',
       'Systeme de suivi des enseignants',
     ],
   },

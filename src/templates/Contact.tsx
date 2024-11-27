@@ -117,8 +117,8 @@ const Contact = () => {
           </div>
         </div>
         <div className="mt-8 flex w-full flex-col gap-6 md:flex-row md:gap-16">
-          <div className="w-full rounded-lg border-2 border-back-100/20 p-8 dark:border-white/50 md:w-[50%]">
-            <div className="flex flex-col md:flex-row md:items-center md:gap-8">
+          <div className="w-full rounded-lg border-2 border-back-100/20 p-6 dark:border-white/50 md:w-[50%]">
+            <div className="flex flex-col md:flex-row md:items-center md:gap-4">
               <Input
                 name="fullname"
                 label="Nom complet"
