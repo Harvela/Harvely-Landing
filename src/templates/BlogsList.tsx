@@ -61,7 +61,7 @@ const BlogList: React.FC = () => {
       </div>
       {/* Grille responsive */}
       <div
-        className={`mt-16 grid grid-cols-1 gap-12 md:grid-cols-3 2xl:grid-cols-4`}
+        className={`mt-16 grid grid-cols-1 gap-8 md:grid-cols-3 2xl:grid-cols-4 2xl:gap-12`}
       >
         {displayedBlogs.map((blog, index) => (
           <BlogCard key={index} {...blog} />
