@@ -5,13 +5,13 @@ const reviews = [
   {
     name: 'KATEMBO MUSABINGO',
     username: 'ISP. Nyiragongo',
-    body: "Exploitons DugAssistant. Je suis émerveillé de générer moi même des situations à partir de mon téléphone. Nous ne serons plus des enseignants pauvres en matières car tout nous est déjà préétabli. Merci vraiment au concepteur de ce système qui rend le travail de l'enseignant très facile. Je suis très satisfait et je dois utiliser ce système et sensibiliser surtout aux autres de s'en approprier aussi.",
+    body: "Utilisons DugAssistant. Je suis émerveillé de générer moi même des situations à partir de mon téléphone. Nous ne manquerons plus de ressources pédagogiques car tout nous est déjà préétabli. Merci vraiment au concepteur de ce système qui rend le travail de l'enseignant très facile. Je suis très satisfait et je dois utiliser ce système et sensibiliser surtout aux autres de s'en approprier aussi.",
     img: 'https://avatar.vercel.sh/jack',
   },
   {
     name: 'NABINTU CHRISTINE',
     username: 'CS. Les Masudi',
-    body: "Jusque là moi je suis satisfaite  de résultat avec la fiche exploité hier. Les enfants voient l'importance  du sujet dans la vie pratique et quotidienne. Vraiment c'est une meilleure application.",
+    body: "Jusqu'à présent, je suis très satisfaite des résultats obtenus avec la fiche utilisée hier. Les élèves ont pu comprendre l'importance du sujet dans leur vie quotidienne. C'est vraiment une excellente application.",
     img: 'https://avatar.vercel.sh/jill',
   },
   {
@@ -35,7 +35,7 @@ const reviews = [
   {
     name: 'KAMIRA JEAN-MARIE',
     username: '',
-    body: "Oui ! Nous avons tous constaté que la plupart des questions en Sciences au Examens d'État 2024 étaient introduites par une situation d'évaluation qui pour certains candidats non informés c'était un problème sérieux. Il est temps que nos enseignants et Préfets comprennent que l'enseignement des sciences a pris une autres forme avec l'APS et les Nouveaux programmes éducatifs y relatifs",
+    body: "Oui ! Nous avons tous constaté que la plupart des questions en Sciences au Examens d'État 2024 étaient introduites par une situation d'évaluation qui pour certains candidats non informés c'était un problème sérieux. Il est temps que nos enseignants et Préfets comprennent que l'enseignement des sciences a pris une autre forme avec l'APS et les Nouveaux programmes éducatifs y relatifs",
     img: 'https://avatar.vercel.sh/james',
   },
 ];

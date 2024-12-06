@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { FiArrowLeft, FiArrowRight } from 'react-icons/fi';
 
 import BlogCard from '@/components/BlogCard';
@@ -8,8 +8,30 @@ import { blogs } from '@/utils/blogs';
 
 const BlogList: React.FC = () => {
   const [currentPage, setCurrentPage] = useState(0);
+  const [blogsPerPage, setBlogsPerPage] = useState(1); // Par défaut, 1 carte par page
 
-  const blogsPerPage = 4;
+  // Fonction pour ajuster le nombre de blogs par page selon la largeur de l'écran
+  const updateBlogsPerPage = () => {
+    const width = window.innerWidth;
+    if (width >= 1536) {
+      // '2xl' breakpoint
+      setBlogsPerPage(4);
+    } else if (width >= 768) {
+      // 'md' breakpoint
+      setBlogsPerPage(3);
+    } else {
+      setBlogsPerPage(1);
+    }
+  };
+
+  useEffect(() => {
+    updateBlogsPerPage(); // Initialisation
+    window.addEventListener('resize', updateBlogsPerPage); // Mise à jour lors du redimensionnement
+
+    return () => {
+      window.removeEventListener('resize', updateBlogsPerPage);
+    };
+  }, []);
 
   const totalPages = Math.ceil(blogs.length / blogsPerPage);
 
@@ -32,12 +54,15 @@ const BlogList: React.FC = () => {
         <h1 className="text-[24px] font-bold text-back-100 dark:text-white md:text-[32px]">
           Nos Blogs
         </h1>
-        <p className="mt-4 text-[14px] font-light text-black/60 dark:text-white/80 md:text-[18px]">
+        <p className="mt-4 text-[13px] font-light text-black/60 dark:text-white/80 md:text-[18px]">
           Découvrez les derniers articles et ressources sur les outils, la
           productivité, et les meilleures pratiques.
         </p>
       </div>
-      <div className="mt-16 grid grid-cols-1 gap-12 md:grid-cols-4">
+      {/* Grille responsive */}
+      <div
+        className={`mt-16 grid grid-cols-1 gap-8 md:grid-cols-3 2xl:grid-cols-4 2xl:gap-12`}
+      >
         {displayedBlogs.map((blog, index) => (
           <BlogCard key={index} {...blog} />
         ))}

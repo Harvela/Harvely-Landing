@@ -29,14 +29,18 @@ const Hero: React.FC = () => {
       <div className="flex flex-col-reverse content-center items-center  justify-between md:h-[75vh] md:flex-row">
         <div className="relative w-full  flex-col items-center justify-center md:w-[50%]">
           <div className="my-auto flex flex-col gap-4 px-4 py-8 md:gap-8 md:px-16">
-            <h1 className="mb-4 text-center text-[18px] font-semibold text-back-100 dark:text-white md:mb-5 md:text-left md:text-[38px]">
-              Concevez vos fiches de preparation
+            <h1
+              className="mb-4 text-center text-[18px] font-semibold leading-snug text-back-100 dark:text-white 
+                        md:mb-5 md:text-left md:text-[28px] lg:text-[32px] lg:leading-tight xl:text-[36px] xl:leading-snug 2xl:text-[42px]"
+            >
+              Créez vos fiches de préparation
               <WordRotate
                 className="font-bold text-button"
                 words={['en moins de 5 minutes', 'en 3 étapes', 'sans stress']}
               />
-              avec l’intelligence artificielle.
+              grâce à l’intelligence artificielle.
             </h1>
+
             <div className="flex w-full flex-row items-center justify-center gap-4 md:flex-row md:justify-normal md:gap-6">
               <a
                 href="https://app.dugassistant.com"
@@ -57,7 +61,7 @@ const Hero: React.FC = () => {
 
         <img
           src="Group.svg"
-          className="size-full w-4/5 px-4 py-8 md:w-[50%] md:p-16"
+          className="mx-auto w-4/5 max-w-[500px] px-4 py-8 md:w-[50%] md:max-w-[400px] md:p-0 2xl:max-w-[600px] 2xl:p-16"
           alt="group svg"
         />
       </div>
