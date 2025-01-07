@@ -28,7 +28,7 @@ const Hero: React.FC = () => {
       />
       <div className="flex flex-col-reverse content-center items-center  justify-between md:h-[75vh] md:flex-row">
         <div className="relative w-full  flex-col items-center justify-center md:w-[50%]">
-          <div className="my-auto flex flex-col gap-4 px-4 py-8 md:gap-8 md:px-16">
+          <div className="my-auto flex flex-col gap-4 px-4 py-8 sm:px-6 md:gap-8 md:px-8 lg:px-12 xl:px-16 2xl:px-20">
             <h1
               className="mb-4 text-center text-[18px] font-semibold leading-snug text-back-100 dark:text-white 
                         md:mb-5 md:text-left md:text-[28px] lg:text-[32px] lg:leading-tight xl:text-[36px] xl:leading-snug 2xl:text-[42px]"

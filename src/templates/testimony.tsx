@@ -79,10 +79,10 @@ const ReviewCard = ({
 const Testimony = () => {
   return (
     <>
-      <h1 className="mb-0 px-4 text-[24px] font-semibold text-back-100 dark:text-white md:mb-6 md:px-32  md:text-[32px]">
+      <h1 className="mb-0 px-4 text-[24px] font-semibold text-back-100 dark:text-white sm:px-6  md:mb-6 md:px-8 md:text-[32px] lg:px-12 xl:px-16  2xl:px-20">
         Ce qu&apos;ils en disent
       </h1>
-      <div className="relative hidden h-[500px] w-full flex-row items-center justify-between overflow-hidden rounded-lg md:flex md:px-32">
+      <div className="relative hidden h-[500px] w-full flex-row items-center justify-between overflow-hidden rounded-lg px-4 sm:px-6 md:flex md:px-8 lg:px-12 xl:px-16 2xl:px-20">
         <Marquee pauseOnHover vertical className="[--duration:20s]">
           {firstRow.map((review) => (
             <ReviewCard key={review.username} {...review} />

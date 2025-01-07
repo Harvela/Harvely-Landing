@@ -13,13 +13,18 @@ const BlogList: React.FC = () => {
   // Fonction pour ajuster le nombre de blogs par page selon la largeur de l'écran
   const updateBlogsPerPage = () => {
     const width = window.innerWidth;
+
     if (width >= 1536) {
       // '2xl' breakpoint
       setBlogsPerPage(4);
+    } else if (width >= 1024) {
+      // 'lg' breakpoint
+      setBlogsPerPage(3);
     } else if (width >= 768) {
       // 'md' breakpoint
-      setBlogsPerPage(3);
+      setBlogsPerPage(2);
     } else {
+      // Small screens (below 'md')
       setBlogsPerPage(1);
     }
   };
@@ -49,7 +54,10 @@ const BlogList: React.FC = () => {
   };
 
   return (
-    <div id="blog" className="mx-auto px-4 py-16 md:px-32">
+    <div
+      id="blog"
+      className="mx-auto px-4 py-16 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20"
+    >
       <div className="mb-6">
         <h1 className="text-[24px] font-bold text-back-100 dark:text-white md:text-[32px]">
           Nos Blogs
@@ -61,7 +69,7 @@ const BlogList: React.FC = () => {
       </div>
       {/* Grille responsive */}
       <div
-        className={`mt-16 grid grid-cols-1 gap-8 md:grid-cols-3 2xl:grid-cols-4 2xl:gap-12`}
+        className={`mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4  2xl:gap-12`}
       >
         {displayedBlogs.map((blog, index) => (
           <BlogCard key={index} {...blog} />

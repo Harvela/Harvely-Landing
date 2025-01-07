@@ -27,7 +27,10 @@ const PricingV2 = () => {
     setSelectedPrice(item);
   };
   return (
-    <div id="pricing" className="h-fit w-full px-4 py-8 md:px-32 md:py-16">
+    <div
+      id="pricing"
+      className="h-fit w-full px-4 py-8 sm:px-6 md:px-8 md:py-16 lg:px-12 xl:px-16 2xl:px-20"
+    >
       <h1 className="mb-8 text-[24px] font-semibold text-back-100 dark:text-white md:mb-6 md:text-[32px]">
         Nos tarifs
       </h1>

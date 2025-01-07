@@ -55,7 +55,7 @@ const Contact = () => {
           }}
         />
       )}
-      <div className="flex w-full flex-col  gap-8 px-4 py-8 md:px-32 md:py-16">
+      <div className="flex w-full flex-col  gap-8 px-4 py-8 sm:px-6 md:px-8 md:py-16 lg:px-12 xl:px-16 2xl:px-20">
         <h1 className="mb-10 text-[24px] font-bold text-back-100 dark:text-white md:text-[32px]">
           Contact
         </h1>

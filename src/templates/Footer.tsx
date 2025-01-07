@@ -23,7 +23,7 @@ const links = {
 
 const Footer = () => (
   <footer className="flex flex-col gap-4 bg-back-100 p-[2px] dark:bg-primary-400 md:gap-16">
-    <div className="flex flex-col justify-between gap-6 bg-white/20 px-4 py-2 text-white md:flex-row md:items-center md:px-32 md:py-6">
+    <div className="flex flex-col justify-between gap-6 bg-white/20 px-4 py-2 text-white sm:px-6 md:flex-row md:items-center md:px-8 md:py-6 lg:px-12 xl:px-16 2xl:px-20">
       <h3 className="text-[14px] font-semibold md:text-[18px]">
         Soyez excellent et fiable, le monde compte sur vous{' '}
       </h3>
@@ -102,7 +102,7 @@ const Footer = () => (
       </div>
     </div>
 
-    <div className="flex flex-col justify-between px-4 md:flex-row md:px-32">
+    <div className="flex flex-col justify-between px-4 sm:px-6 md:flex-row md:px-8 lg:px-12 xl:px-16 2xl:px-20">
       <div className="w-full md:w-[33%]">
         <div className="mb-6 mt-8 flex flex-row items-center gap-2 md:mt-0">
           <img
@@ -153,7 +153,7 @@ const Footer = () => (
       </div>
     </div>
 
-    <div className="px-4 md:px-32">
+    <div className="px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20">
       <hr className="h-px w-full bg-white/60 dark:border-gray-700 sm:mx-auto" />
       <div className="flex flex-row items-center justify-between py-4 sm:flex sm:items-center sm:justify-between">
         <span className="text-[8px] text-white dark:text-gray-400 sm:text-center md:text-[10px]">

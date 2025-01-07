@@ -7,7 +7,7 @@ const Examples = () => {
   return (
     <div
       id="exemples"
-      className="flex w-full flex-col gap-8 border-b-2 border-white/40 px-4 py-16 md:gap-16 md:px-32"
+      className="flex w-full flex-col gap-8 border-b-2 border-white/40 px-4 py-16 sm:px-6 md:gap-16 md:px-8 lg:px-12 xl:px-16 2xl:px-20"
     >
       <h2 className="text-[18px] font-semibold text-back-100 dark:text-white md:text-[32px]">
         En seulement quelques étapes

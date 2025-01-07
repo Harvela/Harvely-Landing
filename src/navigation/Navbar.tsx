@@ -49,7 +49,7 @@ const Navbar = () => {
   const toggleTheme = () => setTheme(theme === 'light' ? 'dark' : 'light');
 
   return (
-    <div className="z-10000 fixed mb-8 w-full border-b-2 border-back-100/10 bg-white p-4 dark:border-white/20 dark:bg-back-100 md:px-32 md:py-2.5">
+    <div className="z-10000 fixed mb-8 w-full border-b-2 border-back-100/10 bg-white p-4 dark:border-white/20 dark:bg-back-100 sm:px-6 md:px-8 md:py-2.5 lg:px-12 xl:px-16 2xl:px-20">
       <div className="hidden flex-row items-center justify-between md:flex">
         <div className="flex flex-row items-center gap-2">
           <img
